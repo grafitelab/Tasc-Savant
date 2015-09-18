@@ -1,0 +1,32 @@
+CACHE MANIFEST
+	# http://blog.grayghostvisuals.com/wordpress/cache-manifest-for-wordpress/
+	# Version Control
+	# version Friday 18th of September 2015 08:05:33 AM
+	#
+	# Handy Dandy Developer Tools
+	# CHROME chrome://appcache-internals
+	# FIREFOX about:cache
+	# Charles - Web Debugging Proxy App
+	# http://charlesproxy.com
+	#
+	# CACHE explicit entries
+	# NETWORK URL online whitelist entries
+	# FALLBACK ish entries 
+	#
+	CACHE:
+	# Styles
+	library/css/style.css
+	#
+	# Scripts
+	library/js/libs/modernizr.custom.min.js
+	#
+	NETWORK:
+	*
+	http://go.disqus.com/embed.js
+	library/js/libs/jslibs.js
+	library/js/scripts.js
+	cache.appcache
+	#SETTINGS:
+	#prefer-online
+	#
+	FALLBACK:
