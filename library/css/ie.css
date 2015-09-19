@@ -669,7 +669,7 @@ HEADER
 *********************/
 header.header {
   text-align: center;
-  background-color: #000000;
+  background-color: #202020;
   color: #ffffff;
   height: 50px;
   padding: 0;
@@ -2710,7 +2710,7 @@ HEADER SYTLES
 *********************/
 header.header {
   text-align: left;
-  height: 60px;
+  height: 65px;
 }
 header.header #hamburger {
   margin-top: 15px;
@@ -2739,9 +2739,9 @@ header.header #categories-nav ul li a:visited {
   color: #e7e7e7;
   display: block;
   padding: 0 10px;
-  height: 60px;
-  line-height: 60px;
-  font-weight: 500;
+  height: 65px;
+  line-height: 65px;
+  font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
   -webkit-box-sizing: border-box;
@@ -2751,6 +2751,24 @@ header.header #categories-nav ul li a:visited {
 }
 header.header #categories-nav ul li a:hover,
 header.header #categories-nav ul li a:visited:hover {
+  color: #ffffff;
+  background-color: #404040;
+}
+header.header #categories-nav ul li.video-link a,
+header.header #categories-nav ul li.video-link a:visited {
+  color: #50e3c2;
+}
+header.header #categories-nav ul li.video-link a:hover,
+header.header #categories-nav ul li.video-link a:visited:hover {
+  color: #ffffff;
+  background-color: #404040;
+}
+header.header #categories-nav ul li.shop-link a,
+header.header #categories-nav ul li.shop-link a:visited {
+  color: #f5a623;
+}
+header.header #categories-nav ul li.shop-link a:hover,
+header.header #categories-nav ul li.shop-link a:visited:hover {
   color: #ffffff;
   background-color: #404040;
 }

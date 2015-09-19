@@ -104,7 +104,7 @@ HEADER SYTLES
 
 header.header {
 	text-align:left;
-	height:60px;
+	height:65px;
 	
 	a,a:visited {
 	}
@@ -140,12 +140,32 @@ header.header {
 					color: @lightgray;
 					display:block;
 					padding:0 10px;
-					height:60px;
-					line-height:60px;
-					font-weight:500;
+					height:65px;
+					line-height:65px;
+					font-weight:400;
 					font-size:14px;
 					text-transform:uppercase;
 					.boxSizing();
+					&:hover {
+						color: @white;
+						background-color: @text;
+					}
+				}
+								
+			}
+			li.video-link { 
+				a,a:visited {
+					color: @videogreen;
+					&:hover {
+						color: @white;
+						background-color: @text;
+					}
+				}
+								
+			}
+			li.shop-link { 
+				a,a:visited {
+					color: @shopyellow;
 					&:hover {
 						color: @white;
 						background-color: @text;
