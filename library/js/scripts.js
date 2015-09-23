@@ -187,6 +187,9 @@ $("a[href*='http://']:not([href*='"+location.hostname+"']),[href*='https://']:no
     
     /*Animations*/
 		
+		
+		
+
 
 }); /* end of as page load scripts */
 
@@ -216,3 +219,58 @@ function googleshare(url, title) {
 
 
 /*! A fix for the iOS orientationchange zoom bug. Script by @scottjehl, rebound by @wilto.MIT / GPLv2 License.*/(function(a){function m(){d.setAttribute("content",g),h=!0}function n(){d.setAttribute("content",f),h=!1}function o(b){l=b.accelerationIncludingGravity,i=Math.abs(l.x),j=Math.abs(l.y),k=Math.abs(l.z),(!a.orientation||a.orientation===180)&&(i>7||(k>6&&j<8||k<8&&j>6)&&i>5)?h&&n():h||m()}var b=navigator.userAgent;if(!(/iPhone|iPad|iPod/.test(navigator.platform)&&/OS [1-5]_[0-9_]* like Mac OS X/i.test(b)&&b.indexOf("AppleWebKit")>-1))return;var c=a.document;if(!c.querySelector)return;var d=c.querySelector("meta[name=viewport]"),e=d&&d.getAttribute("content"),f=e+",maximum-scale=1",g=e+",maximum-scale=10",h=!0,i,j,k,l;if(!d)return;a.addEventListener("orientationchange",m,!1),a.addEventListener("devicemotion",o,!1)})(this); 
+
+
+//Header shrinking
+/*
+$(function(){
+    $('header.header').data('size','big');
+    $('header.header #categories-nav ul li a').data('size','big');
+});
+
+$(window).scroll(function(){
+    if($(document).scrollTop() > 0)
+    {
+        if($('header.header').data('size') == 'big')
+        {
+            $('header.header').data('size','small');
+            $('header.header').stop().animate({
+                height:'40px'
+            },600);
+        }
+    }
+    else
+    {
+        if($('header.header').data('size') == 'small')
+        {
+            $('header.header').data('size','big');
+            $('header.header').stop().animate({
+                height:'100px'
+            },600);
+        }  
+    }
+    
+    if($(document).scrollTop() > 0)
+    {
+        if($('header.header #categories-nav ul li a').data('size') == 'big')
+        {
+            $('header.header #categories-nav ul li a').data('size','small');
+            $('header.header #categories-nav ul li a').stop().animate({
+                'line-height':'40px',
+                height:'40px'
+            },600);
+        }
+    }
+    else
+    {
+        if($('header.header #categories-nav ul li a').data('size') == 'small')
+        {
+            $('header.header #categories-nav ul li a').data('size','big');
+            $('header.header #categories-nav ul li a').stop().animate({
+                'line-height':'100px',
+                height:'100px'
+            },600);
+        }  
+    }
+});
+*/

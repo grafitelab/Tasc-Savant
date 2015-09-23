@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 			<?php if (is_paged()) { } else { ?>
-			<div id="content-top" class="wrap">
+			<div id="content-top">
 				<div id="top-stories">
 					<div id="main-story" class="big-story left-column">		
 							<?php query_posts('showposts=3'); ?>

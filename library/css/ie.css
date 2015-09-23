@@ -1831,9 +1831,6 @@ SIMPLEST SQUARE ARTICLE LIST - used for author page
 /*********************
 MAIN STORIES - HOME
 *********************/
-#content-top {
-  margin-top: 2em;
-}
 #top-stories {
   margin-bottom: 1em;
   height: auto;
@@ -2648,7 +2645,7 @@ come into play. Have fun!
 GENERAL STYLES
 *********************/
 #container {
-  padding-top: 70px;
+  padding-top: 65px;
 }
 /*********************
 LAYOUT & GRID STYLES

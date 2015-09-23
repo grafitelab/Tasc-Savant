@@ -110,6 +110,67 @@ $(function(){
     </script>
             <?php } ?> 
         <!-- END FULL SCREEN IN POST IMAGES -->
+        
+        <!-- SHRINKING HEADER -->
+        <?php if ( !is_single() ) {?>	
+	<script  type="text/javascript">	
+		jQuery(document).ready(function($) {
+
+$(function(){
+    $('header.header').data('size','big');
+    $('header.header #categories-nav ul li a').data('size','big');
+});
+
+$(window).scroll(function(){
+    if($(document).scrollTop() > 0)
+    {
+        if($('header.header').data('size') == 'big')
+        {
+            $('header.header').data('size','small');
+            $('header.header').stop().animate({
+                height:'40px'
+            },600);
+        }
+    }
+    else
+    {
+        if($('header.header').data('size') == 'small')
+        {
+            $('header.header').data('size','big');
+            $('header.header').stop().animate({
+                height:'65px'
+            },600);
+        }  
+    }
+    
+    if($(document).scrollTop() > 0)
+    {
+        if($('header.header #categories-nav ul li a').data('size') == 'big')
+        {
+            $('header.header #categories-nav ul li a').data('size','small');
+            $('header.header #categories-nav ul li a').stop().animate({
+                'line-height':'40px',
+                height:'40px'
+            },600);
+        }
+    }
+    else
+    {
+        if($('header.header #categories-nav ul li a').data('size') == 'small')
+        {
+            $('header.header #categories-nav ul li a').data('size','big');
+            $('header.header #categories-nav ul li a').stop().animate({
+                'line-height':'65px',
+                height:'65px'
+            },600);
+        }  
+    }
+});
+
+});
+    </script>
+            <?php } ?> 
+        <!-- SHRINKING HEADER -->
             
 		<?php wp_footer(); // js scripts are inserted using this function ?>
 
