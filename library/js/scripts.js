@@ -10,6 +10,18 @@ if (window.applicationCache) {
 
 jQuery(document).ready(function($) {
 
+/*SET HEIGHT TO MAIN STORIES*/
+$(function(){
+	var msh = $("#main-story").height();
+	$("#top-stories").css('height',msh);
+	$(window).resize(function(){
+		var msh = $(window).height();
+		$("#top-stories").css('height',msh);
+    });
+
+	
+});
+
 
 /*RESIZE WINDOWS IN SUPER FULL PAGE POST*/
 $(function(){

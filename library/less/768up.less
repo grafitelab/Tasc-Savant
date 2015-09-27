@@ -447,10 +447,10 @@ MAIN STORIES - ONLY HOME
 	
 
 #side-story {
-	display: table-cell;
-	float: none;
+	float: right;
 	position: relative;
-	width:27%;
+	width:40%;
+	height:100%;
 
 	article.side-post {
 		float:right; 
@@ -458,9 +458,24 @@ MAIN STORIES - ONLY HOME
 	
 	.last-opinions {
 		width: 100%;
-		height: 60%;
+		height: 50%;
 		display: block;
-		position: absolute;
+		position: relative;
+		
+		.opinion{
+			height: 100%;
+			
+			.article-big-story{
+				height: 100%;
+				border: 0;
+				.tasc-post{
+					height: 100%;
+					a{
+						height: 100%;
+					}
+				}
+			}
+		}
 	}
 	
 	.promotion {
