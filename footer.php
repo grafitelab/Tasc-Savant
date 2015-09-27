@@ -179,7 +179,7 @@ $(window).scroll(function(){
 	var msh = $("#main-story").height();
 	$("#top-stories").css('height',msh);
 	$(window).resize(function(){
-		var msh = $(window).height();
+		var msh = $("#main-story").height();
 		$("#top-stories").css('height',msh);
     });
 			});
