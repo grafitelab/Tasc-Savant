@@ -17,18 +17,15 @@
 							<?php break; endwhile; ?>	
 							<?php endif; ?>
 					</div> <!-- End first-stories -->
-												
+					<!--							
 					<div id="side-story"  class="right-column">
 						<div class="last-opinions">
-							<h2><a href="http://www.tasc.it/opinioni">Ultime Opinioni</a><a class="iconfont write" href="http://www.tasc.it/opinioni/write">o</a></h2>
-							<ul>
 								<?php 
 									$last_opinions = new WP_Query( array( 'post_type' => 'opinion', 'showposts' => 5 )  );
 									while ( $last_opinions->have_posts() ) : $last_opinions->the_post(); 
 								?>
 									<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 								<?php endwhile; ?>
-							</ul>
 						</div>
 						
 						<div class="second-story-right small-posts">
@@ -59,7 +56,7 @@
 							?>
 						</div>
 
-					</div> 
+					</div> -->
 				</div><!-- End top-stories -->
 			</div>
 			<?php } //solo se è la home mostra le top-stories ?>
