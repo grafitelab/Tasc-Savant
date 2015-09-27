@@ -17,18 +17,20 @@
 							<?php break; endwhile; ?>	
 							<?php endif; ?>
 					</div> <!-- End first-stories -->
-					<!--							
+											
 					<div id="side-story"  class="right-column">
 						<div class="last-opinions">
 								<?php 
 									$last_opinions = new WP_Query( array( 'post_type' => 'opinion', 'showposts' => 5 )  );
 									while ( $last_opinions->have_posts() ) : $last_opinions->the_post(); 
 								?>
-									<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix main-post permalink'); ?> role="article">
+								<?php get_template_part( 'loop','bigstory' ); ?>	
+								</article>
 								<?php endwhile; ?>
 						</div>
 						
-						<div class="second-story-right small-posts">
+			<!--		<div class="second-story-right small-posts">
 							
 <?php 
 								
@@ -54,9 +56,9 @@
 								endwhile;
 								
 							?>
-						</div>
+						</div> -->
 
-					</div> -->
+					</div> 
 				</div><!-- End top-stories -->
 			</div>
 			<?php } //solo se è la home mostra le top-stories ?>
