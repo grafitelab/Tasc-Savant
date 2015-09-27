@@ -21,7 +21,7 @@
 					<div id="side-story"  class="right-column">
 						<div class="last-opinions">
 								<?php 
-									$last_opinions = new WP_Query( array( 'post_type' => 'opinion', 'showposts' => 5 )  );
+									$last_opinions = new WP_Query( array( 'post_type' => 'opinion', 'showposts' => 1 )  );
 									while ( $last_opinions->have_posts() ) : $last_opinions->the_post(); 
 								?>
 								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix main-post permalink'); ?> role="article">
