@@ -30,7 +30,7 @@
 								<?php endwhile; ?>
 						</div>
 						
-			<!--		<div class="second-story-right small-posts">
+						<div class="snack-story">
 							
 <?php 
 								
@@ -56,7 +56,7 @@
 								endwhile;
 								
 							?>
-						</div> -->
+						</div>
 
 					</div> 
 				</div><!-- End top-stories -->
