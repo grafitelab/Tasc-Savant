@@ -19,7 +19,7 @@
 					</div> <!-- End first-stories -->
 											
 					<div id="side-story"  class="right-column">
-						<div class="last-opinions">
+						<div class="last-opinions opinion-story">
 								<?php 
 									$last_opinions = new WP_Query( array( 'post_type' => 'opinion', 'showposts' => 1 )  );
 									while ( $last_opinions->have_posts() ) : $last_opinions->the_post(); 

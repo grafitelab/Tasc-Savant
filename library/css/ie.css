@@ -1926,14 +1926,16 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .second-story,
 #related_stories,
 .sticky,
-#articles {
+#articles,
+.opinion-story {
   overflow: hidden;
 }
 .big-story .tasc-post,
 .second-story .tasc-post,
 #related_stories .tasc-post,
 .sticky .tasc-post,
-#articles .tasc-post {
+#articles .tasc-post,
+.opinion-story .tasc-post {
   width: 100%;
   margin: 0;
   position: relative;
@@ -1942,7 +1944,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .second-story .tasc-post img,
 #related_stories .tasc-post img,
 .sticky .tasc-post img,
-#articles .tasc-post img {
+#articles .tasc-post img,
+.opinion-story .tasc-post img {
   width: 100%;
   height: auto;
   vertical-align: top;
@@ -1951,7 +1954,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .second-story .title,
 #related_stories .title,
 .sticky .title,
-#articles .title {
+#articles .title,
+.opinion-story .title {
   bottom: 0;
   padding: 15px;
   font-size: 17px;
@@ -1967,14 +1971,16 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .second-story .title:hover,
 #related_stories .title:hover,
 .sticky .title:hover,
-#articles .title:hover {
+#articles .title:hover,
+.opinion-story .title:hover {
   color: #fff;
 }
 .big-story .createdby,
 .second-story .createdby,
 #related_stories .createdby,
 .sticky .createdby,
-#articles .createdby {
+#articles .createdby,
+.opinion-story .createdby {
   font-size: 11.5px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
@@ -1987,11 +1993,13 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #related_stories a,
 .sticky a,
 #articles a,
+.opinion-story a,
 .big-story a:visited,
 .second-story a:visited,
 #related_stories a:visited,
 .sticky a:visited,
-#articles a:visited {
+#articles a:visited,
+.opinion-story a:visited {
   color: #fff;
   display: block;
 }
@@ -2000,11 +2008,13 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #related_stories a:hover,
 .sticky a:hover,
 #articles a:hover,
+.opinion-story a:hover,
 .big-story a:visited:hover,
 .second-story a:visited:hover,
 #related_stories a:visited:hover,
 .sticky a:visited:hover,
-#articles a:visited:hover {
+#articles a:visited:hover,
+.opinion-story a:visited:hover {
   color: #fff;
 }
 /*********************
@@ -2975,7 +2985,8 @@ MAIN STORIES - ONLY HOME
 .big-story .title,
 .second-story .title,
 #related_stories .title,
-.sticky .title {
+.sticky .title,
+.opinion-story .title {
   font-size: 2em;
   text-shadow: 0px 0px 0px transparent;
 }
