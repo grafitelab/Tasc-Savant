@@ -10,7 +10,7 @@ if (window.applicationCache) {
 
 jQuery(document).ready(function($) {
 
-/*SET HEIGHT TO MAIN STORIES*/
+/*SET HEIGHT TO MAIN STORIES
 $(function(){
 	var msh = $("#main-story").height();
 	$("#top-stories").css('height',msh);
@@ -21,7 +21,7 @@ $(function(){
 
 	
 });
-
+*/
 
 /*RESIZE WINDOWS IN SUPER FULL PAGE POST*/
 $(function(){

@@ -171,6 +171,22 @@ $(window).scroll(function(){
     </script>
             <?php } ?> 
         <!-- SHRINKING HEADER -->
+		<!-- SET HEIGHT TO MAIN STORY-->
+        <?php if ( is_home() ) {?>	
+	<script  type="text/javascript">	
+		jQuery(document).ready(function($) {
+			$(function(){
+	var msh = $("#main-story").height();
+	$("#top-stories").css('height',msh);
+	$(window).resize(function(){
+		var msh = $(window).height();
+		$("#top-stories").css('height',msh);
+    });
+			});
+});
+    </script>
+            <?php } ?> 
+        <!-- SET HEIGHT TO MAIN STORY -->
             
 		<?php wp_footer(); // js scripts are inserted using this function ?>
 
