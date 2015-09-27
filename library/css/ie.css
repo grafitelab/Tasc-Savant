@@ -1953,13 +1953,13 @@ LOOP BIGSTORY ARCHIVES AND HOME
   height: auto;
   vertical-align: top;
 }
-.big-story .category-tag,
-.second-story .category-tag,
-#related_stories .category-tag,
-.sticky .category-tag,
-#articles .category-tag,
-.opinion-story .category-tag,
-.snack-story .category-tag {
+.big-story .category-highlight,
+.second-story .category-highlight,
+#related_stories .category-highlight,
+.sticky .category-highlight,
+#articles .category-highlight,
+.opinion-story .category-highlight,
+.snack-story .category-highlight {
   display: inline-block;
   color: #fff;
   padding: 1px 8px 0;
