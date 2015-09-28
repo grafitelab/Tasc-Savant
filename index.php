@@ -89,115 +89,13 @@
 									?>
 								</div>
 										
-						    	<div class="right-column small-posts">
-									<?php 
-										//Inizio ad elencare i contenuti nella sidebar super-dinamica. Prima gli snack, poi articolo casuale e citazione, tasc rank.
-										$i = 1; 
-										
-										while (have_posts()) : the_post(); 
-										
-										//Se è uno snack NON salta
-										$format = get_post_format();
-										if ($format == 'aside') {} else {continue;}
-										
-										//Se è già stato messo prima lo salta
-										if(empty($do_not_duplicate)) {} else { if( in_array($post->ID, $do_not_duplicate) ) continue;}
-										
-										
-										$do_not_duplicate[] = $post->ID;
-										
-										
-										//C'È LO SNACK!
-										if ($i % 2 == 0) {?>
-										<div class="second-tile tile">  
-
-										<?php
-										} else { ?>
-											
-										<div class="first-tile tile"> 
-											
-										<?php }
-										get_template_part( 'loop','bigstory' );
-										
-										
-										?> </div> <?php
-										$i++; 
-										endwhile;
-									?>
-
-									<?php
-									 
-									query_posts(array(
-										'showposts' => 2,
-										'orderby' => 'rand'
-									));
-									while (have_posts()) : the_post();									
-									
-									if(empty($do_not_duplicate)) {} else { if( in_array($post->ID, $do_not_duplicate) ) continue;}
-									 
-									 if ($i % 2 == 0) { ?>
-										<div class="second-tile tile">  
-
-										<?php
-										} else { ?>
-											
-										<div class="first-tile tile"> 
-											
-										<?php }
-										get_template_part( 'loop','bigstory' ); $i++;
-										?> </div> <?php
-										 
-									 endwhile; ?>	
-							    		
-							    		<div class="<?php if ($i % 2 == 0) { ?>second-tile <?php } else { echo "first-tile"; } $i++; ?>">
-										<div id="tasc-world" class="promotion grafitestyle">
-											<h3><a href="http://www.tasc.it/tasc-rank">Tasc Rank</a></h3>
-											<div class="tascrank">
-												<ul>
-											    	<?php
-											    	
-													function cmp( $a, $b )
-													{ 
-													  if(  $a->points_user_day ==  $b->points_user_day ){ return 0 ; } 
-													  return ($a->points_user_day < $b->points_user_day ) ? 1 : -1;
-													} 
-													
-													$args = array(
-													'meta_key' => 'points_user_day',
-													'who' => 'authors',
-													);
-													$blogusers = get_users($args);
-													usort($blogusers ,'cmp');
-													$count = 0;
-													foreach ($blogusers as $user) { $count++; ?>
-													<li><a href="<?php echo get_author_posts_url( $user->ID ); ?>"><span class="avatar"><?php echo get_avatar($user->ID, 60); ?></span><span class="name"><?php echo $user->display_name; ?></span></a></li>						      
-												    <?php 
-												    if ($count==3) {break;}  }
-												    ?>
-												</ul>
-											</div>
-										</div>
-										</div>
-										
-										
-										
-										<div class="<?php if ($i % 2 == 0) { echo "second-tile"; } else { echo "first-tile"; } $i++; ?> tile"> 
-											<article class="article-big-story">
-																		    	<div class="tasc-post">
-																		    		<a href="https://www.tasc.it/entra-nel-cast" rel="bookmark" title="Entra nel Cast, crea, scrivi, produci, progetta" sl-processed="1">
-																			    		<div class="title">Entra nel Cast</div>
-																		    			<div class="overlay"></div> 
-																		    			<img width="700" height="462" src="https://www.tasc.it/images/entranelcast.jpg" class="attachment-large wp-post-image" alt="Entra in Tasc e Grafite">							    			<div class="gradient"></div>
-																		    		</a>
-																		    	</div>
-										    	</article>
-										 </div>										
-										
-								</div><!-- end right-column -->
 								
 								
 								
 						    </div><!-- end articles -->
+						    
+						    <?php get_sidebar(); ?>
+						    
 						        <?php if (get_next_posts_link() or get_previous_posts_link()) {  ?>
 								        <nav class="wp-prev-next button-container">
 									        <ul class="clearfix">
