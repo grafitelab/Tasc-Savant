@@ -15,7 +15,8 @@
 								?>
 								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix main-post permalink'); ?> role="article">
 								<?php if ( has_post_thumbnail() ) { the_post_thumbnail('large'); } else { ?><img src="<?php echo get_template_directory_uri(); ?>/library/images/default.jpg" /><?php } ?>
-								<span class="s-opinion-title"><?php the_title(); ?></span><div class="createdby">Creato da <?php $author = get_the_author(); echo $author; ?> </div>	
+								<span class="s-opinion-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></span>
+								<div class="createdby">Creato da <?php $author = get_the_author(); echo $author; ?></div>	
 								</article>
 								<?php endwhile; ?>
 					</div>

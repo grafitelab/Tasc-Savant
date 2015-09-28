@@ -3165,6 +3165,7 @@ SIDEBAR
   height: 600px;
   position: absolute;
   right: 0;
+  z-index: 1;
 }
 .sidebar-section {
   margin-bottom: 55px;
@@ -3255,6 +3256,8 @@ SIDEBAR
   float: left;
   max-width: 225px;
   margin-left: 15px;
+}
+#opinions-sidebar article.type-opinion .s-opinion-title a {
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
   font-weight: 600;
   color: #202020;

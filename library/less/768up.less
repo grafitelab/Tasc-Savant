@@ -583,6 +583,7 @@ SIDEBAR
 	height: 600px; 
 	position: absolute;
 	right: 0;
+	z-index: 1;
 }
 .sidebar-section{
 	margin-bottom: 55px;
@@ -659,11 +660,13 @@ SIDEBAR
 			float: left;
 			max-width: 225px;
 			margin-left: 15px;
-			font-family: @large;
-			font-weight: 600;
-			color: #202020;
-			font-size: 15px;
-			text-transform: uppercase;
+			a{
+				font-family: @large;
+				font-weight: 600;
+				color: #202020;
+				font-size: 15px;
+				text-transform: uppercase;	
+			}
 		}
 		.createdby{
 			float: left;
