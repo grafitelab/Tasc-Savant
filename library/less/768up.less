@@ -602,6 +602,9 @@ SIDEBAR
 		.s-title{
 			font-family: @large;
 			font-size: 16px;
+			color: white;
+			font-weight: 600;
+			text-transform: uppercase;
 			line-height: 35px;
 			padding-left: 15px;
 			padding-right: 30px;
@@ -620,6 +623,12 @@ SIDEBAR
 	a{
 		float: right;
 		line-height: 35px;
+		font-family: @large;
+		font-weight: 600;
+		font-size: 14px;
+	}
+	a:hover{
+		text-decoration: none;
 	}
 }
 
@@ -630,6 +639,9 @@ SIDEBAR
 	.s-title-background{
 		.opinionsshade
 	}
+	a{
+		color: @opinionsmedium;
+	}
 }
 #snacks-sidebar{
 	.s-title-border{
@@ -638,6 +650,9 @@ SIDEBAR
 	.s-title-background{
 		.snacksshade
 	}
+	a{
+		color: @snacksmedium;
+	}
 }
 #column-sidebar{
 	.s-title-border{
@@ -645,6 +660,9 @@ SIDEBAR
 	}
 	.s-title-background{
 		.columnsshade
+	}
+	a{
+		color: @columnsmedium;
 	}
 }
 #other-sidebar{

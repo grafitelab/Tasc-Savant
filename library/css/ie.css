@@ -3185,6 +3185,9 @@ SIDEBAR
 .s-section-title .s-title-background .s-title {
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
   font-size: 16px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
   line-height: 35px;
   padding-left: 15px;
   padding-right: 30px;
@@ -3202,6 +3205,12 @@ SIDEBAR
 .s-section-title a {
   float: right;
   line-height: 35px;
+  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
+  font-weight: 600;
+  font-size: 14px;
+}
+.s-section-title a:hover {
+  text-decoration: none;
 }
 #opinions-sidebar .s-title-border {
   background-color: #fad961;
@@ -3225,6 +3234,9 @@ SIDEBAR
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7951c', endColorstr='#fad961', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
+#opinions-sidebar a {
+  color: #ffc600;
+}
 #snacks-sidebar .s-title-border {
   background-color: #b4ed51;
 }
@@ -3247,6 +3259,9 @@ SIDEBAR
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#429321', endColorstr='#b4ec51', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
+#snacks-sidebar a {
+  color: #7ed321;
+}
 #column-sidebar .s-title-border {
   background-color: #c86dd7;
 }
@@ -3268,6 +3283,9 @@ SIDEBAR
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3023ae', endColorstr='#c86dd7', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
+}
+#column-sidebar a {
+  color: #7000d1;
 }
 #other-sidebar .s-title-border {
   background-color: #606060;
