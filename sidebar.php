@@ -8,14 +8,14 @@
 						</div>
 						<a href="#">Tutte le opinioni ></a>
 					</div>
-					<div style="width: 100%;height: 300px;border: 1px solid;box-sizing: border-box;">
+					<div>
 						<?php 
 									$sidebar_opinions = new WP_Query( array( 'post_type' => 'opinion', 'showposts' => 3 )  );
 									while ( $sidebar_opinions->have_posts() ) : $sidebar_opinions->the_post(); 
 								?>
 								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix main-post permalink'); ?> role="article">
 								<?php if ( has_post_thumbnail() ) { the_post_thumbnail('large'); } else { ?><img src="<?php echo get_template_directory_uri(); ?>/library/images/default.jpg" /><?php } ?>
-								<?php the_title(); ?><div class="createdby">Creato da <?php $author = get_the_author(); echo $author; ?> </div>	
+								<span class="s-opinion-title"><?php the_title(); ?></span><div class="createdby">Creato da <?php $author = get_the_author(); echo $author; ?> </div>	
 								</article>
 								<?php endwhile; ?>
 					</div>

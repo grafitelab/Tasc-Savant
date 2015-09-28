@@ -3241,6 +3241,39 @@ SIDEBAR
 #opinions-sidebar a {
   color: #ffc600;
 }
+#opinions-sidebar article.type-opinion {
+  margin: 0 !important;
+  margin-bottom: 20px !important;
+  border: none;
+}
+#opinions-sidebar article.type-opinion img {
+  width: 150px;
+  height: auto;
+  float: left;
+}
+#opinions-sidebar article.type-opinion .s-opinion-title {
+  float: left;
+  max-width: 225px;
+  margin-left: 15px;
+  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
+  font-weight: 600;
+  color: #202020;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+#opinions-sidebar article.type-opinion .createdby {
+  float: left;
+  max-width: 225px;
+  margin-left: 15px;
+  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
+  font-weight: 600;
+  color: #202020;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+#opinions-sidebar article.type-opinion:last-child {
+  margin-bottom: 0;
+}
 #snacks-sidebar .s-title-border {
   background-color: #b4ed51;
 }

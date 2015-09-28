@@ -646,6 +646,39 @@ SIDEBAR
 	a{
 		color: @opinionsmedium;
 	}
+	article.type-opinion{
+		margin: 0 !important;
+		margin-bottom: 20px !important;
+		border: none;
+		img {
+			width: 150px;
+			height: auto;
+			float: left;
+		}
+		.s-opinion-title{
+			float: left;
+			max-width: 225px;
+			margin-left: 15px;
+			font-family: @large;
+			font-weight: 600;
+			color: #202020;
+			font-size: 15px;
+			text-transform: uppercase;
+		}
+		.createdby{
+			float: left;
+			max-width: 225px;
+			margin-left: 15px;
+			font-family: @large;
+			font-weight: 600;
+			color: #202020;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	}
+	article.type-opinion:last-child{
+		margin-bottom: 0;
+	}
 }
 #snacks-sidebar{
 	.s-title-border{
