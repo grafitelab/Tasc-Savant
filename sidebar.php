@@ -1,1 +1,1 @@
-			<div style="width: 200px; float: right; height: 600px; background-color: blue;"></div>
+			<div id="sidebar"></div>

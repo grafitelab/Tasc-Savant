@@ -1843,6 +1843,9 @@ MAIN STORIES - HOME
 .second-story .overlay {
   opacity: .5;
 }
+#main {
+  position: relative;
+}
 #main-story {
   display: block;
   margin-bottom: 1em;
@@ -2930,6 +2933,12 @@ article.opinion p {
 #articles .tasc-post .title {
   font-size: 2.1em;
 }
+#articles {
+  padding-right: 460px;
+}
+#articles .left-column article.article-big-story:first-child {
+  margin-top: 0;
+}
 /*********************
 POSTS IN SINGLE VIEW
 *********************/
@@ -3068,6 +3077,15 @@ MAIN STORIES - ONLY HOME
 }
 #second-stories ul li .title {
   font-size: 1.6em;
+}
+/*********************
+SIDEBAR
+*********************/
+#sidebar {
+  width: 390px;
+  float: right;
+  height: 600px;
+  background-color: blue;
 }
 /*********************
 REVIEW BOX

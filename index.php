@@ -68,6 +68,9 @@
 					<div id="inner-content" class="clearfix">
 				
 					    <div id="main" class="clearfix" role="main">
+						    
+						    <?php get_sidebar(); ?>
+						    
 						    <div id="articles" class="tasc-grid">
 								
 						    
@@ -94,7 +97,6 @@
 								
 						    </div><!-- end articles -->
 						    
-						    <?php get_sidebar(); ?>
 						    
 						        <?php if (get_next_posts_link() or get_previous_posts_link()) {  ?>
 								        <nav class="wp-prev-next button-container">
