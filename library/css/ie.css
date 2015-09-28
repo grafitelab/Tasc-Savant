@@ -2936,7 +2936,7 @@ article.opinion p {
 #articles {
   padding-right: 460px;
 }
-#articles .left-column article.article-big-story:first-child {
+#articles article.article-big-story:first-child {
   margin-top: 0;
 }
 /*********************
@@ -3083,9 +3083,32 @@ SIDEBAR
 *********************/
 #sidebar {
   width: 390px;
-  float: right;
   height: 600px;
+  position: absolute;
+  right: 0;
   background-color: blue;
+}
+.s-section-title .s-title-background {
+  height: 35px;
+  position: relative;
+  background-color: blue;
+}
+.s-section-title .s-title-background .s-title {
+  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
+  font-size: 16px;
+  line-height: 35px;
+  padding-left: 15px;
+  padding-right: 30px;
+}
+.s-section-title .s-title-background .s-title-white-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 18px 35px 0;
+  border-color: transparent #ffffff transparent transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 /*********************
 REVIEW BOX

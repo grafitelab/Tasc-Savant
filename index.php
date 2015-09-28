@@ -74,7 +74,7 @@
 						    <div id="articles" class="tasc-grid">
 								
 						    
-						    	<div class="left-column">
+						    	<div id="articles-content">
 									<?php wp_reset_query(); if (have_posts()) : while (have_posts()) : the_post(); 
 									
 										//Se è uno snack salta

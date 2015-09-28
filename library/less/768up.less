@@ -353,11 +353,11 @@ ARTICLES ARCHIVES STYLE + footer per l'opinion
 
 #articles{
 	padding-right: 460px;
-	.left-column{
-		article.article-big-story:first-child{
-			margin-top: 0;
-		}
+	
+	article.article-big-story:first-child{
+		margin-top: 0;
 	}
+	
 }
 
 
@@ -577,12 +577,39 @@ SIDEBAR
 *********************/
 #sidebar{
 	width: 390px; 
-	float: right; 
 	height: 600px; 
+	position: absolute;
+	right: 0;
 	background-color: blue;
 }
 
+.s-section-title{
+	.s-title-background{
+		height: 35px;
+		position: relative;
+		background-color: blue;
+		.s-title{
+			font-family: @large;
+			font-size: 16px;
+			line-height: 35px;
+			padding-left: 15px;
+			padding-right: 30px;
+		}
+		.s-title-white-triangle{
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 18px 35px 0;
+			border-color: transparent #ffffff transparent transparent;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+	a{
 		
+	}
+}	
 
 /*********************
 REVIEW BOX
