@@ -8,6 +8,17 @@
 						</div>
 						<a href="#">Tutte le opinioni ></a>
 					</div>
+					<div style="width: 100%;height: 300px;border: 1px solid;box-sizing: border-box;">
+						<?php 
+									$sidebar_opinions = new WP_Query( array( 'post_type' => 'opinion', 'showposts' => 3 )  );
+									while ( $sidebar_opinions->have_posts() ) : $sidebar_opinions->the_post(); 
+								?>
+								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix main-post permalink'); ?> role="article">
+								<?php if ( has_post_thumbnail() ) { the_post_thumbnail('large'); } else { ?><img src="<?php echo get_template_directory_uri(); ?>/library/images/default.jpg" /><?php } ?>
+								<?php the_title(); ?><div class="createdby">Creato da <?php $author = get_the_author(); echo $author; ?> </div>	
+								</article>
+								<?php endwhile; ?>
+					</div>
 				</section>
 				<section id="snacks-sidebar" class="sidebar-section">
 					<div class="s-section-title clearfix">
@@ -18,6 +29,7 @@
 						</div>
 						<a href="#">Tutti gli snacks ></a>
 					</div>
+					<div style="width: 100%;height: 300px;border: 1px solid;box-sizing: border-box;"></div>
 				</section>
 				<section id="column-sidebar" class="sidebar-section">
 					<div class="s-section-title clearfix">
@@ -28,6 +40,7 @@
 						</div>
 						<a href="#">Tutte le rubriche ></a>
 					</div>
+					<div style="width: 100%;height: 300px;border: 1px solid;box-sizing: border-box;"></div>
 				</section>
 				<div id="feedly-sidebar" class="sidebar-section">
 					
@@ -36,10 +49,12 @@
 					<div class="s-section-title clearfix">
 						<div class="s-title-border"></div>
 						<div class="s-title-background">
-							<span class="s-title">Altro</span>
+							<span class="s-title">Quotes</span>
 							<div class="s-title-white-triangle"></div>
 						</div>
+						<a href="#">Scarica Quotes ></a>
 					</div>
+					<div style="width: 100%;height: 300px;border: 1px solid;box-sizing: border-box;"></div>
 				</section>
 				<section id="task-rank-sidebar" class="sidebar-section">
 					
