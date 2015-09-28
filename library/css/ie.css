@@ -402,6 +402,82 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
+.opinionsshade {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7951c+0,fad961+100 */
+  background: #f7951c;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #f7951c), color-stop(100%, #fad961));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #f7951c 0%, #fad961 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7951c', endColorstr='#fad961', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+.snacksshade {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#429321+0,b4ec51+100 */
+  background: #429321;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #429321), color-stop(100%, #b4ec51));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #429321 0%, #b4ec51 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#429321', endColorstr='#b4ec51', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+.columnsshade {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3023ae+0,c86dd7+100 */
+  background: #3023ae;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #3023ae), color-stop(100%, #c86dd7));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #3023ae 0%, #c86dd7 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3023ae', endColorstr='#c86dd7', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+.othershade {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,606060+100 */
+  background: #000000;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #000000 0%, #606060 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #000000), color-stop(100%, #606060));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #000000 0%, #606060 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #000000 0%, #606060 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #000000 0%, #606060 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #000000 0%, #606060 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#606060', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
 /*********************
 TYPOGRAPHY 
 'Gotham A', 'Gotham B' for large sizes: 300,400,500,700
@@ -2911,6 +2987,7 @@ ARTICLES ARCHIVES STYLE + footer per l'opinion
 #articles article.large .title,
 article.opinion .title {
   font-size: 2.5em;
+  padding: 30px;
 }
 #articles article.large footer.article-footer .meta,
 article.opinion footer.article-footer .meta {
@@ -2932,6 +3009,7 @@ article.opinion p {
 }
 #articles .tasc-post .title {
   font-size: 2.1em;
+  padding: 30px;
 }
 #articles {
   padding-right: 460px;
@@ -3051,6 +3129,7 @@ MAIN STORIES - ONLY HOME
 .snack-story .title {
   font-size: 35px;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 30px;
 }
 #second-stories {
   margin-bottom: 1em;
@@ -3086,12 +3165,22 @@ SIDEBAR
   height: 600px;
   position: absolute;
   right: 0;
+}
+.s-section-title {
+  position: relative;
+}
+.s-section-title .s-title-border {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 1px;
   background-color: blue;
 }
 .s-section-title .s-title-background {
   height: 35px;
   position: relative;
   background-color: blue;
+  float: left;
 }
 .s-section-title .s-title-background .s-title {
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
@@ -3108,7 +3197,99 @@ SIDEBAR
   border-color: transparent #ffffff transparent transparent;
   position: absolute;
   right: 0;
-  top: 0;
+  top: -2px;
+}
+.s-section-title a {
+  float: right;
+  line-height: 35px;
+}
+#opinions-sidebar .s-title-border {
+  background-color: #fad961;
+}
+#opinions-sidebar .s-title-background {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7951c+0,fad961+100 */
+  background: #f7951c;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #f7951c), color-stop(100%, #fad961));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #f7951c 0%, #fad961 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7951c', endColorstr='#fad961', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+#snacks-sidebar .s-title-border {
+  background-color: #b4ed51;
+}
+#snacks-sidebar .s-title-background {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#429321+0,b4ec51+100 */
+  background: #429321;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #429321), color-stop(100%, #b4ec51));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #429321 0%, #b4ec51 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#429321', endColorstr='#b4ec51', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+#column-sidebar .s-title-border {
+  background-color: #c86dd7;
+}
+#column-sidebar .s-title-background {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3023ae+0,c86dd7+100 */
+  background: #3023ae;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #3023ae), color-stop(100%, #c86dd7));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #3023ae 0%, #c86dd7 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3023ae', endColorstr='#c86dd7', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+#other-sidebar .s-title-border {
+  background-color: #606060;
+}
+#other-sidebar .s-title-background {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,606060+100 */
+  background: #000000;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #000000 0%, #606060 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #000000), color-stop(100%, #606060));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #000000 0%, #606060 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #000000 0%, #606060 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #000000 0%, #606060 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #000000 0%, #606060 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#606060', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
 }
 /*********************
 REVIEW BOX
