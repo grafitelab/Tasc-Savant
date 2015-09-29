@@ -9,7 +9,7 @@
 						<a href="#">Tutte le opinioni ></a>
 					</div>
 					<div>
-						<?php 
+								<?php 
 									$sidebar_opinions = new WP_Query( array( 'post_type' => 'opinion', 'showposts' => 3 )  );
 									while ( $sidebar_opinions->have_posts() ) : $sidebar_opinions->the_post(); 
 								?>
@@ -28,9 +28,20 @@
 							<span class="s-title">Snacks</span>
 							<div class="s-title-white-triangle"></div>
 						</div>
-						<a href="#">Tutti gli snacks ></a>
+						<a href="#">Tutti gli snacks ></a>	
 					</div>
-					<div style="width: 100%;height: 300px;border: 1px solid;box-sizing: border-box;"></div>
+					<div style="width: 100%;height: 300px;border: 1px solid;box-sizing: border-box;">
+								<?php 
+									$sidebar_snacks = new WP_Query( array('showposts' => 3,'tax_query' => array(array('taxonomy' => 'post_format','field' => 'slug','terms' => 'post-format-quote'))));
+									while ( $sidebar_snacks->have_posts() ) : $sidebar_snacks->the_post(); 
+								?>
+								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix main-post permalink'); ?> role="article">
+								<?php if ( has_post_thumbnail() ) { the_post_thumbnail('large'); } else { ?><img src="<?php echo get_template_directory_uri(); ?>/library/images/default.jpg" /><?php } ?>
+								<span class="s-opinion-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></span>
+								<div class="createdby">Creato da <?php $author = get_the_author(); echo $author; ?></div>	
+								</article>
+								<?php endwhile; ?>
+					</div>
 				</section>
 				<section id="column-sidebar" class="sidebar-section">
 					<div class="s-section-title clearfix">
