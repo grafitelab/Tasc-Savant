@@ -32,7 +32,7 @@
 					</div>
 					<div style="width: 100%;height: 300px;border: 1px solid;box-sizing: border-box;">
 								<?php 
-									$sidebar_snacks = new WP_Query( array('showposts' => 3,'tax_query' => array(array('taxonomy' => 'post_format','field' => 'slug','terms' => 'post-format-quote'))));
+									$sidebar_snacks = new WP_Query( array('showposts' => 2,'tax_query' => array(array('taxonomy' => 'post_format','field' => 'slug','terms' => 'post-format-aside'))));
 									while ( $sidebar_snacks->have_posts() ) : $sidebar_snacks->the_post(); 
 								?>
 								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix main-post permalink'); ?> role="article">
