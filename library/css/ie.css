@@ -2007,7 +2007,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .sticky,
 #articles,
 .opinion-story,
-.snack-story {
+.snack-story,
+#snacks-sidebar {
   overflow: hidden;
 }
 .big-story .tasc-post,
@@ -2016,7 +2017,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .sticky .tasc-post,
 #articles .tasc-post,
 .opinion-story .tasc-post,
-.snack-story .tasc-post {
+.snack-story .tasc-post,
+#snacks-sidebar .tasc-post {
   width: 100%;
   margin: 0;
   position: relative;
@@ -2027,7 +2029,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .sticky .tasc-post img,
 #articles .tasc-post img,
 .opinion-story .tasc-post img,
-.snack-story .tasc-post img {
+.snack-story .tasc-post img,
+#snacks-sidebar .tasc-post img {
   width: 100%;
   height: auto;
   vertical-align: top;
@@ -2038,7 +2041,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .sticky .category-highlight,
 #articles .category-highlight,
 .opinion-story .category-highlight,
-.snack-story .category-highlight {
+.snack-story .category-highlight,
+#snacks-sidebar .category-highlight {
   display: inline-block;
   color: #fff;
   padding: 1px 8px 0;
@@ -2062,7 +2066,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .sticky .title,
 #articles .title,
 .opinion-story .title,
-.snack-story .title {
+.snack-story .title,
+#snacks-sidebar .title {
   bottom: 0;
   padding: 15px;
   font-size: 17px;
@@ -2081,7 +2086,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .sticky .title:hover,
 #articles .title:hover,
 .opinion-story .title:hover,
-.snack-story .title:hover {
+.snack-story .title:hover,
+#snacks-sidebar .title:hover {
   color: #fff;
 }
 .big-story .createdby,
@@ -2090,7 +2096,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .sticky .createdby,
 #articles .createdby,
 .opinion-story .createdby,
-.snack-story .createdby {
+.snack-story .createdby,
+#snacks-sidebar .createdby {
   font-size: 12px;
   text-transform: uppercase;
   color: #ffffff;
@@ -2106,13 +2113,15 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #articles a,
 .opinion-story a,
 .snack-story a,
+#snacks-sidebar a,
 .big-story a:visited,
 .second-story a:visited,
 #related_stories a:visited,
 .sticky a:visited,
 #articles a:visited,
 .opinion-story a:visited,
-.snack-story a:visited {
+.snack-story a:visited,
+#snacks-sidebar a:visited {
   color: #fff;
   display: block;
 }
@@ -2123,14 +2132,22 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #articles a:hover,
 .opinion-story a:hover,
 .snack-story a:hover,
+#snacks-sidebar a:hover,
 .big-story a:visited:hover,
 .second-story a:visited:hover,
 #related_stories a:visited:hover,
 .sticky a:visited:hover,
 #articles a:visited:hover,
 .opinion-story a:visited:hover,
-.snack-story a:visited:hover {
+.snack-story a:visited:hover,
+#snacks-sidebar a:visited:hover {
   color: #fff;
+}
+#snacks-sidebar article {
+  margin-bottom: 20px !important;
+}
+#snacks-sidebar article:last-child {
+  margin-bottom: 0px !important;
 }
 /*********************
 OPINIONE

@@ -30,17 +30,13 @@
 						</div>
 						<a href="#">Tutti gli snacks ></a>	
 					</div>
-					<div style="width: 100%;height: 300px;border: 1px solid;box-sizing: border-box;">
+					<div>
 								<?php 
 									$sidebar_snacks = new WP_Query( array('showposts' => 2,'tax_query' => array(array('taxonomy' => 'post_format','field' => 'slug','terms' => 'post-format-aside'))));
 									while ( $sidebar_snacks->have_posts() ) : $sidebar_snacks->the_post(); 
+									get_template_part( 'loop','bigstory' ); 
+									endwhile; 
 								?>
-								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix main-post permalink'); ?> role="article">
-								<?php if ( has_post_thumbnail() ) { the_post_thumbnail('large'); } else { ?><img src="<?php echo get_template_directory_uri(); ?>/library/images/default.jpg" /><?php } ?>
-								<span class="s-opinion-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></span>
-								<div class="createdby">Creato da <?php $author = get_the_author(); echo $author; ?></div>	
-								</article>
-								<?php endwhile; ?>
 					</div>
 				</section>
 				<section id="column-sidebar" class="sidebar-section">
