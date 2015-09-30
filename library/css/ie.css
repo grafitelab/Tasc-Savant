@@ -876,6 +876,15 @@ header.header #categories-nav {
 .opened-nav header.header #hamburger p:before {
   transform: rotate(90deg);
 }
+header.header.smaller {
+  height: 40px;
+}
+header.header.smaller #hamburger {
+  margin-top: 4px;
+}
+header.header.smaller #logo {
+  padding-top: 8px;
+}
 /*********************
 LEFT NAVIGATION
 *********************/
@@ -2962,8 +2971,8 @@ header.header #categories-nav ul li.shop-link a:visited:hover {
   color: #ffffff;
   background-color: #404040;
 }
-header.header.smaller {
-  height: 40px;
+header.header.smaller #logo {
+  margin-top: 0;
 }
 header.header.smaller #categories-nav ul li a,
 header.header.smaller #categories-nav ul li a:visited {

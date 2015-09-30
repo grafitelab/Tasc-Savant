@@ -113,22 +113,22 @@ $(function(){
         
         <!-- SHRINKING HEADER -->
         <?php if ( !is_single() ) {?>	
-	<script  type="text/javascript">	
-function init() {
-    window.addEventListener('scroll', function(e){
-        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-            shrinkOn = 300,
-            header = document.querySelector("header.header");
-        if (distanceY > shrinkOn) {
-            classie.add(header,"smaller");
+	<script  type="text/javascript">
+jQuery(document).ready(function($) {	
+$(function() {
+    //caches a jQuery object containing the header element
+    var header = $("header.header");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 500) {
+            header.addClass("smaller");
         } else {
-            if (classie.has(header,"smaller")) {
-                classie.remove(header,"smaller");
-            }
+            header.removeClass("smaller");
         }
     });
-}
-window.onload = init();
+});
+});
     </script>
             <?php } ?> 
         <!-- SHRINKING HEADER -->
