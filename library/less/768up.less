@@ -132,6 +132,11 @@ header.header {
 		float:right;
 		width:auto;
 		display:block;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-ms-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
 		ul {
 			li { 
 				list-style-type:none;
@@ -146,6 +151,11 @@ header.header {
 					font-size:14px;
 					text-transform:uppercase;
 					.boxSizing();
+					-webkit-transition: all 0.3s;
+					-moz-transition: all 0.3s;
+					-ms-transition: all 0.3s;
+					-o-transition: all 0.3s;
+					transition: all 0.3s;
 					&:hover {
 						color: @white;
 						background-color: @text;
@@ -180,7 +190,22 @@ header.header {
 	
 }
 
+header.header.smaller{
+	height: 40px;
+	#categories-nav {
+		ul {
+			li { 
+				a,a:visited {
+					height:40px;
+					line-height:40px;
+					font-weight:400;
+				}
+								
+			}
+		}
+	}
 
+}
 
 /*********************
 MIDDLE BAR

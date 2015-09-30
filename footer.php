@@ -114,60 +114,21 @@ $(function(){
         <!-- SHRINKING HEADER -->
         <?php if ( !is_single() ) {?>	
 	<script  type="text/javascript">	
-		jQuery(document).ready(function($) {
-
-$(function(){
-    $('header.header').data('size','big');
-    $('header.header #categories-nav ul li a').data('size','big');
-});
-
-$(window).scroll(function(){
-    if($(document).scrollTop() > 0)
-    {
-        if($('header.header').data('size') == 'big')
-        {
-            $('header.header').data('size','small');
-            $('header.header').stop().animate({
-                height:'40px'
-            },600);
+function init() {
+    window.addEventListener('scroll', function(e){
+        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+            shrinkOn = 300,
+            header = document.querySelector("header.header");
+        if (distanceY > shrinkOn) {
+            classie.add(header,"smaller");
+        } else {
+            if (classie.has(header,"smaller")) {
+                classie.remove(header,"smaller");
+            }
         }
-    }
-    else
-    {
-        if($('header.header').data('size') == 'small')
-        {
-            $('header.header').data('size','big');
-            $('header.header').stop().animate({
-                height:'65px'
-            },600);
-        }  
-    }
-    
-    if($(document).scrollTop() > 0)
-    {
-        if($('header.header #categories-nav ul li a').data('size') == 'big')
-        {
-            $('header.header #categories-nav ul li a').data('size','small');
-            $('header.header #categories-nav ul li a').stop().animate({
-                'line-height':'40px',
-                height:'40px'
-            },600);
-        }
-    }
-    else
-    {
-        if($('header.header #categories-nav ul li a').data('size') == 'small')
-        {
-            $('header.header #categories-nav ul li a').data('size','big');
-            $('header.header #categories-nav ul li a').stop().animate({
-                'line-height':'65px',
-                height:'65px'
-            },600);
-        }  
-    }
-});
-
-});
+    });
+}
+window.onload = init();
     </script>
             <?php } ?> 
         <!-- SHRINKING HEADER -->

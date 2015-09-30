@@ -761,6 +761,11 @@ header.header {
   -webkit-transform-style: preserve-3d;
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 header.header a,
 header.header a:visited {
@@ -793,6 +798,11 @@ header.header #hamburger {
   -ms-user-select: none !important;
   user-select: none !important;
   -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 header.header #hamburger p {
   display: block;
@@ -843,6 +853,11 @@ header.header #logo {
   margin: 0 auto;
   vertical-align: top;
   margin-left: -45px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 header.header #logo span {
   display: block;
@@ -2894,6 +2909,11 @@ header.header #categories-nav {
   float: right;
   width: auto;
   display: block;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 header.header #categories-nav ul li {
   list-style-type: none;
@@ -2913,6 +2933,11 @@ header.header #categories-nav ul li a:visited {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 header.header #categories-nav ul li a:hover,
 header.header #categories-nav ul li a:visited:hover {
@@ -2936,6 +2961,15 @@ header.header #categories-nav ul li.shop-link a:hover,
 header.header #categories-nav ul li.shop-link a:visited:hover {
   color: #ffffff;
   background-color: #404040;
+}
+header.header.smaller {
+  height: 40px;
+}
+header.header.smaller #categories-nav ul li a,
+header.header.smaller #categories-nav ul li a:visited {
+  height: 40px;
+  line-height: 40px;
+  font-weight: 400;
 }
 /*********************
 MIDDLE BAR
