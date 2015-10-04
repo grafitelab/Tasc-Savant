@@ -64,18 +64,9 @@
 					</div>
 					<div style="width: 100%;height: 300px;border: 1px solid;box-sizing: border-box;">
 						<span class="quote">
-						<?php
-						$key = 'vyfl4dws0xnebf9ka95p9e'; 
-						$language = 'it';
-						$request = file_get_contents('https://www.getquotesapp.com/api/randomquote?key='.$key.'&ln='.$language);
-						$response = json_decode($request, true);
-						
-						$body_quote = $response['quote']['body'];
-						$author_quote = $response['quote']['author'];	
-						echo '"'.$body_quote . '"';					
-						?>
+				
 						</span>
-						<span class="quote-author"><?php echo '"'.$author_quotee . '"';?></span>
+						<span class="quote-author"></span>
 						<span><a href="#">Scarica quotes dall'app store ></a></span>
 					</div>
 				</section>

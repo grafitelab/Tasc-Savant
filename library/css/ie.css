@@ -3302,6 +3302,7 @@ SIDEBAR
 }
 .s-section-title a:hover {
   text-decoration: none;
+  border-bottom-color: transparent;
 }
 #opinions-sidebar .s-title-border {
   background-color: #fad961;
