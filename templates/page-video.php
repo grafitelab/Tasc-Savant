@@ -1,40 +1,67 @@
-<?php /* Template name: Hello page */ ?>  
+<?php /* Template name: Video Page */ ?>  
 
 <?php get_header(); ?>
+			<?php 
+				global $post;
+				//get the right thumbnail
+				$thumb_id = get_post_thumbnail_id();
+				$thumb_url = wp_get_attachment_image_src($thumb_id,'thumb-big', true);
+				$thumb= $thumb_url[0];
+			?>
 			<div id="content-top" class="m-section">
 				<div id="m-header">
-					<div class="featured-background"></div>
-					<div class="featured-last">
-						<h2 class="last-category"></h2>
-						<h1 class="last-title"></h1>
+					<?php
+						$lastCustom = new WP_Query( 'post_type=video&posts_per_page=1' );
+						if ($lastCustom->have_posts()) {
+							while ($lastCustom->have_posts()) {
+								$lastCustom->the_post();
+    				?>
+					<div class="featured-background"<?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>></div>
+					<h1 class="page-title">Ultimo Video</h1>
+					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
+						<h2 class="last-category">
+							<?php
+								$lastTerms = get_the_terms($post->ID, 'video_category' );
+									if ($lastTerms && ! is_wp_error($lastTerms)) :
+										$term_slugs_arr = array();
+										foreach ($lastTerms as $term) {
+											$term_slugs_arr[] = $term->slug;
+										}
+										$terms_slug_str = join( " ", $term_slugs_arr);
+									endif;
+									echo $terms_slug_str;
+							?>
+						</h2>
+						<h1 class="last-title"><?php the_title(); ?></h1>
 					</div>
+					<?php
+							}
+						}
+    				?>
 				</div>
 				<div id="m-nav">
-					<?php 
-						/*
-						$args = array(
-						'type'                     => 'post',
-						'child_of'                 => 0,
-						'parent'                   => '',
-						'orderby'                  => 'name',
-						'order'                    => 'ASC',
-						'hide_empty'               => 1,
-						'hierarchical'             => 1,
-						'exclude'                  => '',
-						'include'                  => '',
-						'number'                   => '',
-						'taxonomy'                 => 'category',
-						'pad_counts'               => false 
+					<?php
 
-						); 
-						
-						$categories = get_categories( $args ); 
-						
-						foreach ( $categories as $category ) {
-							echo '<li><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a></li>';
-						}
-						*/
-					?> 
+					$taxonomy = 'video_category';
+
+					$tax_args = array(
+					'hide_empty'        => false, 
+					'exclude'           => array(), 
+					'exclude_tree'      => array(), 
+					'include'           => array(),
+					); 
+
+					$terms = get_terms($taxonomy, $tax_args); // Get all terms of a taxonomy
+
+					if ( $terms && !is_wp_error( $terms ) ) : ?>
+						<ul>
+							<li><a href="/video">Tutti</a></li>
+								<?php foreach ( $terms as $term ) { ?>
+							<li><a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"><?php echo $term->name; ?></a></li>
+								<?php } ?>
+    					</ul>
+    					
+					<?php endif;?>
 				</div>
 			</div>
 			<div id="content-container" class="wrap">
