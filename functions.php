@@ -355,27 +355,160 @@ function authorNotification($post_id) {
 add_action('publish_post', 'authorNotification');
 add_action('publish_opinion', 'authorNotification');
 
-//NO AUTHOR BASE SLUG 
-/*
-add_filter('author_rewrite_rules', 'no_author_base_rewrite_rules');
-function no_author_base_rewrite_rules($author_rewrite) {
-   global $wpdb;
-   $author_rewrite = array();
-   $authors = $wpdb->get_results("SELECT user_nicename AS nicename from $wpdb->users");   
-   foreach($authors as $author) {
-       $author_rewrite["({$author->nicename})/page/?([0-9]+)/?$"] = 'index.php?author_name=$matches[1]&paged=$matches[2]';
-       $author_rewrite["({$author->nicename})/?$"] = 'index.php?author_name=$matches[1]';
-   }  
-   return $author_rewrite;
+//CUSTOM POST TYPES
+
+function my_custom_post_video() {
+  $labels = array(
+    'name'               => _x( 'Video', 'post type general name' ),
+    'singular_name'      => _x( 'Video', 'post type singular name' ),
+    'add_new'            => _x( 'Aggiungi Nuovo', 'book' ),
+    'add_new_item'       => __( 'Aggiungi Nuovo Video' ),
+    'edit_item'          => __( 'Modifica Video' ),
+    'new_item'           => __( 'Nuovo Video' ),
+    'all_items'          => __( 'Tutti i Video' ),
+    'view_item'          => __( 'Guarda Video' ),
+    'search_items'       => __( 'Cerca Video' ),
+    'not_found'          => __( 'Video non trovato' ),
+    'not_found_in_trash' => __( 'Video non trovato nel cestino' ), 
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Video'
+  );
+  $args = array(
+    'labels'        => $labels,
+    'description'   => 'Raccolta dei video selezionati con cura dal CAST',
+    'public'        => true,
+    'menu_icon' => 'dashicons-video-alt3',
+    'menu_position' => 6,
+    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+    'has_archive'   => false,
+  );
+  register_post_type( 'video', $args ); 
 }
+add_action( 'init', 'my_custom_post_video' );
 
-if( !is_admin() ) {
-add_action('init', 'author_rewrite_so_22115103');
+function my_custom_post_product() {
+  $labels = array(
+    'name'               => _x( 'Prodotti', 'post type general name' ),
+    'singular_name'      => _x( 'Prodotto', 'post type singular name' ),
+    'add_new'            => _x( 'Aggiungi Nuovo', 'book' ),
+    'add_new_item'       => __( 'Aggiungi Nuovo Prodotto' ),
+    'edit_item'          => __( 'Modifica Prodotto' ),
+    'new_item'           => __( 'Nuovo Prodotto' ),
+    'all_items'          => __( 'Tutti i Prodotti' ),
+    'view_item'          => __( 'Guarda i Prodotti' ),
+    'search_items'       => __( 'Cerca Prodotti' ),
+    'not_found'          => __( 'Prodotto non trovato' ),
+    'not_found_in_trash' => __( 'Prodotto non trovato nel cestino' ), 
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Prodotti'
+  );
+  $args = array(
+    'labels'        => $labels,
+    'description'   => 'Raccolta dei prodotti selezionati con cura dal CAST',
+    'public'        => true,
+    'menu_icon' => 'dashicons-cart',
+    'menu_position' => 6,
+    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+    'has_archive'   => false,
+  );
+  register_post_type( 'product', $args ); 
 }
+add_action( 'init', 'my_custom_post_product' );
 
-function author_rewrite_so_22115103() {
-   global $wp_rewrite; 
-   if( 'author' == $wp_rewrite->author_base ) $wp_rewrite->author_base = null;
-} */
+function my_custom_post_column() {
+  $labels = array(
+    'name'               => _x( 'Rubriche', 'post type general name' ),
+    'singular_name'      => _x( 'Rubrica', 'post type singular name' ),
+    'add_new'            => _x( 'Aggiungi Nuova', 'book' ),
+    'add_new_item'       => __( 'Aggiungi Nuova Rubrica' ),
+    'edit_item'          => __( 'Modifica Rubrica' ),
+    'new_item'           => __( 'Nuova Rubrica' ),
+    'all_items'          => __( 'Tutte le Rubriche' ),
+    'view_item'          => __( 'Guarda le Rubriche' ),
+    'search_items'       => __( 'Cerca Rubriche' ),
+    'not_found'          => __( 'Rubrica non trovato' ),
+    'not_found_in_trash' => __( 'Rubrica non trovato nel cestino' ), 
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Rubriche'
+  );
+  $args = array(
+    'labels'        => $labels,
+    'description'   => 'Raccolta delle rubriche gestite dal CAST',
+    'public'        => true,
+    'menu_icon' => 'dashicons-feedback',
+    'menu_position' => 6,
+    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+    'has_archive'   => false,
+  );
+  register_post_type( 'column', $args ); 
+}
+add_action( 'init', 'my_custom_post_column' );
 
+//CUSTOM TAXONOMIES
+
+function my_taxonomies_video() {
+  $labels = array(
+    'name'              => _x( 'Categorie Video', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Categoria Video', 'taxonomy singular name' ),
+    'search_items'      => __( 'Cerca Categorie Video' ),
+    'all_items'         => __( 'Tutte le Categorie Video' ),
+    'parent_item'       => __( 'Genitore Categoria Video' ),
+    'parent_item_colon' => __( 'Genitore Categoria Video:' ),
+    'edit_item'         => __( 'Modifica Categoria Video' ), 
+    'update_item'       => __( 'Aggiorna Categoria Video' ),
+    'add_new_item'      => __( 'Aggiungi Nuova Categoria Video' ),
+    'new_item_name'     => __( 'Nuova Categoria Video' ),
+    'menu_name'         => __( 'Categorie Video' ),
+  );
+  $args = array(
+    'labels' => $labels,
+    'hierarchical' => true,
+  );
+  register_taxonomy( 'video_category', 'video', $args );
+}
+add_action( 'init', 'my_taxonomies_video', 0 );
+
+function my_taxonomies_product() {
+  $labels = array(
+    'name'              => _x( 'Categorie Prodotti', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Categoria Prodotto', 'taxonomy singular name' ),
+    'search_items'      => __( 'Search Product Categories' ),
+    'all_items'         => __( 'Tutte le Categorie Prodotto' ),
+    'parent_item'       => __( 'Genitore Categoria Prodotto' ),
+    'parent_item_colon' => __( 'Genitore Categoria Prodotto:' ),
+    'edit_item'         => __( 'Modifica Categoria Prodotto' ), 
+    'update_item'       => __( 'Aggiorna Categoria Prodotto' ),
+    'add_new_item'      => __( 'Aggiungi Nuova Categoria Prodotto' ),
+    'new_item_name'     => __( 'Nuova Categoria Prodotto' ),
+    'menu_name'         => __( 'Categorie Prodotti' ),
+  );
+  $args = array(
+    'labels' => $labels,
+    'hierarchical' => true,
+  );
+  register_taxonomy( 'product_category', 'product', $args );
+}
+add_action( 'init', 'my_taxonomies_product', 0 );
+
+function my_taxonomies_column() {
+  $labels = array(
+    'name'              => _x( 'Categorie Rubriche', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Categoria Rubrica', 'taxonomy singular name' ),
+    'search_items'      => __( 'Cerca Categorie Rubriche' ),
+    'all_items'         => __( 'Tutte le Categorie Rubriche' ),
+    'parent_item'       => __( 'Genitore Categoria Rubrica' ),
+    'parent_item_colon' => __( 'Genitore Categoria Rubrica:' ),
+    'edit_item'         => __( 'Modifica Categoria Rubrica' ), 
+    'update_item'       => __( 'Aggiorna Categoria Rubrica' ),
+    'add_new_item'      => __( 'Aggiungi Nuova Categoria Rubrica' ),
+    'new_item_name'     => __( 'Nuova Categoria Rubrica' ),
+    'menu_name'         => __( 'Categorie Rubriche' ),
+  );
+  $args = array(
+    'labels' => $labels,
+    'hierarchical' => true,
+  );
+  register_taxonomy( 'column_category', 'column', $args );
+}
+add_action( 'init', 'my_taxonomies_column', 0 );
 ?>
