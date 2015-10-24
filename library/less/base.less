@@ -2063,3 +2063,115 @@ SUPER FULL PAGE STYLES
 #fblikebox {
 	display:none;
 }
+
+/******************************************************************
+CUSTOM PAGES
+******************************************************************/
+
+.page-template-page-video{
+	#content-top{
+		position: relative;
+		
+		#m-header{
+			position: relative;
+		}
+		.featured-background{
+			height: 100vh;
+			background-size: cover;
+			margin-top: -65px;
+			background-position: center center;
+			position: relative;
+			.featured-background-shade{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				opacity: 0.6;
+				top: 0;
+				left: 0;
+			}
+		}
+		h1.page-title{
+			position: absolute;
+			top: 15%;
+			left: 0;
+			right: 0;
+			color: white;
+			font-weight: 200;
+			border: none;
+			padding: 0;
+		}
+		.m-border{
+			height: 1px;
+		    background-color: #50E3C2;
+		    width: 50px;
+		    margin: 0 auto;
+		    margin-top: 10px;
+		}
+		.featured-last{
+			position: absolute;
+		    margin: 0 auto;
+		    top: 33%;
+		    left: 0;
+		    right: 0;
+		    max-width: 948px;
+		    width: 80%;
+		    height: 50%;
+		    background-position: center center;
+		    background-size: cover;
+		    color: white;
+		}
+		.featured-last-shade{
+			background-color: black;
+		    width: 100%;
+		    height: 100%;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    opacity: 0.25;
+		}
+		h2.last-category{
+			text-align: center;
+		    font-weight: 200;
+		    text-transform: uppercase;
+		    font-size: 18px;
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    top: 15%;
+		}
+		h1.last-title{
+			text-align: center;
+		    text-transform: uppercase;
+		    font-size: 36px;
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    top: 40%;
+		}
+		#m-nav{
+			position: absolute;
+		    bottom: 0;
+		    width: 100%;
+		    height: 65px;
+		    background-color: #202020;
+		    ul{
+			    height: 100%;
+			    li{
+				    list-style: none;
+				    display: inline;
+				    height: 100%;
+				    line-height: 65px;
+				    padding-left: 15px;
+				    padding-right: 15px;
+				    a{
+					    color: white;
+					    font-size: 14px;
+					    font-weight: 200;
+					    text-transform: uppercase;
+				    }
+			    }
+		    }
+		}
+	}
+}

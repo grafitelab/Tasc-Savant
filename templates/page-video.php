@@ -1,13 +1,6 @@
 <?php /* Template name: Video Page */ ?>  
 
 <?php get_header(); ?>
-			<?php 
-				global $post;
-				//get the right thumbnail
-				$thumb_id = get_post_thumbnail_id();
-				$thumb_url = wp_get_attachment_image_src($thumb_id,'thumb-big', true);
-				$thumb= $thumb_url[0];
-			?>
 			<div id="content-top" class="m-section">
 				<div id="m-header">
 					<?php
@@ -15,9 +8,17 @@
 						if ($lastCustom->have_posts()) {
 							while ($lastCustom->have_posts()) {
 								$lastCustom->the_post();
+								
+								
+				global $post;
+				//get the right thumbnail
+				$thumb_id = get_post_thumbnail_id();
+				$thumb_url = wp_get_attachment_image_src($thumb_id,'thumb-big', true);
+				$thumb= $thumb_url[0];
+			
     				?>
-					<div class="featured-background"<?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>></div>
-					<h1 class="page-title">Ultimo Video</h1>
+					<div class="featured-background"<?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>><div class="featured-background-shade"></div></div>
+					<h1 class="page-title">Ultimo Video<div class="m-border"></div></h1>
 					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
 						<h2 class="last-category">
 							<?php
@@ -30,7 +31,7 @@
 										$terms_slug_str = join( " ", $term_slugs_arr);
 									endif;
 									echo $terms_slug_str;
-							?>
+							?><div class="m-border"></div>
 						</h2>
 						<h1 class="last-title"><?php the_title(); ?></h1>
 					</div>
