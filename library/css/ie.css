@@ -2823,20 +2823,24 @@ SUPER FULL PAGE STYLES
 /******************************************************************
 CUSTOM PAGES
 ******************************************************************/
-.page-template-page-video #content-top {
+.page-template-page-video #content-top,
+.page-template-page-rubriche #content-top {
   position: relative;
 }
-.page-template-page-video #content-top #m-header {
+.page-template-page-video #content-top #m-header,
+.page-template-page-rubriche #content-top #m-header {
   position: relative;
 }
-.page-template-page-video #content-top .featured-background {
+.page-template-page-video #content-top .featured-background,
+.page-template-page-rubriche #content-top .featured-background {
   height: 100vh;
   background-size: cover;
   margin-top: -65px;
   background-position: center center;
   position: relative;
 }
-.page-template-page-video #content-top .featured-background .featured-background-shade {
+.page-template-page-video #content-top .featured-background .featured-background-shade,
+.page-template-page-rubriche #content-top .featured-background .featured-background-shade {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2845,7 +2849,8 @@ CUSTOM PAGES
   top: 0;
   left: 0;
 }
-.page-template-page-video #content-top h1.page-title {
+.page-template-page-video #content-top h1.page-title,
+.page-template-page-rubriche #content-top h1.page-title {
   position: absolute;
   top: 15%;
   left: 0;
@@ -2855,14 +2860,16 @@ CUSTOM PAGES
   border: none;
   padding: 0;
 }
-.page-template-page-video #content-top .m-border {
+.page-template-page-video #content-top .m-border,
+.page-template-page-rubriche #content-top .m-border {
   height: 1px;
   background-color: #50E3C2;
   width: 50px;
   margin: 0 auto;
   margin-top: 10px;
 }
-.page-template-page-video #content-top .featured-last {
+.page-template-page-video #content-top .featured-last,
+.page-template-page-rubriche #content-top .featured-last {
   position: absolute;
   margin: 0 auto;
   top: 30%;
@@ -2875,7 +2882,8 @@ CUSTOM PAGES
   background-size: cover;
   color: white;
 }
-.page-template-page-video #content-top .featured-last-shade {
+.page-template-page-video #content-top .featured-last-shade,
+.page-template-page-rubriche #content-top .featured-last-shade {
   background-color: black;
   width: 100%;
   height: 100%;
@@ -2884,7 +2892,8 @@ CUSTOM PAGES
   left: 0;
   opacity: 0.25;
 }
-.page-template-page-video #content-top h2.last-category {
+.page-template-page-video #content-top h2.last-category,
+.page-template-page-rubriche #content-top h2.last-category {
   text-align: center;
   font-weight: 200;
   text-transform: uppercase;
@@ -2894,7 +2903,8 @@ CUSTOM PAGES
   right: 0;
   top: 15%;
 }
-.page-template-page-video #content-top h1.last-title {
+.page-template-page-video #content-top h1.last-title,
+.page-template-page-rubriche #content-top h1.last-title {
   text-align: center;
   text-transform: uppercase;
   font-size: 36px;
@@ -2903,23 +2913,27 @@ CUSTOM PAGES
   right: 0;
   top: 40%;
 }
-.page-template-page-video #content-top #m-nav {
+.page-template-page-video #content-top #m-nav,
+.page-template-page-rubriche #content-top #m-nav {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 65px;
   background-color: #202020;
 }
-.page-template-page-video #content-top #m-nav ul {
+.page-template-page-video #content-top #m-nav ul,
+.page-template-page-rubriche #content-top #m-nav ul {
   height: 100%;
 }
-.page-template-page-video #content-top #m-nav ul li {
+.page-template-page-video #content-top #m-nav ul li,
+.page-template-page-rubriche #content-top #m-nav ul li {
   list-style: none;
   display: inline;
   height: 100%;
   line-height: 65px;
 }
-.page-template-page-video #content-top #m-nav ul li a {
+.page-template-page-video #content-top #m-nav ul li a,
+.page-template-page-rubriche #content-top #m-nav ul li a {
   color: white;
   font-size: 14px;
   font-weight: 200;
@@ -2928,10 +2942,26 @@ CUSTOM PAGES
   padding-left: 15px;
   padding-right: 15px;
 }
-.page-template-page-video #content-top #m-nav ul li a:hover {
+.page-template-page-video #content-top #m-nav ul li a:hover,
+.page-template-page-rubriche #content-top #m-nav ul li a:hover {
   color: #ffffff;
   background-color: #404040;
   text-decoration: none;
+}
+/******************************************************************
+RUBRICHE
+******************************************************************/
+.page-template-page-video #content-top,
+.page-template-page-rubriche #content-top {
+  position: relative;
+}
+.page-template-page-video #content-top #m-header,
+.page-template-page-rubriche #content-top #m-header {
+  position: relative;
+}
+.page-template-page-video #content-top #m-header .featured-background,
+.page-template-page-rubriche #content-top #m-header .featured-background {
+  background-image: url(../images/page-column-bg.jpg);
 }
 /******************************************************************
 Site Name: 

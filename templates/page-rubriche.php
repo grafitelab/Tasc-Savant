@@ -17,8 +17,8 @@
 				$thumb= $thumb_url[0];
 			
     				?>
-					<div class="featured-background"<?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>><div class="featured-background-shade"></div></div>
-					<h1 class="page-title">Ultimo Video<div class="m-border"></div></h1>
+					<div class="featured-background"><div class="featured-background-shade"></div></div>
+					<h1 class="page-title">Rubriche<div class="m-border"></div></h1>
 					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
 						<h2 class="last-category">
 							<?php
