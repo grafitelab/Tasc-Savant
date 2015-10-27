@@ -4,7 +4,7 @@
 			<div id="content-top" class="m-section">
 				<div id="m-header">
 					<?php
-						$lastCustom = new WP_Query( 'post_type=video&posts_per_page=1' );
+						$lastCustom = new WP_Query( 'post_type=column&posts_per_page=1' );
 						if ($lastCustom->have_posts()) {
 							while ($lastCustom->have_posts()) {
 								$lastCustom->the_post();
@@ -22,7 +22,7 @@
 					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
 						<h2 class="last-category">
 							<?php
-								$lastTerms = get_the_terms($post->ID, 'video_category' );
+								$lastTerms = get_the_terms($post->ID, 'column_category' );
 									if ($lastTerms && ! is_wp_error($lastTerms)) :
 										$term_slugs_arr = array();
 										foreach ($lastTerms as $term) {
@@ -43,7 +43,7 @@
 				<div id="m-nav">
 					<?php
 
-					$taxonomy = 'video_category';
+					$taxonomy = 'column_category';
 
 					$tax_args = array(
 					'hide_empty'        => false, 
@@ -56,7 +56,7 @@
 
 					if ( $terms && !is_wp_error( $terms ) ) : ?>
 						<ul>
-							<li><a href="/video">Tutti</a></li>
+							<li><a href="/rubriche">Tutti</a></li>
 								<?php foreach ( $terms as $term ) { ?>
 							<li><a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"><?php echo $term->name; ?></a></li>
 								<?php } ?>
@@ -66,9 +66,48 @@
 				</div>
 			</div>
 			<div id="content-container" class="wrap">
-				<div id="content" class="full-width">
+				<div id="content">			
 					<div id="inner-content" class="clearfix">
-	    				
+				
+					    <div id="main" class="clearfix" role="main">
+						    
+						    <?php get_sidebar('sidebar-column'); ?>
+						    
+						    <div id="articles" class="tasc-grid">
+								
+						    
+						    	<div id="articles-content">
+									<?php $mainCustom = new WP_Query( 'post_type=column' );
+						if ($mainCustom->have_posts()) {
+							while ($mainCustom->have_posts()) {
+								$mainCustom->the_post();
+
+										
+										get_template_part( 'loop','bigstory');
+										//$i++; 
+										
+										}
+						
+								
+									?>
+								</div>
+										
+								
+								
+								
+						    </div><!-- end articles -->
+						    
+						    
+						        <?php if (get_next_posts_link() or get_previous_posts_link()) {  ?>
+								        <nav class="wp-prev-next button-container">
+									        <ul class="clearfix">
+										        <li class="prev-link"><?php next_posts_link('Vai nel passato') ?></li>
+										        <li class="next-link"><?php previous_posts_link('Torna al presente') ?></li>
+									        </ul>
+								        </nav>
+							        <?php } } ?>		
+
+					    </div> <!-- end #main -->
 					</div> <!-- end #inner-content -->
 	    
 				</div> <!-- end #content -->

@@ -2963,6 +2963,10 @@ RUBRICHE
 .page-template-page-rubriche #content-top #m-header .featured-background {
   background-image: url(../images/page-column-bg.jpg);
 }
+.page-template-page-video #content-top #m-header .m-border,
+.page-template-page-rubriche #content-top #m-header .m-border {
+  background-color: #7000D1;
+}
 /******************************************************************
 Site Name: 
 Author: 
