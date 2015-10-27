@@ -1,4 +1,4 @@
-<?php /* Template name: Video Page */ ?>  
+<?php /* Template name: Shop Page */ ?>  
 
 <?php get_header(); ?>
 			<div id="content-top" class="m-section">
