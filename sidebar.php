@@ -63,9 +63,9 @@
 									$terms = get_terms($taxonomy, $tax_args); // Get all terms of a taxonomy
 
 									if ( $terms && !is_wp_error( $terms ) ) : ?>
-										<ul>
+										<ul class="s-column-container">
 												<?php foreach ( $terms as $term ) { ?>
-											<li><a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"><?php echo $term->name; ?></a></li>
+											<li class="s-column-single"><a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"><?php echo $term->name; ?></a></li>
 												<?php } ?>
     									</ul>
     									

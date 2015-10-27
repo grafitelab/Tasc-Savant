@@ -2941,6 +2941,7 @@ CUSTOM PAGES
   display: inline-block;
   padding-left: 15px;
   padding-right: 15px;
+  border: none;
 }
 .page-template-page-video #content-top #m-nav ul li a:hover,
 .page-template-page-rubriche #content-top #m-nav ul li a:hover {
