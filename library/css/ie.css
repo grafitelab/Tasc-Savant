@@ -2984,6 +2984,25 @@ RUBRICHE
   background-color: #7000D1;
 }
 /******************************************************************
+TASC SHOP
+******************************************************************/
+.page-template-page-video #content-top,
+.page-template-page-rubriche #content-top {
+  position: relative;
+}
+.page-template-page-video #content-top #m-header,
+.page-template-page-rubriche #content-top #m-header {
+  position: relative;
+}
+.page-template-page-video #content-top #m-header .featured-background,
+.page-template-page-rubriche #content-top #m-header .featured-background {
+  background-image: url(../images/page-shop-bg.jpg);
+}
+.page-template-page-video #content-top #m-header .m-border,
+.page-template-page-rubriche #content-top #m-header .m-border {
+  background-color: #F5A623;
+}
+/******************************************************************
 Site Name: 
 Author: 
 
