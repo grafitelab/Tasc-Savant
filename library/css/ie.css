@@ -2986,20 +2986,16 @@ RUBRICHE
 /******************************************************************
 TASC SHOP
 ******************************************************************/
-.page-template-page-video #content-top,
-.page-template-page-rubriche #content-top {
+.page-template-page-shop #content-top {
   position: relative;
 }
-.page-template-page-video #content-top #m-header,
-.page-template-page-rubriche #content-top #m-header {
+.page-template-page-shop #content-top #m-header {
   position: relative;
 }
-.page-template-page-video #content-top #m-header .featured-background,
-.page-template-page-rubriche #content-top #m-header .featured-background {
+.page-template-page-shop #content-top #m-header .featured-background {
   background-image: url(../images/page-shop-bg.jpg);
 }
-.page-template-page-video #content-top #m-header .m-border,
-.page-template-page-rubriche #content-top #m-header .m-border {
+.page-template-page-shop #content-top #m-header .m-border {
   background-color: #F5A623;
 }
 /******************************************************************
