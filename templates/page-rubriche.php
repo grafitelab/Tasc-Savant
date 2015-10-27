@@ -71,7 +71,7 @@
 				
 					    <div id="main" class="clearfix" role="main">
 						    
-						    <?php get_sidebar('sidebar-column'); ?>
+						    <?php get_sidebar('column'); ?>
 						    
 						    <div id="articles" class="tasc-grid">
 								
