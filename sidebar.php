@@ -65,7 +65,13 @@
 									if ( $terms && !is_wp_error( $terms ) ) : ?>
 										<ul class="s-column-container">
 												<?php foreach ( $terms as $term ) { ?>
-											<li class="s-column-single"><a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"><?php echo $term->name; ?></a></li>
+											<li class="s-column-single">
+												<div class="outer-mask">
+													<div class="inner-mask">
+														<div class="content"><a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"><?php echo $term->name; ?></a></div>
+        											</div>
+    											</div>
+    										</li>
 												<?php } ?>
     									</ul>
     									

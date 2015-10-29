@@ -3596,6 +3596,49 @@ SIDEBAR
 #column-sidebar a {
   color: #7000d1;
 }
+#column-sidebar ul.s-column-container {
+  list-style: none;
+  padding: 0;
+}
+#column-sidebar ul.s-column-container li.s-column-single {
+  width: 100%;
+  height: 190px;
+  position: relative;
+  display: block;
+}
+#column-sidebar ul.s-column-container li.s-column-single .outer-mask {
+  position: absolute;
+  left: 75px;
+  top: 45px;
+  width: 390px;
+  height: 190px;
+  overflow: hidden;
+}
+#column-sidebar ul.s-column-container li.s-column-single .outer-mask .inner-mask {
+  position: absolute;
+  left: -80px;
+  top: 0px;
+  width: 330px;
+  height: 190px;
+  overflow: hidden;
+  -webkit-transform: skew(-40deg, 0deg);
+  -ms-transform: skew(-40deg, 0deg);
+  -o-transform: skew(-40deg, 0deg);
+  transform: skew(-40deg, 0deg);
+}
+#column-sidebar ul.s-column-container li.s-column-single .outer-mask .inner-mask .content {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 330px;
+  height: 190px;
+  background-color: #234e7b;
+  background-image: -webkit-linear-gradient(top, #234e7b, #0d2951);
+  background-image: -moz-linear-gradient(top, #234e7b, #0d2951);
+  background-image: -ms-linear-gradient(top, #234e7b, #0d2951);
+  background-image: -o-linear-gradient(top, #234e7b, #0d2951);
+  background-image: linear-gradient(top, #234e7b, #0d2951);
+}
 #other-sidebar .s-title-border {
   background-color: #606060;
 }
