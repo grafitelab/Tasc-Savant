@@ -3002,6 +3002,40 @@ TASC SHOP
 .page-template-page-shop #content-top #m-header .m-border {
   background-color: #F5A623;
 }
+.page-template-page-shop #content-top #m-header #featured-product-container {
+  position: absolute;
+  top: 44%;
+  left: 0;
+  right: 0;
+  height: 360px;
+}
+.page-template-page-shop #content-top #m-header #featured-product-container .featured-product {
+  display: inline-block;
+  height: 100%;
+  width: 32.142857142857145%;
+  background-color: #828282;
+  top: 0;
+  vertical-align: top;
+  margin-right: 1.7857142857142856%;
+  position: relative;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.page-template-page-shop #content-top #m-header #featured-product-container .featured-product h1.product-title {
+  position: absolute;
+  bottom: 25px;
+  font-size: 25px;
+  color: white;
+  font-weight: 500;
+}
+.page-template-page-shop #content-top #m-header #featured-product-container .featured-product span.featured-price {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: #F5A623;
+  font-weight: 500;
+}
 /******************************************************************
 Site Name: 
 Author: 

@@ -6,6 +6,7 @@
 					<div class="featured-background"><div class="featured-background-shade"></div></div>
 					<h1 class="page-title">Tasc Shop<div class="m-border"></div></h1>
 					<h2 class="page-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</h2>
+					<div id="featured-product-container">
 					<?php
 						$lastCustom = new WP_Query( 'post_type=product&posts_per_page=3' );
 						if ($lastCustom->have_posts()) {
@@ -28,6 +29,7 @@
 							}
 						}
     				?>
+					</div>
 				</div>
 				<div id="m-nav">
 					<?php
