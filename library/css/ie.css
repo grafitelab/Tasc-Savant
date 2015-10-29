@@ -2211,6 +2211,10 @@ article.opinion .article-header h1 {
   font-size: 2.8em !important;
   text-align: center;
 }
+article.opinion .thumbnail img {
+  width: 100%;
+  height: auto;
+}
 article.opinion .post-content {
   font-size: 18px;
   line-height: 1.8;

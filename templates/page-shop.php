@@ -3,8 +3,11 @@
 <?php get_header(); ?>
 			<div id="content-top" class="m-section">
 				<div id="m-header">
+					<div class="featured-background"><div class="featured-background-shade"></div></div>
+					<h1 class="page-title">Tasc Shop<div class="m-border"></div></h1>
+					<h2 class="page-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</h2>
 					<?php
-						$lastCustom = new WP_Query( 'post_type=product&posts_per_page=1' );
+						$lastCustom = new WP_Query( 'post_type=product&posts_per_page=3' );
 						if ($lastCustom->have_posts()) {
 							while ($lastCustom->have_posts()) {
 								$lastCustom->the_post();
@@ -17,23 +20,9 @@
 				$thumb= $thumb_url[0];
 			
     				?>
-					<div class="featured-background"<?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>><div class="featured-background-shade"></div></div>
-					<h1 class="page-title">Tasc Shop<div class="m-border"></div></h1>
-					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
-						<h2 class="last-category">
-							<?php
-								$lastTerms = get_the_terms($post->ID, 'product_category' );
-									if ($lastTerms && ! is_wp_error($lastTerms)) :
-										$term_slugs_arr = array();
-										foreach ($lastTerms as $term) {
-											$term_slugs_arr[] = $term->slug;
-										}
-										$terms_slug_str = join( " ", $term_slugs_arr);
-									endif;
-									echo $terms_slug_str;
-							?><div class="m-border"></div>
-						</h2>
-						<h1 class="last-title"><?php the_title(); ?></h1>
+					<div class="featured-product" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
+						<h1 class="product-title"><?php the_title(); ?></h1>
+						<span class="featured-price">$33.00</span>
 					</div>
 					<?php
 							}
@@ -68,7 +57,14 @@
 			<div id="content-container" class="wrap">
 				<div id="content" class="full-width">
 					<div id="inner-content" class="clearfix">
-	    				
+	    				<div id="main" class="clearfix" role="main">
+		    				<article class="product">
+			    				<div class="thumb"></div>
+			    				<span class="brand">Swatch</span>
+			    				<span class="price">$33.00</span>
+			    				<h1 class="product-name">Orologio di vacca mutante</h1>
+		    				</article>
+	    				</div>
 					</div> <!-- end #inner-content -->
 	    
 				</div> <!-- end #content -->
