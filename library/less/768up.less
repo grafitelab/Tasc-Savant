@@ -741,6 +741,7 @@ SIDEBAR
 			height: 190px;
 			position: relative;
 			display: block;
+			margin-bottom: 20px;
 			.outer-mask {
 			    position: absolute;
 			    left: 75px;
@@ -774,6 +775,30 @@ SIDEBAR
 					}
 				}
 			
+			}
+			a{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+			h1.title{
+				top:0;
+				padding:15px;
+				font-size:17px;
+				font-weight:600;
+				position:absolute;
+				text-align:left;
+				font-family: @large;
+				z-index:2;
+				color: #fff;
+				text-shadow:0px 1px 1px #000;
+				text-transform: uppercase;
+				&:hover {
+					color: #fff;
+				}
 			}
 		}
 	}

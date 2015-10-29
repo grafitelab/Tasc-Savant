@@ -3605,6 +3605,7 @@ SIDEBAR
   height: 190px;
   position: relative;
   display: block;
+  margin-bottom: 20px;
 }
 #column-sidebar ul.s-column-container li.s-column-single .outer-mask {
   position: absolute;
@@ -3638,6 +3639,30 @@ SIDEBAR
   background-image: -ms-linear-gradient(top, #234e7b, #0d2951);
   background-image: -o-linear-gradient(top, #234e7b, #0d2951);
   background-image: linear-gradient(top, #234e7b, #0d2951);
+}
+#column-sidebar ul.s-column-container li.s-column-single a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#column-sidebar ul.s-column-container li.s-column-single h1.title {
+  top: 0;
+  padding: 15px;
+  font-size: 17px;
+  font-weight: 600;
+  position: absolute;
+  text-align: left;
+  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0px 1px 1px #000;
+  text-transform: uppercase;
+}
+#column-sidebar ul.s-column-container li.s-column-single h1.title:hover {
+  color: #fff;
 }
 #other-sidebar .s-title-border {
   background-color: #606060;

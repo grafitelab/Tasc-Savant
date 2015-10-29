@@ -48,7 +48,7 @@
 						</div>
 						<a href="#">Tutte le rubriche ></a>
 					</div>
-					<div style="width: 100%;height: 300px;border: 1px solid;box-sizing: border-box;">
+					<div>
 								<?php
 
 									$taxonomy = 'column_category';
@@ -68,9 +68,11 @@
 											<li class="s-column-single">
 												<div class="outer-mask">
 													<div class="inner-mask">
-														<div class="content"><a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"><?php echo $term->name; ?></a></div>
+														<div class="content"></div>
         											</div>
     											</div>
+    											<a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"></a>
+    											<h1 class="title"><?php echo $term->name; ?></h1>
     										</li>
 												<?php } ?>
     									</ul>
