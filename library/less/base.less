@@ -2222,6 +2222,18 @@ TASC SHOP
 			.featured-background{
 				background-image: url(../images/page-shop-bg.jpg);
 			}
+			h2.page-subtitle{
+				position: absolute;
+			    top: 24%;
+			    width: 80%;
+			    margin: 0 auto;
+			    left: 0;
+			    right: 0;
+			    color: white;
+			    text-align: center;
+			    font-size: 21px;
+			    font-weight: 200;
+			}
 			.m-border{
 				background-color: #F5A623;
 			}
@@ -2238,7 +2250,6 @@ TASC SHOP
 				    background-color: #828282;
 				    top: 0;
 				    vertical-align: top;
-				    margin-right: 1.7857142857142856%;
 				    position: relative;
 				    padding: 15px;
 				    box-sizing: border-box;
@@ -2260,6 +2271,53 @@ TASC SHOP
 			    }
 			}
 		
+		}
+	}
+	#content-container{
+		#content{
+			#inner-content{
+				#main{
+					text-align: justify;
+					font-size: 0;
+					display: -webkit-flex;
+					-webkit-flex-flow: row wrap;
+					-webkit-justify-content: space-between;
+					-webkit-align-content: flex-start;
+					&:after{
+						content: '';
+						display: inline-block;
+						width: 100%;
+					}
+					article.product{
+						display: inline-block;
+						width: 23%;
+						span.brand{
+							display: block;
+							font-size: 12px;
+							font-weight: 400;
+							color: black;
+						}
+						span.price{
+							display: block;
+							font-size: 12px;
+							font-weight: 500;
+							color: #F5A623;
+							margin-top: -18px;
+							text-align: right;
+						}
+						h1.product-name{
+							font-size: 14px;
+							font-weight: 500;
+							color: black;
+							border: 0;
+						}
+					}
+					.gap{
+						display: inline-block;
+						width: 23%;
+					}
+				}
+			}
 		}
 	}
 }

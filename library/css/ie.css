@@ -2999,6 +2999,18 @@ TASC SHOP
 .page-template-page-shop #content-top #m-header .featured-background {
   background-image: url(../images/page-shop-bg.jpg);
 }
+.page-template-page-shop #content-top #m-header h2.page-subtitle {
+  position: absolute;
+  top: 24%;
+  width: 80%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  color: white;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 200;
+}
 .page-template-page-shop #content-top #m-header .m-border {
   background-color: #F5A623;
 }
@@ -3016,7 +3028,6 @@ TASC SHOP
   background-color: #828282;
   top: 0;
   vertical-align: top;
-  margin-right: 1.7857142857142856%;
   position: relative;
   padding: 15px;
   box-sizing: border-box;
@@ -3035,6 +3046,47 @@ TASC SHOP
   font-size: 20px;
   color: #F5A623;
   font-weight: 500;
+}
+.page-template-page-shop #content-container #content #inner-content #main {
+  text-align: justify;
+  font-size: 0;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: space-between;
+  -webkit-align-content: flex-start;
+}
+.page-template-page-shop #content-container #content #inner-content #main:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+.page-template-page-shop #content-container #content #inner-content #main article.product {
+  display: inline-block;
+  width: 23%;
+}
+.page-template-page-shop #content-container #content #inner-content #main article.product span.brand {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: black;
+}
+.page-template-page-shop #content-container #content #inner-content #main article.product span.price {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #F5A623;
+  margin-top: -18px;
+  text-align: right;
+}
+.page-template-page-shop #content-container #content #inner-content #main article.product h1.product-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  border: 0;
+}
+.page-template-page-shop #content-container #content #inner-content #main .gap {
+  display: inline-block;
+  width: 23%;
 }
 /******************************************************************
 Site Name: 

@@ -59,13 +59,14 @@
 			<div id="content-container" class="wrap">
 				<div id="content" class="full-width">
 					<div id="inner-content" class="clearfix">
-	    				<div id="main" class="clearfix" role="main">
+	    				<div id="main" role="main">
 		    				<article class="product">
 			    				<div class="thumb"></div>
 			    				<span class="brand">Swatch</span>
 			    				<span class="price">$33.00</span>
 			    				<h1 class="product-name">Orologio di vacca mutante</h1>
 		    				</article>
+		    				<div class="gap"></div>
 	    				</div>
 					</div> <!-- end #inner-content -->
 	    
