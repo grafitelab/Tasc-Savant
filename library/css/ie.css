@@ -3609,8 +3609,6 @@ SIDEBAR
 }
 #column-sidebar ul.s-column-container li.s-column-single .outer-mask {
   position: absolute;
-  left: 75px;
-  top: 45px;
   width: 390px;
   height: 190px;
   overflow: hidden;
@@ -3633,12 +3631,24 @@ SIDEBAR
   top: 0px;
   width: 330px;
   height: 190px;
-  background-color: #234e7b;
-  background-image: -webkit-linear-gradient(top, #234e7b, #0d2951);
-  background-image: -moz-linear-gradient(top, #234e7b, #0d2951);
-  background-image: -ms-linear-gradient(top, #234e7b, #0d2951);
-  background-image: -o-linear-gradient(top, #234e7b, #0d2951);
-  background-image: linear-gradient(top, #234e7b, #0d2951);
+  background-blend-mode: multiply;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3023ae+0,c86dd7+100 */
+  background: #3023ae;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #3023ae), color-stop(100%, #c86dd7));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #3023ae 0%, #c86dd7 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3023ae', endColorstr='#c86dd7', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
 }
 #column-sidebar ul.s-column-container li.s-column-single a {
   position: absolute;
@@ -3647,6 +3657,7 @@ SIDEBAR
   width: 100%;
   height: 100%;
   display: block;
+  border: none;
 }
 #column-sidebar ul.s-column-container li.s-column-single h1.title {
   top: 0;

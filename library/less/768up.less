@@ -744,8 +744,6 @@ SIDEBAR
 			margin-bottom: 20px;
 			.outer-mask {
 			    position: absolute;
-			    left: 75px;
-			    top: 45px;
 			    width: 390px;
 			    height: 190px;
 			    overflow: hidden;
@@ -766,12 +764,8 @@ SIDEBAR
 					    top: 0px;
 					    width: 330px;
 					    height: 190px;
-					    background-color: #234e7b;
-					    background-image: -webkit-linear-gradient(top, #234e7b, #0d2951);
-					    background-image:    -moz-linear-gradient(top, #234e7b, #0d2951);
-					    background-image:     -ms-linear-gradient(top, #234e7b, #0d2951);
-					    background-image:      -o-linear-gradient(top, #234e7b, #0d2951);
-					    background-image:         linear-gradient(top, #234e7b, #0d2951);
+					    background-blend-mode: multiply;
+					    .columnsshade
 					}
 				}
 			
@@ -783,6 +777,7 @@ SIDEBAR
 				width: 100%;
 				height: 100%;
 				display: block;
+				border: none;
 			}
 			h1.title{
 				top:0;
