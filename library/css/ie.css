@@ -3054,6 +3054,7 @@ TASC SHOP
   -webkit-flex-flow: row wrap;
   -webkit-justify-content: space-between;
   -webkit-align-content: flex-start;
+  margin-bottom: 20px;
 }
 .page-template-page-shop #content-container #content #inner-content #main:after {
   content: '';
@@ -3063,6 +3064,13 @@ TASC SHOP
 .page-template-page-shop #content-container #content #inner-content #main article.product {
   display: inline-block;
   width: 23%;
+  border: 0px;
+}
+.page-template-page-shop #content-container #content #inner-content #main article.product .thumb {
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: #D8D8D8;
+  margin-bottom: 20px;
 }
 .page-template-page-shop #content-container #content #inner-content #main article.product span.brand {
   display: block;
