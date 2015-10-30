@@ -2969,21 +2969,32 @@ CUSTOM PAGES
   text-decoration: none;
 }
 /******************************************************************
+VIDEO
+******************************************************************/
+.page-template-page-video #content-top {
+  position: relative;
+}
+.page-template-page-video #content-top #m-header {
+  position: relative;
+}
+.page-template-page-video #content-top #m-header .featured-background {
+  background-image: url(../images/page-column-bg.jpg);
+}
+.page-template-page-video #content-top #m-header .m-border {
+  background-color: #50E3C2;
+}
+/******************************************************************
 RUBRICHE
 ******************************************************************/
-.page-template-page-video #content-top,
 .page-template-page-rubriche #content-top {
   position: relative;
 }
-.page-template-page-video #content-top #m-header,
 .page-template-page-rubriche #content-top #m-header {
   position: relative;
 }
-.page-template-page-video #content-top #m-header .featured-background,
 .page-template-page-rubriche #content-top #m-header .featured-background {
   background-image: url(../images/page-column-bg.jpg);
 }
-.page-template-page-video #content-top #m-header .m-border,
 .page-template-page-rubriche #content-top #m-header .m-border {
   background-color: #7000D1;
 }
@@ -3020,12 +3031,20 @@ TASC SHOP
   left: 0;
   right: 0;
   height: 360px;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: space-between;
+  -webkit-align-content: flex-start;
+  text-align: justify;
+  font-size: 0;
+  width: 92%;
+  margin: 0 auto;
 }
 .page-template-page-shop #content-top #m-header #featured-product-container .featured-product {
   display: inline-block;
   height: 100%;
-  width: 32.142857142857145%;
-  background-color: #828282;
+  width: 30%;
+  background-color: #D8D8D8;
   top: 0;
   vertical-align: top;
   position: relative;
@@ -3065,6 +3084,7 @@ TASC SHOP
   display: inline-block;
   width: 23%;
   border: 0px;
+  margin-bottom: 50px;
 }
 .page-template-page-shop #content-container #content #inner-content #main article.product .thumb {
   width: 100%;
