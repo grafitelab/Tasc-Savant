@@ -6,7 +6,7 @@
 							<span class="s-title">Le vostre opinioni</span>
 							<div class="s-title-white-triangle"></div>
 						</div>
-						<a href="#">Tutte le opinioni ></a>
+						<a href="https://www.tasc.it/opinioni">Tutte le opinioni ></a>
 					</div>
 					<div>
 								<?php 
@@ -46,7 +46,7 @@
 							<span class="s-title">Rubriche</span>
 							<div class="s-title-white-triangle"></div>
 						</div>
-						<a href="#">Tutte le rubriche ></a>
+						<a href="https://www.tasc.it/rubriche">Tutte le rubriche ></a>
 					</div>
 					<div>
 								<?php
