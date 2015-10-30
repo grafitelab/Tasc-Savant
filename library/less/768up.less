@@ -719,7 +719,11 @@ SIDEBAR
 		.snacksshade
 	}
 	a{
-		color: @snacksmedium;
+		color: @snacksmedium !important;
+		border: transparent;
+		&:hover{
+			color: @snacksmedium !important;
+		}
 	}
 }
 #column-sidebar{

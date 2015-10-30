@@ -2093,6 +2093,9 @@ LOOP BIGSTORY ARCHIVES AND HOME
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  /*CAMBIO*/
+  height: 23px;
+  line-height: 23px;
 }
 .big-story .title,
 .second-story .title,
@@ -3116,6 +3119,12 @@ TASC SHOP
   width: 23%;
 }
 /******************************************************************
+NASCOSTI
+******************************************************************/
+span.title-date {
+  display: none !important;
+}
+/******************************************************************
 Site Name: 
 Author: 
 
@@ -3682,7 +3691,11 @@ SIDEBAR
   /* IE6-9 fallback on horizontal gradient */
 }
 #snacks-sidebar a {
-  color: #7ed321;
+  color: #7ed321 !important;
+  border: transparent;
+}
+#snacks-sidebar a:hover {
+  color: #7ed321 !important;
 }
 #column-sidebar .s-title-border {
   background-color: #c86dd7;
