@@ -105,7 +105,7 @@
 								echo $body_quote;					
 							?>
 						</span>
-						<span class="quote-author"><?php $author_quote ?></span>
+						<span class="quote-author"><?php echo $author_quote ?></span>
 						<span><a href="#">Scarica quotes dall'app store ></a></span>
 					</div>
 				</section>
