@@ -21,17 +21,13 @@
 					<h1 class="page-title">Rubriche<div class="m-border"></div></h1>
 					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
 						<h2 class="last-category">
-							<?php
-								$lastTerms = get_the_terms($post->ID, 'column_category' );
-									if ($lastTerms && ! is_wp_error($lastTerms)) :
-										$term_slugs_arr = array();
-										foreach ($lastTerms as $term) {
-											$term_slugs_arr[] = $term->slug;
-										}
-										$terms_slug_str = join( " ", $term_slugs_arr);
-									endif;
-									echo $terms_slug_str;
-							?><div class="m-border"></div>
+							<?php $lastTerms = get_the_terms( $post->ID , 'column_category' );
+
+foreach ( $lastTerms as $lastTerm ) {
+
+echo $lastTerm->name;
+
+} ?><div class="m-border"></div>
 						</h2>
 						<h1 class="last-title"><?php the_title(); ?></h1>
 					</div>
