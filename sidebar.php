@@ -92,7 +92,8 @@
 						</div>
 						<a href="#">Scarica Quotes ></a>
 					</div>
-					<div style="width: 100%;height: 300px;border: 1px solid;box-sizing: border-box;">
+				
+					<div>
 						<span class="quote">
 							<?php
 								$key = 'vyfl4dws0xnebf9ka95p9e'; 
@@ -102,11 +103,10 @@
 								
 								$body_quote = $response['quote']['body'];
 								$author_quote = $response['quote']['author'];	
-								echo $body_quote;					
+								echo '"' . $body_quote . '"';					
 							?>
 						</span>
 						<span class="quote-author"><?php echo $author_quote ?></span>
-						<span><a href="#">Scarica quotes dall'app store ></a></span>
 					</div>
 				</section>
 				<section id="task-rank-sidebar" class="sidebar-section">

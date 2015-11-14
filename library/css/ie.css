@@ -3829,6 +3829,20 @@ SIDEBAR
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#606060', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
+#other-sidebar a {
+  color: #000000;
+}
+#other-sidebar .quote {
+  font-size: 24px;
+  font-weight: 100;
+  display: block;
+}
+#other-sidebar .quote-author {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: right;
+}
 /*********************
 REVIEW BOX
 *********************/
