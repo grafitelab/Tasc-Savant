@@ -72,10 +72,10 @@
 						<div id="main" role="main">
 							<div id="videos" class="clearfix">
 							<?php 
-								$allVideos = new WP_Query( 'post_type=video&posts_per_page=9' );
-								if ($allVideos->have_posts()) {
-								while ($allVideos->have_posts()) {
-								$allVideos->the_post();
+								$videoCategory = new WP_Query( 'post_type=video&posts_per_page=1' );
+								if ($videoCategory->have_posts()) {
+								while ($videoCategory->have_posts()) {
+								$videoCategory->the_post();
 							?>
 							<article class="video">
 								<div class="tasc-post">
