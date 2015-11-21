@@ -2050,7 +2050,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #articles,
 .opinion-story,
 .snack-story,
-#snacks-sidebar {
+#snacks-sidebar,
+#article-sidebar {
   overflow: hidden;
 }
 .big-story .tasc-post,
@@ -2060,7 +2061,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #articles .tasc-post,
 .opinion-story .tasc-post,
 .snack-story .tasc-post,
-#snacks-sidebar .tasc-post {
+#snacks-sidebar .tasc-post,
+#article-sidebar .tasc-post {
   width: 100%;
   margin: 0;
   position: relative;
@@ -2072,7 +2074,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #articles .tasc-post img,
 .opinion-story .tasc-post img,
 .snack-story .tasc-post img,
-#snacks-sidebar .tasc-post img {
+#snacks-sidebar .tasc-post img,
+#article-sidebar .tasc-post img {
   width: 100%;
   height: auto;
   vertical-align: top;
@@ -2084,7 +2087,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #articles .category-highlight,
 .opinion-story .category-highlight,
 .snack-story .category-highlight,
-#snacks-sidebar .category-highlight {
+#snacks-sidebar .category-highlight,
+#article-sidebar .category-highlight {
   display: inline-block;
   color: #fff;
   padding: 1px 8px 0;
@@ -2112,7 +2116,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #articles .title,
 .opinion-story .title,
 .snack-story .title,
-#snacks-sidebar .title {
+#snacks-sidebar .title,
+#article-sidebar .title {
   bottom: 0;
   padding: 15px;
   font-size: 17px;
@@ -2132,7 +2137,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #articles .title:hover,
 .opinion-story .title:hover,
 .snack-story .title:hover,
-#snacks-sidebar .title:hover {
+#snacks-sidebar .title:hover,
+#article-sidebar .title:hover {
   color: #fff;
 }
 .big-story .title .title-date,
@@ -2142,7 +2148,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #articles .title .title-date,
 .opinion-story .title .title-date,
 .snack-story .title .title-date,
-#snacks-sidebar .title .title-date {
+#snacks-sidebar .title .title-date,
+#article-sidebar .title .title-date {
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
   font-weight: 300;
   text-transform: uppercase;
@@ -2158,7 +2165,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #articles .createdby,
 .opinion-story .createdby,
 .snack-story .createdby,
-#snacks-sidebar .createdby {
+#snacks-sidebar .createdby,
+#article-sidebar .createdby {
   font-size: 12px;
   text-transform: uppercase;
   color: #ffffff;
@@ -2175,6 +2183,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .opinion-story a,
 .snack-story a,
 #snacks-sidebar a,
+#article-sidebar a,
 .big-story a:visited,
 .second-story a:visited,
 #related_stories a:visited,
@@ -2182,7 +2191,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #articles a:visited,
 .opinion-story a:visited,
 .snack-story a:visited,
-#snacks-sidebar a:visited {
+#snacks-sidebar a:visited,
+#article-sidebar a:visited {
   color: #fff;
   display: block;
 }
@@ -2194,6 +2204,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .opinion-story a:hover,
 .snack-story a:hover,
 #snacks-sidebar a:hover,
+#article-sidebar a:hover,
 .big-story a:visited:hover,
 .second-story a:visited:hover,
 #related_stories a:visited:hover,
@@ -2201,7 +2212,8 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #articles a:visited:hover,
 .opinion-story a:visited:hover,
 .snack-story a:visited:hover,
-#snacks-sidebar a:visited:hover {
+#snacks-sidebar a:visited:hover,
+#article-sidebar a:visited:hover {
   color: #fff;
 }
 #snacks-sidebar article {
@@ -2841,22 +2853,316 @@ SUPER FULL PAGE STYLES
 #fblikebox {
   display: none;
 }
+/*********************
+SIDEBAR
+*********************/
+#sidebar {
+  width: 390px;
+  height: 600px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+.sidebar-section {
+  margin-bottom: 55px;
+}
+.s-section-title {
+  position: relative;
+  margin-bottom: 30px;
+}
+.s-section-title .s-title-border {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 1px;
+  background-color: blue;
+}
+.s-section-title .s-title-background {
+  height: 35px;
+  position: relative;
+  background-color: blue;
+  float: left;
+}
+.s-section-title .s-title-background .s-title {
+  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 35px;
+  padding-left: 15px;
+  padding-right: 30px;
+}
+.s-section-title .s-title-background .s-title-white-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 18px 33px 0;
+  border-color: transparent #ffffff transparent transparent;
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+.s-section-title a {
+  float: right;
+  line-height: 35px;
+  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
+  font-weight: 600;
+  font-size: 14px;
+}
+.s-section-title a:hover {
+  text-decoration: none;
+  border-bottom-color: transparent;
+}
+#opinions-sidebar .s-title-border {
+  background-color: #fad961;
+}
+#opinions-sidebar .s-title-background {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7951c+0,fad961+100 */
+  background: #f7951c;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #f7951c), color-stop(100%, #fad961));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #f7951c 0%, #fad961 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7951c', endColorstr='#fad961', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+#opinions-sidebar a {
+  color: #ffc600;
+}
+#opinions-sidebar article.type-opinion {
+  margin: 0 !important;
+  margin-bottom: 20px !important;
+  border: none;
+}
+#opinions-sidebar article.type-opinion img {
+  width: 100%;
+  height: auto;
+  float: left;
+}
+#opinions-sidebar article.type-opinion .s-opinion-title {
+  float: left;
+  max-width: 225px;
+  margin-left: 15px;
+}
+#opinions-sidebar article.type-opinion .s-opinion-title a {
+  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
+  font-weight: 600;
+  color: #202020;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+#opinions-sidebar article.type-opinion .createdby {
+  float: left;
+  max-width: 225px;
+  margin-left: 15px;
+  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
+  font-weight: 600;
+  color: #202020;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+#opinions-sidebar article.type-opinion:last-child {
+  margin-bottom: 0;
+}
+#snacks-sidebar .s-title-border {
+  background-color: #b4ed51;
+}
+#snacks-sidebar .s-title-background {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#429321+0,b4ec51+100 */
+  background: #429321;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #429321), color-stop(100%, #b4ec51));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #429321 0%, #b4ec51 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#429321', endColorstr='#b4ec51', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+#snacks-sidebar a {
+  color: #7ed321 !important;
+  border-bottom: solid 1px !important;
+  border-bottom-color: transparent !important;
+}
+#snacks-sidebar a:hover {
+  color: #7ed321 !important;
+}
+#column-sidebar .s-title-border {
+  background-color: #c86dd7;
+}
+#column-sidebar .s-title-background {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3023ae+0,c86dd7+100 */
+  background: #3023ae;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #3023ae), color-stop(100%, #c86dd7));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #3023ae 0%, #c86dd7 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3023ae', endColorstr='#c86dd7', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+#column-sidebar a {
+  color: #7000d1;
+}
+#column-sidebar ul.s-column-container {
+  list-style: none;
+  padding: 0;
+}
+#column-sidebar ul.s-column-container li.s-column-single {
+  width: 100%;
+  height: 190px;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+#column-sidebar ul.s-column-container li.s-column-single .outer-mask {
+  position: absolute;
+  width: 390px;
+  height: 190px;
+  overflow: hidden;
+}
+#column-sidebar ul.s-column-container li.s-column-single .outer-mask .inner-mask {
+  position: absolute;
+  left: -80px;
+  top: 0px;
+  width: 330px;
+  height: 190px;
+  overflow: hidden;
+  -webkit-transform: skew(-40deg, 0deg);
+  -ms-transform: skew(-40deg, 0deg);
+  -o-transform: skew(-40deg, 0deg);
+  transform: skew(-40deg, 0deg);
+}
+#column-sidebar ul.s-column-container li.s-column-single .outer-mask .inner-mask .content {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 330px;
+  height: 190px;
+  background-blend-mode: multiply;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3023ae+0,c86dd7+100 */
+  background: #3023ae;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #3023ae), color-stop(100%, #c86dd7));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #3023ae 0%, #c86dd7 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3023ae', endColorstr='#c86dd7', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+#column-sidebar ul.s-column-container li.s-column-single a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+#column-sidebar ul.s-column-container li.s-column-single h1.title {
+  top: 0;
+  padding: 15px;
+  font-size: 17px;
+  font-weight: 600;
+  position: absolute;
+  text-align: left;
+  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0px 1px 1px #000;
+  text-transform: uppercase;
+}
+#column-sidebar ul.s-column-container li.s-column-single h1.title:hover {
+  color: #fff;
+}
+#other-sidebar .s-title-border {
+  background-color: #606060;
+}
+#other-sidebar .s-title-background {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,606060+100 */
+  background: #000000;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #000000 0%, #606060 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #000000), color-stop(100%, #606060));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #000000 0%, #606060 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #000000 0%, #606060 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #000000 0%, #606060 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #000000 0%, #606060 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#606060', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+#other-sidebar a {
+  color: #000000;
+}
+#other-sidebar .quote {
+  font-size: 24px;
+  font-weight: 100;
+  display: block;
+}
+#other-sidebar .quote-author {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: right;
+}
 /******************************************************************
 CUSTOM PAGES
 ******************************************************************/
 .page-template-page-video #content-top,
 .page-template-page-rubriche #content-top,
-.page-template-page-shop #content-top {
+.page-template-page-shop #content-top,
+.tax-video_category #content-top {
   position: relative;
 }
 .page-template-page-video #content-top #m-header,
 .page-template-page-rubriche #content-top #m-header,
-.page-template-page-shop #content-top #m-header {
+.page-template-page-shop #content-top #m-header,
+.tax-video_category #content-top #m-header {
   position: relative;
 }
 .page-template-page-video #content-top .featured-background,
 .page-template-page-rubriche #content-top .featured-background,
-.page-template-page-shop #content-top .featured-background {
+.page-template-page-shop #content-top .featured-background,
+.tax-video_category #content-top .featured-background {
   height: 100vh;
   background-size: cover;
   margin-top: -65px;
@@ -2865,7 +3171,8 @@ CUSTOM PAGES
 }
 .page-template-page-video #content-top .featured-background .featured-background-shade,
 .page-template-page-rubriche #content-top .featured-background .featured-background-shade,
-.page-template-page-shop #content-top .featured-background .featured-background-shade {
+.page-template-page-shop #content-top .featured-background .featured-background-shade,
+.tax-video_category #content-top .featured-background .featured-background-shade {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2876,7 +3183,8 @@ CUSTOM PAGES
 }
 .page-template-page-video #content-top h1.page-title,
 .page-template-page-rubriche #content-top h1.page-title,
-.page-template-page-shop #content-top h1.page-title {
+.page-template-page-shop #content-top h1.page-title,
+.tax-video_category #content-top h1.page-title {
   position: absolute;
   top: 15%;
   left: 0;
@@ -2888,7 +3196,8 @@ CUSTOM PAGES
 }
 .page-template-page-video #content-top .m-border,
 .page-template-page-rubriche #content-top .m-border,
-.page-template-page-shop #content-top .m-border {
+.page-template-page-shop #content-top .m-border,
+.tax-video_category #content-top .m-border {
   height: 1px;
   width: 50px;
   margin: 0 auto;
@@ -2896,7 +3205,8 @@ CUSTOM PAGES
 }
 .page-template-page-video #content-top .featured-last,
 .page-template-page-rubriche #content-top .featured-last,
-.page-template-page-shop #content-top .featured-last {
+.page-template-page-shop #content-top .featured-last,
+.tax-video_category #content-top .featured-last {
   position: absolute;
   margin: 0 auto;
   top: 30%;
@@ -2911,7 +3221,8 @@ CUSTOM PAGES
 }
 .page-template-page-video #content-top .featured-last-shade,
 .page-template-page-rubriche #content-top .featured-last-shade,
-.page-template-page-shop #content-top .featured-last-shade {
+.page-template-page-shop #content-top .featured-last-shade,
+.tax-video_category #content-top .featured-last-shade {
   background-color: black;
   width: 100%;
   height: 100%;
@@ -2922,7 +3233,8 @@ CUSTOM PAGES
 }
 .page-template-page-video #content-top h2.last-category,
 .page-template-page-rubriche #content-top h2.last-category,
-.page-template-page-shop #content-top h2.last-category {
+.page-template-page-shop #content-top h2.last-category,
+.tax-video_category #content-top h2.last-category {
   text-align: center;
   font-weight: 200;
   text-transform: uppercase;
@@ -2934,7 +3246,8 @@ CUSTOM PAGES
 }
 .page-template-page-video #content-top h1.last-title,
 .page-template-page-rubriche #content-top h1.last-title,
-.page-template-page-shop #content-top h1.last-title {
+.page-template-page-shop #content-top h1.last-title,
+.tax-video_category #content-top h1.last-title {
   text-align: center;
   text-transform: uppercase;
   font-size: 36px;
@@ -2945,7 +3258,8 @@ CUSTOM PAGES
 }
 .page-template-page-video #content-top #m-nav,
 .page-template-page-rubriche #content-top #m-nav,
-.page-template-page-shop #content-top #m-nav {
+.page-template-page-shop #content-top #m-nav,
+.tax-video_category #content-top #m-nav {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -2954,12 +3268,14 @@ CUSTOM PAGES
 }
 .page-template-page-video #content-top #m-nav ul,
 .page-template-page-rubriche #content-top #m-nav ul,
-.page-template-page-shop #content-top #m-nav ul {
+.page-template-page-shop #content-top #m-nav ul,
+.tax-video_category #content-top #m-nav ul {
   height: 100%;
 }
 .page-template-page-video #content-top #m-nav ul li,
 .page-template-page-rubriche #content-top #m-nav ul li,
-.page-template-page-shop #content-top #m-nav ul li {
+.page-template-page-shop #content-top #m-nav ul li,
+.tax-video_category #content-top #m-nav ul li {
   list-style: none;
   display: inline;
   height: 100%;
@@ -2967,7 +3283,8 @@ CUSTOM PAGES
 }
 .page-template-page-video #content-top #m-nav ul li a,
 .page-template-page-rubriche #content-top #m-nav ul li a,
-.page-template-page-shop #content-top #m-nav ul li a {
+.page-template-page-shop #content-top #m-nav ul li a,
+.tax-video_category #content-top #m-nav ul li a {
   color: white;
   font-size: 14px;
   font-weight: 200;
@@ -2979,7 +3296,8 @@ CUSTOM PAGES
 }
 .page-template-page-video #content-top #m-nav ul li a:hover,
 .page-template-page-rubriche #content-top #m-nav ul li a:hover,
-.page-template-page-shop #content-top #m-nav ul li a:hover {
+.page-template-page-shop #content-top #m-nav ul li a:hover,
+.tax-video_category #content-top #m-nav ul li a:hover {
   color: #ffffff;
   background-color: #404040;
   text-decoration: none;
@@ -2987,22 +3305,28 @@ CUSTOM PAGES
 /******************************************************************
 VIDEO
 ******************************************************************/
-.page-template-page-video #content-top {
+.page-template-page-video #content-top,
+.tax-video_category #content-top {
   position: relative;
 }
-.page-template-page-video #content-top #m-header {
+.page-template-page-video #content-top #m-header,
+.tax-video_category #content-top #m-header {
   position: relative;
 }
-.page-template-page-video #content-top #m-header .featured-background {
+.page-template-page-video #content-top #m-header .featured-background,
+.tax-video_category #content-top #m-header .featured-background {
   background-image: url(../images/page-column-bg.jpg);
 }
-.page-template-page-video #content-top #m-header .m-border {
+.page-template-page-video #content-top #m-header .m-border,
+.tax-video_category #content-top #m-header .m-border {
   background-color: #50E3C2;
 }
-.page-template-page-video #videos {
+.page-template-page-video #videos,
+.tax-video_category #videos {
   margin-bottom: 2em;
 }
-.page-template-page-video #videos article.video {
+.page-template-page-video #videos article.video,
+.tax-video_category #videos article.video {
   border: 0;
   margin: 0;
 }
@@ -3578,146 +3902,11 @@ SIDEBAR
   right: 0;
   z-index: 1;
 }
-.sidebar-section {
-  margin-bottom: 55px;
-}
-.s-section-title {
-  position: relative;
-  margin-bottom: 30px;
-}
-.s-section-title .s-title-border {
-  width: 100%;
-  height: 2px;
-  position: absolute;
-  bottom: 1px;
-  background-color: blue;
-}
-.s-section-title .s-title-background {
-  height: 35px;
-  position: relative;
-  background-color: blue;
-  float: left;
-}
-.s-section-title .s-title-background .s-title {
-  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
-  font-size: 16px;
-  color: white;
-  font-weight: 600;
-  text-transform: uppercase;
-  line-height: 35px;
-  padding-left: 15px;
-  padding-right: 30px;
-}
-.s-section-title .s-title-background .s-title-white-triangle {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 18px 33px 0;
-  border-color: transparent #ffffff transparent transparent;
-  position: absolute;
-  right: 0;
-  top: 0px;
-}
-.s-section-title a {
-  float: right;
-  line-height: 35px;
-  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
-  font-weight: 600;
-  font-size: 14px;
-}
-.s-section-title a:hover {
-  text-decoration: none;
-  border-bottom-color: transparent;
-}
-#opinions-sidebar .s-title-border {
-  background-color: #fad961;
-}
-#opinions-sidebar .s-title-background {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7951c+0,fad961+100 */
-  background: #f7951c;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #f7951c), color-stop(100%, #fad961));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #f7951c 0%, #fad961 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7951c', endColorstr='#fad961', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-}
-#opinions-sidebar a {
-  color: #ffc600;
-}
-#opinions-sidebar article.type-opinion {
-  margin: 0 !important;
-  margin-bottom: 20px !important;
-  border: none;
-}
 #opinions-sidebar article.type-opinion img {
   width: 150px;
-  height: auto;
-  float: left;
-}
-#opinions-sidebar article.type-opinion .s-opinion-title {
-  float: left;
-  max-width: 225px;
-  margin-left: 15px;
-}
-#opinions-sidebar article.type-opinion .s-opinion-title a {
-  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
-  font-weight: 600;
-  color: #202020;
-  font-size: 15px;
-  text-transform: uppercase;
-}
-#opinions-sidebar article.type-opinion .createdby {
-  float: left;
-  max-width: 225px;
-  margin-left: 15px;
-  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
-  font-weight: 600;
-  color: #202020;
-  font-size: 12px;
-  text-transform: uppercase;
 }
 #opinions-sidebar article.type-opinion:last-child {
   margin-bottom: 0;
-}
-#snacks-sidebar .s-title-border {
-  background-color: #b4ed51;
-}
-#snacks-sidebar .s-title-background {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#429321+0,b4ec51+100 */
-  background: #429321;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #429321), color-stop(100%, #b4ec51));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #429321 0%, #b4ec51 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#429321', endColorstr='#b4ec51', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-}
-#snacks-sidebar a {
-  color: #7ed321 !important;
-  border-bottom: solid 1px !important;
-  border-bottom-color: transparent !important;
-}
-#snacks-sidebar a:hover {
-  color: #7ed321 !important;
 }
 #column-sidebar .s-title-border {
   background-color: #c86dd7;
@@ -3822,42 +4011,6 @@ SIDEBAR
 }
 #column-sidebar ul.s-column-container li.s-column-single h1.title:hover {
   color: #fff;
-}
-#other-sidebar .s-title-border {
-  background-color: #606060;
-}
-#other-sidebar .s-title-background {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,606060+100 */
-  background: #000000;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #000000 0%, #606060 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #000000), color-stop(100%, #606060));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #000000 0%, #606060 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #000000 0%, #606060 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #000000 0%, #606060 100%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #000000 0%, #606060 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#606060', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-}
-#other-sidebar a {
-  color: #000000;
-}
-#other-sidebar .quote {
-  font-size: 24px;
-  font-weight: 100;
-  display: block;
-}
-#other-sidebar .quote-author {
-  display: block;
-  font-size: 13px;
-  text-transform: uppercase;
-  text-align: right;
 }
 /*********************
 REVIEW BOX

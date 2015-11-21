@@ -380,7 +380,7 @@ function my_custom_post_video() {
     'menu_icon' => 'dashicons-video-alt3',
     'menu_position' => 6,
     'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
-    'has_archive'   => true,
+    'has_archive'   => false,
   );
   register_post_type( 'video', $args ); 
 }

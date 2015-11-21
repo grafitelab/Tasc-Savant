@@ -612,119 +612,15 @@ SIDEBAR
 	right: 0;
 	z-index: 1;
 }
-.sidebar-section{
-	margin-bottom: 55px;
-}
-
-.s-section-title{
-	position: relative;
-	margin-bottom: 30px;
-	.s-title-border{
-		width: 100%;
-		height: 2px;
-		position: absolute;
-		bottom: 1px;
-		background-color: blue;
-	}
-	.s-title-background{
-		height: 35px;
-		position: relative;
-		background-color: blue;
-		float: left;
-		.s-title{
-			font-family: @large;
-			font-size: 16px;
-			color: white;
-			font-weight: 600;
-			text-transform: uppercase;
-			line-height: 35px;
-			padding-left: 15px;
-			padding-right: 30px;
-		}
-		.s-title-white-triangle{
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 0 18px 33px 0;
-			border-color: transparent #ffffff transparent transparent;
-			position: absolute;
-			right: 0;
-			top: 0px;
-		}
-	}
-	a{
-		float: right;
-		line-height: 35px;
-		font-family: @large;
-		font-weight: 600;
-		font-size: 14px;
-	}
-	a:hover{
-		text-decoration: none;
-		border-bottom-color: transparent;
-	}
-}
 
 #opinions-sidebar{
-	.s-title-border{
-		background-color: @opinionslight;
-	}
-	.s-title-background{
-		.opinionsshade
-	}
-	a{
-		color: @opinionsmedium;
-	}
-	article.type-opinion{
-		margin: 0 !important;
-		margin-bottom: 20px !important;
-		border: none;
+		article.type-opinion{
 		img {
 			width: 150px;
-			height: auto;
-			float: left;
-		}
-		.s-opinion-title{
-			float: left;
-			max-width: 225px;
-			margin-left: 15px;
-			a{
-				font-family: @large;
-				font-weight: 600;
-				color: #202020;
-				font-size: 15px;
-				text-transform: uppercase;	
-			}
-		}
-		.createdby{
-			float: left;
-			max-width: 225px;
-			margin-left: 15px;
-			font-family: @large;
-			font-weight: 600;
-			color: #202020;
-			font-size: 12px;
-			text-transform: uppercase;
 		}
 	}
 	article.type-opinion:last-child{
 		margin-bottom: 0;
-	}
-}
-#snacks-sidebar{
-	.s-title-border{
-		background-color: @snackslight;
-	}
-	.s-title-background{
-		.snacksshade
-	}
-	a{
-		color: @snacksmedium !important;
-		border-bottom: solid 1px !important;
-		border-bottom-color: transparent !important;
-		&:hover{
-			color: @snacksmedium !important;
-		}
 	}
 }
 #column-sidebar{
@@ -801,28 +697,6 @@ SIDEBAR
 				}
 			}
 		}
-	}
-}
-#other-sidebar{
-	.s-title-border{
-		background-color: @otherlight;
-	}
-	.s-title-background{
-		.othershade
-	}
-	a{
-		color: @otherdark;
-	}
-	.quote{
-		font-size: 24px;
-	    font-weight: 100;
-	    display: block;
-	}
-	.quote-author{
-		display: block;
-	    font-size: 13px;
-	    text-transform: uppercase;
-	    text-align: right;
 	}
 }
 
