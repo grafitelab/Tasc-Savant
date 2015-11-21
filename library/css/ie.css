@@ -754,6 +754,11 @@ header.header {
   opacity: .95;
   width: 100%;
   display: inline-block;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
   -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
   -moz-transition: -moz-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
   -o-transition: -o-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
@@ -761,11 +766,6 @@ header.header {
   -webkit-transform-style: preserve-3d;
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
 }
 header.header a,
 header.header a:visited {
