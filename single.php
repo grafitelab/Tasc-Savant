@@ -41,5 +41,5 @@ get_header(); ?>
 				</div> <!-- end #content -->
 				
 			</div>  <!-- end #content-container -->    
-			<?php get_template_part( 'parts/grafitebar' ); ?>
+
 <?php get_footer(); ?>
