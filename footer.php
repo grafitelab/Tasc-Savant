@@ -5,8 +5,8 @@
 			<div id="inner-footer" class="wrap clearfix">
 				<p class="attribution">
 					Powered by <a href="http://www.grafite.io">Grafite</a><!--... <a target="_blank" href="http://it.wikipedia.org/wiki/Nespresso">What else?</a>-->
+					 | <span><a href="http://www.tasc.it/disclaimer">Legal Policy</a></span>
 				</p>
-				<p><a href="http://www.tasc.it/disclaimer">Legal Policy</a></p>
 				<p class="quote">
 					<a href="http://www.getquotesapp.com" target="_blank">
 					<?php
