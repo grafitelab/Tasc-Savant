@@ -1,6 +1,4 @@
 <div class="my_meta_control">
-     
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras orci lorem, bibendum in pharetra ac, luctus ut mauris. Phasellus dapibus elit et justo malesuada eget <code>functions.php</code>.</p>
  
     <label>Prezzo Originale</label>
  
