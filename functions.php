@@ -512,15 +512,4 @@ function my_taxonomies_column() {
 }
 add_action( 'init', 'my_taxonomies_column', 0 );
 
-/*Remove metaboxs from CPTs*/
-add_action( 'add_meta_boxes', 'custom_remove_meta_boxes' );
-function custom_remove_meta_boxes() {
-    /* MY_CPT */
-    remove_meta_box( 'featured_video_plus-box', 'product', 'side' );
-    /* page */
-    remove_meta_box( 'featured_video_plus-box', 'page', 'side' );
-    /* post */
-    remove_meta_box( 'featured_video_plus-box', 'post', 'side' );
-}
-
 ?>
