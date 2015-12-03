@@ -5,6 +5,12 @@
 									<?php the_content();?>
 							    </div>
 							    <div class="rightColumn details">
+								    <?php $productCustomMeta = get_post_meta($post->ID,'_my_meta',TRUE);?>
+								    <span class="price"><?php if ($productCustomMeta['discounted-price'] != ""){ echo "<span class='discounted-price'>".$productCustomMeta['price'].'</span> | '.$productCustomMeta['discounted-price'];} else if ($productCustomMeta['price'] != "") { echo $productCustomMeta['price']; }?></span>
+								    <span class="description">
+								    	<h3>Descrizione:</h3>
+								    	<?php if ($productCustomMeta['description'] != ""){ echo $productCustomMeta['description'];}?>
+								    </span>
 								    <a class="buyButton" href="#">Acquista</a>
 							    </div>
 							</section> <!-- end article section -->
