@@ -1552,6 +1552,43 @@ STILI PER ARTICLE generali validi sia per single sia per archivi.
 #side-post-sharebox ul li a:hover {
   opacity: 0.85;
 }
+.gallery a {
+  border: 0;
+}
+.gallery a img {
+  margin: 0;
+}
+.gallery .wcflex-direction-nav {
+  margin: 0;
+}
+.gallery .wcflex-direction-nav .wcflex-prev,
+.gallery .wcflex-direction-nav .wcflex-next {
+  background: inherit !important;
+  height: 100%;
+  top: 0px;
+  background-color: rgba(84, 84, 84, 0.3) !important;
+  width: 82px;
+  margin: 0;
+}
+.gallery .wcflex-direction-nav .wcflex-prev::after,
+.gallery .wcflex-direction-nav .wcflex-next::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  margin-top: -30px;
+  font-family: "tasc-savant";
+}
+.gallery .wcflex-direction-nav .wcflex-prev::after {
+  content: "i";
+}
+.gallery .wcflex-direction-nav .wcflex-next::after {
+  content: "g";
+}
 article {
   border-bottom: 2px solid #e7e7e7;
   margin-bottom: 4em;
