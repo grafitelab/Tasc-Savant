@@ -17,13 +17,15 @@
 				global $post;
 				//get the right thumbnail
 				$thumb_id = get_post_thumbnail_id();
-				$thumb_url = wp_get_attachment_image_src($thumb_id,'thumb-big', true);
+				$thumb_url = wp_get_attachment_image_src($thumb_id,'thumb-normal', true);
 				$thumb= $thumb_url[0];
+				$productCustomMeta = get_post_meta($post->ID,'_my_meta',TRUE);
 			
     				?>
-					<div class="featured-product" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
+					<div class="featured-product" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>'); background-size: cover;"  <?php } ?>>
+						<a class="absoluteLink" href="<?php the_permalink() ?>"></a>
 						<h1 class="product-title"><?php the_title(); ?></h1>
-						<span class="featured-price">$33.00</span>
+						<span class="featured-price"><?php $productCustomMeta['price'] ?></span>
 					</div>
 					<?php
 							}
@@ -60,105 +62,30 @@
 				<div id="content" class="full-width">
 					<div id="inner-content" class="clearfix">
 	    				<div id="main" role="main">
+		    				<?php
+						$allProducts = new WP_Query( 'post_type=product' );
+						if ($allProducts->have_posts()) {
+							while ($allProducts->have_posts()) {
+								$allProducts->the_post();
+				global $post;
+				//get the right thumbnail
+				$thumb_id = get_post_thumbnail_id();
+				$thumb_url = wp_get_attachment_image_src($thumb_id,'thumb-normal', true);
+				$thumb= $thumb_url[0];
+				$productCustomMeta = get_post_meta($post->ID,'_my_meta',TRUE);
+			
+    				?>
 		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
+			    				<div class="thumb" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>'); background-size: cover;"  <?php } ?>><a class="absoluteLink" href="<?php the_permalink() ?>"></a></div>
+			    				<span class="brand"><?php echo $productCustomMeta['brand'] ?></span>
+			    				<span class="price"><?php if ($productCustomMeta['discounted-price'] != ""){ echo "<span class='discounted-price'>".$productCustomMeta['price'].'</span> | '.$productCustomMeta['discounted-price'];} else if ($productCustomMeta['price'] != "") { echo $productCustomMeta['price']; }?></span>
+			    				<h1 class="product-name"><?php the_title(); ?></h1>
 		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
-		    				<article class="product">
-			    				<div class="thumb"></div>
-			    				<span class="brand">Swatch</span>
-			    				<span class="price">$33.00</span>
-			    				<h1 class="product-name">Orologio di vacca mutante</h1>
-		    				</article>
+		    				<?php } } ?>
 	    				</div>
 					</div> <!-- end #inner-content -->
 	    
 				</div> <!-- end #content -->
 			</div>  <!-- end #content-container -->    
+			
 <?php get_footer(); ?>

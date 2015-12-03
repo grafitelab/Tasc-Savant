@@ -4,11 +4,33 @@
 			<div id="content-top" class="m-section">
 				<div id="m-header">
 					<?php
-						$lastCustom = new WP_Query( 'post_type=video&posts_per_page=1' );
-						if ($lastCustom->have_posts()) {
-							while ($lastCustom->have_posts()) {
-								$lastCustom->the_post();
+						if (is_tax() || is_category() || is_tag() ){
+								    $qobj = get_queried_object();
+								    // var_dump($qobj); // debugging only
 								
+								    // concatenate the query
+								    $args = array(
+								      'posts_per_page' => 1,
+								      'orderby' => 'rand',
+								      'tax_query' => array(
+								        array(
+								          'taxonomy' => $qobj->taxonomy,
+								          'field' => 'id',
+								          'terms' => $qobj->term_id,
+								    //    using a slug is also possible
+								    //    'field' => 'slug', 
+								    //    'terms' => $qobj->name
+								        )
+								      )
+								    );
+								
+								    $lastCustom = new WP_Query( $args );
+								    // var_dump($random_query); // debugging only
+								
+								    if ($lastCustom->have_posts()) {
+								        while ($lastCustom->have_posts()) {
+								          $lastCustom->the_post();
+								          // Display
 								
 				global $post;
 				//get the right thumbnail
@@ -18,7 +40,7 @@
 			
     				?>
 					<div class="featured-background"<?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>><div class="featured-background-shade"></div></div>
-					<h1 class="page-title">Ultimo Video<div class="m-border"></div></h1>
+					<h1 class="page-title"><?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); echo $term->name; ?><div class="m-border"></div></h1>
 					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
 						<h2 class="last-category">
 							<?php
@@ -37,6 +59,7 @@
 					</div>
 					<?php
 							}
+						}
 						}
     				?>
 				</div>
@@ -72,11 +95,34 @@
 						<div id="main" role="main">
 							<div id="videos" class="clearfix">
 							<?php 
-								$videoCategory = new WP_Query( 'post_type=video&posts_per_page=1' );
-								if ($videoCategory->have_posts()) {
-								while ($videoCategory->have_posts()) {
-								$videoCategory->the_post();
-							?>
+								if (is_tax() || is_category() || is_tag() ){
+								    $qobj = get_queried_object();
+								    // var_dump($qobj); // debugging only
+								
+								    // concatenate the query
+								    $args = array(
+								      'posts_per_page' => 1,
+								      'orderby' => 'rand',
+								      'tax_query' => array(
+								        array(
+								          'taxonomy' => $qobj->taxonomy,
+								          'field' => 'id',
+								          'terms' => $qobj->term_id,
+								    //    using a slug is also possible
+								    //    'field' => 'slug', 
+								    //    'terms' => $qobj->name
+								        )
+								      )
+								    );
+								
+								    $videoCategory = new WP_Query( $args );
+								    // var_dump($random_query); // debugging only
+								
+								    if ($videoCategory->have_posts()) {
+								        while ($videoCategory->have_posts()) {
+								          $videoCategory->the_post();
+								          // Display
+									?>
 							<article class="video">
 								<div class="tasc-post">
 								    		<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
@@ -98,7 +144,7 @@
 								    	</div>
 
 							</article>
-							<?php } }?>
+									<?php } } }?>
 							</div>
 						</div>
 	    				
