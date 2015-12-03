@@ -10,7 +10,11 @@ get_header(); ?>
 					$large = get_post_meta(get_the_ID(), 'opt_large', true);
 					if ( $large == "on" or $large == 1 ) {					
 						get_template_part( 'loop', 'singleheaderfull' );
-					} ?>
+					} 
+					if ( is_singular( 'video' ) ) {
+						get_template_part( 'loop', 'videosingleheaderfull' );
+					}
+					?>
 		
 			<div id="content-container" class="wrap center-wrap">
 			
