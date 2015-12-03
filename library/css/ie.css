@@ -1523,6 +1523,35 @@ div.gradient {
 /*********************
 STILI PER ARTICLE generali validi sia per single sia per archivi.
 *********************/
+#side-post-sharebox {
+  position: fixed !important;
+  height: 220px;
+  width: 60px;
+  background-color: rgba(84, 84, 84, 0.33);
+  top: 50%;
+  margin-top: -110px;
+  z-index: 10;
+  left: 0px;
+}
+#side-post-sharebox ul {
+  padding: 0;
+}
+#side-post-sharebox ul li {
+  list-style: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#side-post-sharebox ul li a {
+  border: 0;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 30px;
+  opacity: 0.7;
+}
+#side-post-sharebox ul li a:hover {
+  opacity: 0.85;
+}
 article {
   border-bottom: 2px solid #e7e7e7;
   margin-bottom: 4em;

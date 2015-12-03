@@ -14,7 +14,10 @@ You are reading our code. Thank you for that: it's often said that imitation is 
 	<head>
 		<title><?php wp_title('&laquo;', true, 'right'); ?></title>
 		<!--Typography-->
-		<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6718272/768424/css/fonts.css" />		
+		<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6718272/768424/css/fonts.css" />
+		<!--Tasc Savant Icons-->
+		<link href="https://file.myfontastic.com/eankRBbhT9SQXUtpXghH9c/icons.css" rel="stylesheet">
+				
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset="utf-8" />
 		<meta name="theme-color" content="#0A0A0A">
 		<!-- Google Chrome Frame for IE -->
@@ -189,6 +192,10 @@ You are reading our code. Thank you for that: it's often said that imitation is 
 		<?php if(is_single()) {
 			$large = get_post_meta($post->ID, 'opt_large', true);
 			if($large == "on" or $large == 1) { ?>
+				<?php 
+					global $post;
+					get_template_part( 'parts/side-sharebox' ); 
+				?>
 				<div id="container" class="super-full" <?php if(is_page('cast')) {?>class="grafitestyle" <?php } ?> >
 			<?php } else { ?>
 				<div id="container" <?php if(is_page('cast')) {?>class="grafitestyle" <?php } ?> >
