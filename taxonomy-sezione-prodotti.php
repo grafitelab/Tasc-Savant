@@ -1,120 +1,115 @@
-<?php get_header(); ?>
-adsfadsfasdf
-			<?php 
-			
-			$business = get_terms( 'sezione', 'parent=business' );
-			$howto = get_terms( 'sezione', 'parent=howto' );
-			$queried_object = get_queried_object();  
-			$term_id = $queried_object->term_id; 
-			$parent  = get_term_by( 'id', $term_id, 'sezione'); 
-			
-			$paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
-			 ?>
-				<?php if($parent->parent == "2348" or $parent->slug == "business") { ?>
-					<div id="content-header"> 
-						<div class="header-image business"></div>
-						<ul id="content-menu" class="content-menu-cut wrap">
-							<li><a href="http://www.tasc.it/sezione/business">Home Business</a></li>
-							<?php wp_list_categories('taxonomy=sezione&hide_empty=0&title_li=&child_of=2348'); ?> 
-						</ul>
-					</div>
-				<?php } ?>
-				
-				<?php if($parent->parent == "2958" or $parent->slug == "howto") { ?>
-					<div id="content-header"> 
-						<div class="header-image howto"></div>
-					</div>
-				<?php } ?>
-				
-				
-				<?php  //Queste top stories sono copiate dalla index.
-				if ($detect->isMobile() && !$detect->isTablet()) { ?> 
-				<div id="content">					
-					<div id="inner-content" class="clearfix">						
-						
-					    <div id="main" class="eightcol first clearfix" role="main">
-						    <div id="articles">
-							    <?php $query = new WP_Query($query_string. '&offset='.($paged-1)*14);
-							    
-							    	if ( $query->have_posts()) : while ( $query->have_posts()) :  $query->the_post();  { get_template_part( 'loop' ); } endwhile; endif; ?>		
-							</div>
-	    				</div> <!-- end #main -->
-					</div> <!-- end #inner-content -->
-	    
-				</div> <!-- end #content -->
-				
-				<?php } else { ?>
-				<div id="content-top" class="wrap">
-					<div id="top-stories">
-						<div id="main-story" class="big-story">		
-								<?php query_posts($query_string.'&showposts=1&offset='.($paged-1)*14); ?>
-								<?php if (have_posts()) : while (have_posts()) : the_post(); $do_not_duplicate[] = $post->ID; ?>
-									<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix main-post permalink'); ?> role="article">
-									    	<?php get_template_part( 'loop','bigstory' ); ?>
-									</article>
-								<?php endwhile; ?>	
-								<?php endif; ?>
-							</div> <!-- End top-stories -->
-							
-							<div id="side-story" class="big-story">
-								<?php query_posts($query_string . '&showposts=1&offset='.((($paged-1)*14)+1)); ?>
-								<?php if (have_posts()) : while (have_posts()) : the_post(); $do_not_duplicate[] = $post->ID; ?>
-									<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix side-post permalink'); ?> role="article">
-									    	<?php get_template_part( 'loop','bigstory' ); ?>
-									</article>
-								<?php endwhile; ?>	
-								<?php endif; ?>
-							</div> 
-					</div>
-					<div id="top-stories" class="stories-table">
-						<div id="main-story" class="big-story">		
-								<?php query_posts($query_string . '&showposts=1&offset='.((($paged-1)*14)+2)); ?>
-								<?php if (have_posts()) : while (have_posts()) : the_post(); $do_not_duplicate[] = $post->ID; ?>
-									<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix main-post permalink'); ?> role="article">
-									    	<?php get_template_part( 'loop','bigstory' ); ?>	
-									</article>
-								<?php endwhile; ?>	
-								<?php endif; ?>
-							</div> <!-- End top-stories -->
-							
-							<div id="side-story" class="big-story">
-								<?php query_posts($query_string . '&showposts=1&offset='.((($paged-1)*14)+3)); ?>
-								<?php if (have_posts()) : while (have_posts()) : the_post(); $do_not_duplicate[] = $post->ID; ?>
-									<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix side-post permalink'); ?> role="article">
-									    	<?php get_template_part( 'loop','bigstory' ); ?>
-									</article>
-								<?php endwhile; ?>	
-								<?php endif; ?>
-							</div> 
-					</div><!-- End main-stories -->
-				</div>
-				
-				<?php get_template_part( 'parts/grafitebar' ); ?>
-			 
-			<div id="content-container" class="wrap">
-				<div id="content">					
-					<div id="inner-content" class="clearfix center-wrap">	
-							<h1 class="archive-title">Altre Storie</h1>					
-						    <div id="articles">
-							    <?php $query = new WP_Query($query_string.'&offset='.((($paged-1)*14)+4));
-							    
-							    	if ( $query->have_posts()) : while ( $query->have_posts()) :  $query->the_post();  { get_template_part( 'loop' ); } endwhile; 
-							    	
-							        if (get_next_posts_link() or get_previous_posts_link()) {  ?>
-									        <nav class="wp-prev-next button-container">
-										        <ul class="clearfix">
-											        <li class="prev-link"><?php next_posts_link('Vai nel passato') ?></li>
-											        <li class="next-link"><?php previous_posts_link('Torna al presente') ?></li>
-										        </ul>
-									        </nav>
-								        <?php }  	
-							    	
-							    	 endif; ?>		
-							</div>
-					</div> <!-- end #inner-content -->
-	    
-				</div> <!-- end #content -->
-				<?php } //non è mobile ?> 
-			</div>  <!-- end #content-container -->    
+<?php /* Template name: Shop Page */ ?>  
 
+<?php get_header(); ?>
+			<div id="content-top" class="m-section">
+				<div id="m-header">
+					<div class="featured-background"><div class="featured-background-shade"></div></div>
+					<h1 class="page-title"><?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); echo $term->name; ?><div class="m-border"></div></h1>
+					<h2 class="page-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</h2>
+					<div id="featured-product-container">
+					<?php
+						$lastCustom = new WP_Query( 'post_type=product&posts_per_page=3' );
+						if ($lastCustom->have_posts()) {
+							while ($lastCustom->have_posts()) {
+								$lastCustom->the_post();
+								
+								
+				global $post;
+				//get the right thumbnail
+				$thumb_id = get_post_thumbnail_id();
+				$thumb_url = wp_get_attachment_image_src($thumb_id,'thumb-normal', true);
+				$thumb= $thumb_url[0];
+				$productCustomMeta = get_post_meta($post->ID,'_my_meta',TRUE);
+			
+    				?>
+					<div class="featured-product" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>'); background-size: cover;"  <?php } ?>>
+						<a class="absoluteLink" href="<?php the_permalink() ?>"></a>
+						<h1 class="product-title"><?php the_title(); ?></h1>
+						<span class="featured-price"><?php $productCustomMeta['price'] ?></span>
+					</div>
+					<?php
+							}
+						}
+    				?>
+					</div>
+				</div>
+				<div id="m-nav">
+					<?php
+
+					$taxonomy = 'product_category';
+
+					$tax_args = array(
+					'hide_empty'        => false, 
+					'exclude'           => array(), 
+					'exclude_tree'      => array(), 
+					'include'           => array(),
+					); 
+
+					$terms = get_terms($taxonomy, $tax_args); // Get all terms of a taxonomy
+
+					if ( $terms && !is_wp_error( $terms ) ) : ?>
+						<ul>
+							<li><a href="/video">Tutti</a></li>
+								<?php foreach ( $terms as $term ) { ?>
+							<li><a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"><?php echo $term->name; ?></a></li>
+								<?php } ?>
+    					</ul>
+    					
+					<?php endif;?>
+				</div>
+			</div>
+			<div id="content-container" class="wrap">
+				<div id="content" class="full-width">
+					<div id="inner-content" class="clearfix">
+	    				<div id="main" role="main">
+		    				<?php 
+								if (is_tax() || is_category() || is_tag() ){
+								    $qobj = get_queried_object();
+								    // var_dump($qobj); // debugging only
+								
+								    // concatenate the query
+								    $args = array(
+								      'posts_per_page' => 1,
+								      'orderby' => 'rand',
+								      'tax_query' => array(
+								        array(
+								          'taxonomy' => $qobj->taxonomy,
+								          'field' => 'id',
+								          'terms' => $qobj->term_id,
+								    //    using a slug is also possible
+								    //    'field' => 'slug', 
+								    //    'terms' => $qobj->name
+								        )
+								      )
+								    );
+								
+								    $productCategory = new WP_Query( $args );
+								    // var_dump($random_query); // debugging only
+								
+								    if ($productCategory->have_posts()) {
+								        while ($productCategory->have_posts()) {
+								          $productCategory->the_post();
+								          // Display
+									
+				global $post;
+				//get the right thumbnail
+				$thumb_id = get_post_thumbnail_id();
+				$thumb_url = wp_get_attachment_image_src($thumb_id,'thumb-normal', true);
+				$thumb= $thumb_url[0];
+				$productCustomMeta = get_post_meta($post->ID,'_my_meta',TRUE);
+			
+    				?>
+		    				<article class="product">
+			    				<div class="thumb" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>'); background-size: cover;"  <?php } ?>><a class="absoluteLink" href="<?php the_permalink() ?>"></a></div>
+			    				<span class="brand"><?php echo $productCustomMeta['brand'] ?></span>
+			    				<span class="price"><?php if ($productCustomMeta['discounted-price'] != ""){ echo "<span class='discounted-price'>".$productCustomMeta['price'].'</span> | '.$productCustomMeta['discounted-price'];} else if ($productCustomMeta['price'] != "") { echo $productCustomMeta['price']; }?></span>
+			    				<h1 class="product-name"><?php the_title(); ?></h1>
+		    				</article>
+		    				<?php } } }?>
+	    				</div>
+					</div> <!-- end #inner-content -->
+	    
+				</div> <!-- end #content -->
+			</div>  <!-- end #content-container -->    
+			
 <?php get_footer(); ?>

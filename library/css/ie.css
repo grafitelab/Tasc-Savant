@@ -3230,19 +3230,22 @@ CUSTOM PAGES
 .page-template-page-video #content-top,
 .page-template-page-rubriche #content-top,
 .page-template-page-shop #content-top,
-.tax-video_category #content-top {
+.tax-video_category #content-top,
+.tax-product_category #content-top {
   position: relative;
 }
 .page-template-page-video #content-top #m-header,
 .page-template-page-rubriche #content-top #m-header,
 .page-template-page-shop #content-top #m-header,
-.tax-video_category #content-top #m-header {
+.tax-video_category #content-top #m-header,
+.tax-product_category #content-top #m-header {
   position: relative;
 }
 .page-template-page-video #content-top .featured-background,
 .page-template-page-rubriche #content-top .featured-background,
 .page-template-page-shop #content-top .featured-background,
-.tax-video_category #content-top .featured-background {
+.tax-video_category #content-top .featured-background,
+.tax-product_category #content-top .featured-background {
   height: 100vh;
   background-size: cover;
   margin-top: -65px;
@@ -3252,7 +3255,8 @@ CUSTOM PAGES
 .page-template-page-video #content-top .featured-background .featured-background-shade,
 .page-template-page-rubriche #content-top .featured-background .featured-background-shade,
 .page-template-page-shop #content-top .featured-background .featured-background-shade,
-.tax-video_category #content-top .featured-background .featured-background-shade {
+.tax-video_category #content-top .featured-background .featured-background-shade,
+.tax-product_category #content-top .featured-background .featured-background-shade {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -3264,7 +3268,8 @@ CUSTOM PAGES
 .page-template-page-video #content-top h1.page-title,
 .page-template-page-rubriche #content-top h1.page-title,
 .page-template-page-shop #content-top h1.page-title,
-.tax-video_category #content-top h1.page-title {
+.tax-video_category #content-top h1.page-title,
+.tax-product_category #content-top h1.page-title {
   position: absolute;
   top: 15%;
   left: 0;
@@ -3277,7 +3282,8 @@ CUSTOM PAGES
 .page-template-page-video #content-top .m-border,
 .page-template-page-rubriche #content-top .m-border,
 .page-template-page-shop #content-top .m-border,
-.tax-video_category #content-top .m-border {
+.tax-video_category #content-top .m-border,
+.tax-product_category #content-top .m-border {
   height: 1px;
   width: 50px;
   margin: 0 auto;
@@ -3286,7 +3292,8 @@ CUSTOM PAGES
 .page-template-page-video #content-top .featured-last,
 .page-template-page-rubriche #content-top .featured-last,
 .page-template-page-shop #content-top .featured-last,
-.tax-video_category #content-top .featured-last {
+.tax-video_category #content-top .featured-last,
+.tax-product_category #content-top .featured-last {
   position: absolute;
   margin: 0 auto;
   top: 30%;
@@ -3302,7 +3309,8 @@ CUSTOM PAGES
 .page-template-page-video #content-top .featured-last-shade,
 .page-template-page-rubriche #content-top .featured-last-shade,
 .page-template-page-shop #content-top .featured-last-shade,
-.tax-video_category #content-top .featured-last-shade {
+.tax-video_category #content-top .featured-last-shade,
+.tax-product_category #content-top .featured-last-shade {
   background-color: black;
   width: 100%;
   height: 100%;
@@ -3314,7 +3322,8 @@ CUSTOM PAGES
 .page-template-page-video #content-top h2.last-category,
 .page-template-page-rubriche #content-top h2.last-category,
 .page-template-page-shop #content-top h2.last-category,
-.tax-video_category #content-top h2.last-category {
+.tax-video_category #content-top h2.last-category,
+.tax-product_category #content-top h2.last-category {
   text-align: center;
   font-weight: 200;
   text-transform: uppercase;
@@ -3327,7 +3336,8 @@ CUSTOM PAGES
 .page-template-page-video #content-top h1.last-title,
 .page-template-page-rubriche #content-top h1.last-title,
 .page-template-page-shop #content-top h1.last-title,
-.tax-video_category #content-top h1.last-title {
+.tax-video_category #content-top h1.last-title,
+.tax-product_category #content-top h1.last-title {
   text-align: center;
   text-transform: uppercase;
   font-size: 36px;
@@ -3339,7 +3349,8 @@ CUSTOM PAGES
 .page-template-page-video #content-top #m-nav,
 .page-template-page-rubriche #content-top #m-nav,
 .page-template-page-shop #content-top #m-nav,
-.tax-video_category #content-top #m-nav {
+.tax-video_category #content-top #m-nav,
+.tax-product_category #content-top #m-nav {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -3349,13 +3360,15 @@ CUSTOM PAGES
 .page-template-page-video #content-top #m-nav ul,
 .page-template-page-rubriche #content-top #m-nav ul,
 .page-template-page-shop #content-top #m-nav ul,
-.tax-video_category #content-top #m-nav ul {
+.tax-video_category #content-top #m-nav ul,
+.tax-product_category #content-top #m-nav ul {
   height: 100%;
 }
 .page-template-page-video #content-top #m-nav ul li,
 .page-template-page-rubriche #content-top #m-nav ul li,
 .page-template-page-shop #content-top #m-nav ul li,
-.tax-video_category #content-top #m-nav ul li {
+.tax-video_category #content-top #m-nav ul li,
+.tax-product_category #content-top #m-nav ul li {
   list-style: none;
   display: inline;
   height: 100%;
@@ -3364,7 +3377,8 @@ CUSTOM PAGES
 .page-template-page-video #content-top #m-nav ul li a,
 .page-template-page-rubriche #content-top #m-nav ul li a,
 .page-template-page-shop #content-top #m-nav ul li a,
-.tax-video_category #content-top #m-nav ul li a {
+.tax-video_category #content-top #m-nav ul li a,
+.tax-product_category #content-top #m-nav ul li a {
   color: white;
   font-size: 14px;
   font-weight: 200;
@@ -3377,7 +3391,8 @@ CUSTOM PAGES
 .page-template-page-video #content-top #m-nav ul li a:hover,
 .page-template-page-rubriche #content-top #m-nav ul li a:hover,
 .page-template-page-shop #content-top #m-nav ul li a:hover,
-.tax-video_category #content-top #m-nav ul li a:hover {
+.tax-video_category #content-top #m-nav ul li a:hover,
+.tax-product_category #content-top #m-nav ul li a:hover {
   color: #ffffff;
   background-color: #404040;
   text-decoration: none;
@@ -3438,16 +3453,20 @@ a.absoluteLink {
   left: 0;
   border: 0px;
 }
-.page-template-page-shop #content-top {
+.page-template-page-shop #content-top,
+.tax-product_category #content-top {
   position: relative;
 }
-.page-template-page-shop #content-top #m-header {
+.page-template-page-shop #content-top #m-header,
+.tax-product_category #content-top #m-header {
   position: relative;
 }
-.page-template-page-shop #content-top #m-header .featured-background {
+.page-template-page-shop #content-top #m-header .featured-background,
+.tax-product_category #content-top #m-header .featured-background {
   background-image: url(../images/page-shop-bg.jpg);
 }
-.page-template-page-shop #content-top #m-header h2.page-subtitle {
+.page-template-page-shop #content-top #m-header h2.page-subtitle,
+.tax-product_category #content-top #m-header h2.page-subtitle {
   position: absolute;
   top: 24%;
   width: 80%;
@@ -3459,10 +3478,12 @@ a.absoluteLink {
   font-size: 21px;
   font-weight: 200;
 }
-.page-template-page-shop #content-top #m-header .m-border {
+.page-template-page-shop #content-top #m-header .m-border,
+.tax-product_category #content-top #m-header .m-border {
   background-color: #F5A623;
 }
-.page-template-page-shop #content-top #m-header #featured-product-container {
+.page-template-page-shop #content-top #m-header #featured-product-container,
+.tax-product_category #content-top #m-header #featured-product-container {
   position: absolute;
   top: 44%;
   left: 0;
@@ -3477,7 +3498,8 @@ a.absoluteLink {
   width: 92%;
   margin: 0 auto;
 }
-.page-template-page-shop #content-top #m-header #featured-product-container .featured-product {
+.page-template-page-shop #content-top #m-header #featured-product-container .featured-product,
+.tax-product_category #content-top #m-header #featured-product-container .featured-product {
   display: inline-block;
   height: 100%;
   width: 30%;
@@ -3488,14 +3510,16 @@ a.absoluteLink {
   padding: 15px;
   box-sizing: border-box;
 }
-.page-template-page-shop #content-top #m-header #featured-product-container .featured-product h1.product-title {
+.page-template-page-shop #content-top #m-header #featured-product-container .featured-product h1.product-title,
+.tax-product_category #content-top #m-header #featured-product-container .featured-product h1.product-title {
   position: absolute;
   bottom: 25px;
   font-size: 25px;
   color: white;
   font-weight: 500;
 }
-.page-template-page-shop #content-top #m-header #featured-product-container .featured-product span.featured-price {
+.page-template-page-shop #content-top #m-header #featured-product-container .featured-product span.featured-price,
+.tax-product_category #content-top #m-header #featured-product-container .featured-product span.featured-price {
   position: absolute;
   bottom: 15px;
   right: 15px;
@@ -3503,7 +3527,8 @@ a.absoluteLink {
   color: #F5A623;
   font-weight: 500;
 }
-.page-template-page-shop #content-container #content #inner-content #main {
+.page-template-page-shop #content-container #content #inner-content #main,
+.tax-product_category #content-container #content #inner-content #main {
   text-align: justify;
   font-size: 0;
   display: -webkit-flex;
@@ -3512,30 +3537,35 @@ a.absoluteLink {
   -webkit-align-content: flex-start;
   margin-bottom: 20px;
 }
-.page-template-page-shop #content-container #content #inner-content #main:after {
+.page-template-page-shop #content-container #content #inner-content #main:after,
+.tax-product_category #content-container #content #inner-content #main:after {
   content: '';
   display: inline-block;
   width: 100%;
 }
-.page-template-page-shop #content-container #content #inner-content #main article.product {
+.page-template-page-shop #content-container #content #inner-content #main article.product,
+.tax-product_category #content-container #content #inner-content #main article.product {
   display: inline-block;
   width: 23%;
   border: 0px;
   margin-bottom: 50px;
 }
-.page-template-page-shop #content-container #content #inner-content #main article.product .thumb {
+.page-template-page-shop #content-container #content #inner-content #main article.product .thumb,
+.tax-product_category #content-container #content #inner-content #main article.product .thumb {
   width: 100%;
   padding-bottom: 100%;
   background-color: #D8D8D8;
   margin-bottom: 20px;
 }
-.page-template-page-shop #content-container #content #inner-content #main article.product span.brand {
+.page-template-page-shop #content-container #content #inner-content #main article.product span.brand,
+.tax-product_category #content-container #content #inner-content #main article.product span.brand {
   display: block;
   font-size: 12px;
   font-weight: 400;
   color: black;
 }
-.page-template-page-shop #content-container #content #inner-content #main article.product span.price {
+.page-template-page-shop #content-container #content #inner-content #main article.product span.price,
+.tax-product_category #content-container #content #inner-content #main article.product span.price {
   display: block;
   font-size: 12px;
   font-weight: 500;
@@ -3543,13 +3573,15 @@ a.absoluteLink {
   margin-top: -18px;
   text-align: right;
 }
-.page-template-page-shop #content-container #content #inner-content #main article.product h1.product-name {
+.page-template-page-shop #content-container #content #inner-content #main article.product h1.product-name,
+.tax-product_category #content-container #content #inner-content #main article.product h1.product-name {
   font-size: 14px;
   font-weight: 500;
   color: black;
   border: 0;
 }
-.page-template-page-shop #content-container #content #inner-content #main .gap {
+.page-template-page-shop #content-container #content #inner-content #main .gap,
+.tax-product_category #content-container #content #inner-content #main .gap {
   display: inline-block;
   width: 23%;
 }
