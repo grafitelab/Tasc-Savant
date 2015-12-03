@@ -3543,6 +3543,29 @@ TASC SHOP
   display: inline-block;
   width: 23%;
 }
+.product.single .leftColumn.content {
+  float: left;
+  width: 60%;
+}
+.product.single .rightColumn.details {
+  float: right;
+  width: 47%;
+  background-color: #ECECEC;
+  padding: 20px;
+}
+.product.single .rightColumn.details a.buyButton {
+  display: block;
+  width: 100%;
+  border: 0;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #F5A623;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: white;
+  font-weight: 500;
+}
 /******************************************************************
 NASCOSTI
 ******************************************************************/

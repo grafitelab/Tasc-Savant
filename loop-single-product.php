@@ -1,7 +1,12 @@
-<article id="post-<?php the_ID(); ?>" <?php if(is_single()) {post_class('clearfix single');} else {post_class('clearfix snack');} ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+<article id="post-<?php the_ID(); ?>" <?php if(is_single()) {post_class('clearfix single product');} else {post_class('clearfix snack');} ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 							<?php get_template_part( 'parts/sharebox' ); ?>
 						    <section class="post-content post-content-article clearfix" itemprop="articleBody">
-							<?php the_content();  Prova?>
+							    <div class="leftColumn content">
+									<?php the_content();?>
+							    </div>
+							    <div class="rightColumn details">
+								    <a class="buyButton" href="#">Acquista</a>
+							    </div>
 							</section> <!-- end article section -->
 <footer class="article-footer">
     <div class="meta post-detailed-info " class="updated" datetime="<?php get_the_time( 'Y-m-j' ); ?>" >Pubblicato il <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time(get_option('date_format')); ?></time></div>
