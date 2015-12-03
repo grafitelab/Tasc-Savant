@@ -14,6 +14,9 @@ get_header(); ?>
 					if ( is_singular( 'video' ) ) {
 						get_template_part( 'loop', 'videosingleheaderfull' );
 					}
+					if ( is_singular( 'product' ) ) {
+						get_template_part( 'loop', 'productsingleheaderfull' );
+					}
 					?>
 		
 			<div id="content-container" class="wrap center-wrap">
@@ -23,8 +26,12 @@ get_header(); ?>
 					<div id="inner-content" class="clearfix">
 				
 							<?php if (have_posts()) : while (have_posts()) : the_post(); 
-								
-								get_template_part( 'loop', 'single' );
+								if ( is_singular( 'product' ) ) {
+									get_template_part( 'loop', 'single-product' );
+								}
+								else{
+									get_template_part( 'loop', 'single' );
+								}
 
 							 endwhile; ?>			
 						
