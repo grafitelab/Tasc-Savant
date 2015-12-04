@@ -3590,13 +3590,14 @@ a.absoluteLink {
 }
 .product.single .leftColumn.content {
   float: left;
-  width: 60%;
+  width: 100%;
 }
 .product.single .rightColumn.details {
-  float: right;
-  width: 37%;
+  float: left;
+  width: 100%;
   background-color: #ECECEC;
   padding: 20px;
+  box-sizing: border-box;
 }
 .product.single .rightColumn.details .price {
   display: block;
@@ -4461,6 +4462,17 @@ VIDEO
 #videos article.video {
   width: 33.33333333333%;
   float: left;
+}
+/******************************************************************
+SHOP
+******************************************************************/
+.product.single .leftColumn.content {
+  float: left;
+  width: 60%;
+}
+.product.single .rightColumn.details {
+  float: right;
+  width: 37%;
 }
 /* 
 you can call the larger styles if you want, but there's really no need 
