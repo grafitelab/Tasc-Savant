@@ -1,10 +1,14 @@
-<?php /* Template name: Column Page */ ?>  
+<?php /* Template name: Shop Page */ ?>  
 
 <?php get_header(); ?>
 			<div id="content-top" class="m-section">
 				<div id="m-header">
+					<div class="featured-background"><div class="featured-background-shade"></div></div>
+					<h1 class="page-title"><?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); echo $term->name; ?><div class="m-border"></div></h1>
+					<h2 class="page-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</h2>
+					<div id="featured-product-container">
 					<?php
-						$lastCustom = new WP_Query( 'post_type=column&posts_per_page=1' );
+						$lastCustom = new WP_Query( 'post_type=product&posts_per_page=3' );
 						if ($lastCustom->have_posts()) {
 							while ($lastCustom->have_posts()) {
 								$lastCustom->the_post();
@@ -13,33 +17,26 @@
 				global $post;
 				//get the right thumbnail
 				$thumb_id = get_post_thumbnail_id();
-				$thumb_url = wp_get_attachment_image_src($thumb_id,'thumb-big', true);
+				$thumb_url = wp_get_attachment_image_src($thumb_id,'thumb-normal', true);
 				$thumb= $thumb_url[0];
+				$productCustomMeta = get_post_meta($post->ID,'_my_meta',TRUE);
 			
     				?>
-					<div class="featured-background"><div class="featured-background-shade"></div></div>
-					<h1 class="page-title">Rubriche<div class="m-border"></div></h1>
-					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
-						<h2 class="last-category">
-							<?php $lastTerms = get_the_terms( $post->ID , 'column_category' );
-
-foreach ( $lastTerms as $lastTerm ) {
-
-echo $lastTerm->name;
-
-} ?><div class="m-border"></div>
-						</h2>
-						<h1 class="last-title"><?php the_title(); ?></h1>
+					<div class="featured-product" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>'); background-size: cover;"  <?php } ?>>
+						<a class="absoluteLink" href="<?php the_permalink() ?>"></a>
+						<h1 class="product-title"><?php the_title(); ?></h1>
+						<span class="featured-price"><?php $productCustomMeta['price'] ?></span>
 					</div>
 					<?php
 							}
 						}
     				?>
+					</div>
 				</div>
 				<div id="m-nav">
 					<?php
 
-					$taxonomy = 'column_category';
+					$taxonomy = 'product_category';
 
 					$tax_args = array(
 					'hide_empty'        => false, 
@@ -52,7 +49,7 @@ echo $lastTerm->name;
 
 					if ( $terms && !is_wp_error( $terms ) ) : ?>
 						<ul>
-							<li><a href="/rubriche">Tutti</a></li>
+							<li><a href="/video">Tutti</a></li>
 								<?php foreach ( $terms as $term ) { ?>
 							<li><a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"><?php echo $term->name; ?></a></li>
 								<?php } ?>
@@ -62,18 +59,10 @@ echo $lastTerm->name;
 				</div>
 			</div>
 			<div id="content-container" class="wrap">
-				<div id="content">			
+				<div id="content" class="full-width">
 					<div id="inner-content" class="clearfix">
-				
-					    <div id="main" class="clearfix" role="main">
-						    
-						    <?php get_sidebar('column'); ?>
-						    
-						    <div id="articles" class="tasc-grid">
-								
-						    
-						    	<div id="articles-content">
-							    	<?php 
+	    				<div id="main" role="main">
+		    				<?php 
 								if (is_tax() || is_category() || is_tag() ){
 								    $qobj = get_queried_object();
 								    // var_dump($qobj); // debugging only
@@ -94,37 +83,33 @@ echo $lastTerm->name;
 								      )
 								    );
 								
-								    $columnCategory = new WP_Query( $args );
+								    $productCategory = new WP_Query( $args );
 								    // var_dump($random_query); // debugging only
 								
-								    if ($columnCategory->have_posts()) {
-								        while ($columnCategory->have_posts()) {
-								          $columnCategory->the_post();
+								    if ($productCategory->have_posts()) {
+								        while ($productCategory->have_posts()) {
+								          $productCategory->the_post();
 								          // Display
-							        get_template_part( 'loop','bigstory');
-							        
-							        }?>
-							        
-								</div>
-										
-								
-								
-								
-						    </div><!-- end articles -->
-						    
-						    
-						        <?php if (get_next_posts_link() or get_previous_posts_link()) {  ?>
-								        <nav class="wp-prev-next button-container">
-									        <ul class="clearfix">
-										        <li class="prev-link"><?php next_posts_link('Vai nel passato') ?></li>
-										        <li class="next-link"><?php previous_posts_link('Torna al presente') ?></li>
-									        </ul>
-								        </nav>
-							        <?php } } ?>		
-
-					    </div> <!-- end #main -->
+									
+				global $post;
+				//get the right thumbnail
+				$thumb_id = get_post_thumbnail_id();
+				$thumb_url = wp_get_attachment_image_src($thumb_id,'thumb-normal', true);
+				$thumb= $thumb_url[0];
+				$productCustomMeta = get_post_meta($post->ID,'_my_meta',TRUE);
+			
+    				?>
+		    				<article class="product">
+			    				<div class="thumb" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>'); background-size: cover;"  <?php } ?>><a class="absoluteLink" href="<?php the_permalink() ?>"></a></div>
+			    				<span class="brand"><?php echo $productCustomMeta['brand'] ?></span>
+			    				<span class="price"><?php if ($productCustomMeta['discounted-price'] != ""){ echo "<span class='discounted-price'>".$productCustomMeta['price'].'</span> | '.$productCustomMeta['discounted-price'];} else if ($productCustomMeta['price'] != "") { echo $productCustomMeta['price']; }?></span>
+			    				<h1 class="product-name"><?php the_title(); ?></h1>
+		    				</article>
+		    				<?php } } }?>
+	    				</div>
 					</div> <!-- end #inner-content -->
 	    
 				</div> <!-- end #content -->
 			</div>  <!-- end #content-container -->    
+			
 <?php get_footer(); ?>
