@@ -2539,6 +2539,93 @@ VIDEO
 	}
 }
 
+.single-video{
+		.featured-background-shade{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				opacity: 0.6;
+				top: 0;
+				left: 0;
+				z-index: 1;
+		}
+		h1.page-title{
+			position: absolute;
+			top: 15%;
+			left: 0;
+			right: 0;
+			color: white;
+			font-weight: 200;
+			border: none;
+			padding: 0;
+			z-index: 2;
+		}
+		.m-border{
+			height: 1px;
+		    width: 50px;
+		    margin: 0 auto;
+		    margin-top: 10px;
+		    background-color: #50E3C2;
+		}
+		.featured-last{
+			position: absolute;
+		    margin: 0 auto;
+		    top: 30%;
+		    left: 0;
+		    right: 0;
+		    max-width: 948px;
+		    width: 80%;
+		    height: 55%;
+		    background-position: center center;
+		    background-size: cover;
+		    color: white;
+		    z-index: 2;
+		    
+		    .featured-video-plus{
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    height: 100%;
+			    iframe{ 
+				    position: absolute;
+				    top: 0;
+				    left: 0;
+				    width: 100%;
+				    height: 100%;
+			    }
+		    }
+		}
+		.featured-last-shade{
+			background-color: black;
+		    width: 100%;
+		    height: 100%;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    opacity: 0.25;
+		}
+	#full-post-info{
+		left: 0;
+		width: 100%;
+		z-index: 2;
+		#super-title{
+			width: 100%;
+			.single-title{
+				text-align: center;
+			    left: 0px;
+			    margin: 0 auto;
+			    a{
+				    text-transform: uppercase;
+				    font-weight: 600 !important;
+			    }
+			}
+		}
+	}	
+
+}
+
 /******************************************************************
 RUBRICHE
 ******************************************************************/
@@ -2670,6 +2757,7 @@ a.absoluteLink{
 						    padding-bottom: 100%;
 						    background-color: #D8D8D8;
 						    margin-bottom: 20px;
+						    position: relative;
 						}
 						span.brand{
 							display: block;
