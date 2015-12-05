@@ -8,7 +8,7 @@
 								    	<h3>Descrizione:</h3>
 								    	<?php if ($productCustomMeta['description'] != ""){ echo $productCustomMeta['description'];}?>
 								    </span>
-								    <a class="buyButton" href="#">Acquista</a>
+								    <a class="buyButton" href="<?php if ($productCustomMeta['storelink'] != ""){ echo $productCustomMeta['storelink'];}?>">Acquista</a>
 							    </div>
 							    <div class="leftColumn content">
 									<?php the_content();?>
