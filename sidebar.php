@@ -28,7 +28,7 @@
 							<span class="s-title">Snacks</span>
 							<div class="s-title-white-triangle"></div>
 						</div>
-						<a href="#">Tutti gli snacks ></a>	
+						<a href="#">Tutti gli snack ></a>	
 					</div>
 					<div>
 								<?php 
