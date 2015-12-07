@@ -3459,6 +3459,15 @@ VIDEO
 .tax-video_category #videos article.video {
   border: 0;
   margin: 0;
+  height: 250px;
+}
+.page-template-page-video #videos article.video .tasc-post,
+.tax-video_category #videos article.video .tasc-post {
+  height: 100%;
+}
+.page-template-page-video #videos article.video .tasc-post a,
+.tax-video_category #videos article.video .tasc-post a {
+  border: 0;
 }
 .single-video .featured-background-shade {
   position: absolute;

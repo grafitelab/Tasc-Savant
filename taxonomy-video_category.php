@@ -122,9 +122,14 @@
 								        while ($videoCategory->have_posts()) {
 								          $videoCategory->the_post();
 								          // Display
+								          global $post;
+										//get the right thumbnail
+										$thumb_id = get_post_thumbnail_id();
+										$thumb_url = wp_get_attachment_image_src($thumb_id,'thumb-normal', true);
+										$thumb= $thumb_url[0];
 									?>
 							<article class="video">
-								<div class="tasc-post">
+								<div class="tasc-post" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>'); background-size: cover;"  <?php } ?>>
 								    		<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 									    		<div class="title">
 										    	<span class="category-highlight category-<?php foreach(get_the_category() as $category) {
@@ -138,8 +143,7 @@
 										    	</div>
 												<div class="video-icon"></div>
 								    			<div class="overlay"></div> 
-								    			<?php if ( has_post_thumbnail() ) { the_post_thumbnail('large'); } else { ?><img src="<?php echo get_template_directory_uri(); ?>/library/images/default.jpg" /><?php } ?>
-							    			<div class="gradient"></div>
+								    			<div class="gradient"></div>
 								    		</a>
 								    	</div>
 
