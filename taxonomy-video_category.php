@@ -102,7 +102,6 @@
 								    // concatenate the query
 								    $args = array(
 								      'posts_per_page' => 9,
-								      'orderby' => 'rand',
 								      'tax_query' => array(
 								        array(
 								          'taxonomy' => $qobj->taxonomy,
