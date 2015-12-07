@@ -41,6 +41,7 @@
 					<div class="featured-background"<?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>><div class="featured-background-shade"></div></div>
 					<h1 class="page-title"><?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); echo $term->name; ?><div class="m-border"></div></h1>
 					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
+						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="divLink"></a>
 						<h2 class="last-category">
 							<?php
 								$lastTerms = get_the_terms($post->ID, 'video_category' );
@@ -55,6 +56,8 @@
 							?><div class="m-border"></div>
 						</h2>
 						<h1 class="last-title"><?php the_title(); ?></h1>
+						<div class="overlay"></div> 
+						<div class="gradient"></div>
 					</div>
 					<?php
 							}

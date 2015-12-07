@@ -849,9 +849,20 @@ div.gradient {
 	width: 100%;
 }
 
-.tasc-post:hover .overlay {
+.tasc-post:hover .overlay, .featured-last:hover .overlay {
 		opacity:0 !important;
 
+}
+
+.divLink{
+	width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
 
 
@@ -2492,6 +2503,7 @@ CUSTOM PAGES
 		    left: 0;
 		    right: 0;
 		    top: 15%;
+		    z-index: 2;
 		}
 		h1.last-title{
 			text-align: center;
@@ -2501,6 +2513,7 @@ CUSTOM PAGES
 		    left: 0;
 		    right: 0;
 		    top: 40%;
+		    z-index: 2;
 		}
 		#m-nav{
 			position: absolute;
