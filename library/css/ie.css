@@ -3282,7 +3282,7 @@ CUSTOM PAGES
 .tax-column_category #content-top .featured-background {
   height: 100vh;
   background-size: cover;
-  margin-top: -65px;
+  margin-top: -50px;
   background-position: center center;
   position: relative;
 }
@@ -4067,7 +4067,7 @@ article.opinion p {
   padding: 30px;
 }
 #articles {
-  padding-right: 460px;
+  padding-right: 41.07142857142857%;
 }
 #articles article.article-big-story:first-child {
   margin-top: 0;
@@ -4216,7 +4216,7 @@ MAIN STORIES - ONLY HOME
 SIDEBAR
 *********************/
 #sidebar {
-  width: 390px;
+  width: 34.82142857142857%;
   position: absolute;
   right: 0;
   z-index: 1;
@@ -4258,22 +4258,24 @@ SIDEBAR
 }
 #column-sidebar ul.s-column-container li.s-column-single {
   width: 100%;
-  height: 190px;
+  padding-bottom: 48.71794872%;
+  height: auto;
   position: relative;
   display: block;
   margin-bottom: 20px;
 }
 #column-sidebar ul.s-column-container li.s-column-single .outer-mask {
   position: absolute;
-  width: 390px;
-  height: 190px;
+  width: 100%;
+  padding-top: 48.71794872%;
+  height: auto;
   overflow: hidden;
 }
 #column-sidebar ul.s-column-container li.s-column-single .outer-mask .inner-mask {
   position: absolute;
   left: -80px;
   top: 0px;
-  width: 330px;
+  width: 100%;
   height: 190px;
   overflow: hidden;
   -webkit-transform: skew(-40deg, 0deg);
@@ -4596,6 +4598,17 @@ SUPER FULL PAGE STYLES
   border-bottom: 0px;
   background-color: #232323;
   color: #ffffff;
+}
+/******************************************************************
+CUSTOM PAGES
+******************************************************************/
+.page-template-page-video #content-top .featured-background,
+.page-template-page-rubriche #content-top .featured-background,
+.page-template-page-shop #content-top .featured-background,
+.tax-video_category #content-top .featured-background,
+.tax-product_category #content-top .featured-background,
+.tax-column_category #content-top .featured-background {
+  margin-top: -65px;
 }
 /******************************************************************
 VIDEO

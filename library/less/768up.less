@@ -381,7 +381,7 @@ ARTICLES ARCHIVES STYLE + footer per l'opinion
 }
 
 #articles{
-	padding-right: 460px;
+	padding-right: 41.07142857142857%;
 	
 	article.article-big-story:first-child{
 		margin-top: 0;
@@ -606,7 +606,7 @@ MAIN STORIES - ONLY HOME
 SIDEBAR
 *********************/
 #sidebar{
-	width: 390px; 
+	width: 34.82142857142857%; 
 	position: absolute;
 	right: 0;
 	z-index: 1;
@@ -638,20 +638,22 @@ SIDEBAR
 		
 		li.s-column-single{
 			width: 100%;
-			height: 190px;
+			padding-bottom: 48.71794872%;
+			height: auto;
 			position: relative;
 			display: block;
 			margin-bottom: 20px;
 			.outer-mask {
 			    position: absolute;
-			    width: 390px;
-			    height: 190px;
+			    width: 100%;
+			    padding-top: 48.71794872%;
+			    height: auto;
 			    overflow: hidden;
 			    .inner-mask {
 				    position: absolute;
 				    left: -80px;
 				    top: 0px;
-				    width: 330px;
+				    width: 100%;
 				    height: 190px;
 				    overflow: hidden;
 				    -webkit-transform: skew(-40deg, 0deg);
@@ -975,6 +977,18 @@ background: @white;
  }
  
  
+}
+
+/******************************************************************
+CUSTOM PAGES
+******************************************************************/
+
+.page-template-page-video, .page-template-page-rubriche, .page-template-page-shop, .tax-video_category, .tax-product_category, .tax-column_category{
+	#content-top{
+		.featured-background{
+			margin-top: -65px;
+		}
+	}
 }
 
 /******************************************************************
