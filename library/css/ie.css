@@ -2969,8 +2969,8 @@ SUPER FULL PAGE STYLES
 }
 .super-full #super-header #large-post-header #full-post-info {
   position: absolute;
-  bottom: 3%;
-  width: 94%;
+  bottom: 10%;
+  width: 70%;
   left: 3%;
   z-index: 4;
   color: #ffffff;
@@ -2983,7 +2983,7 @@ SUPER FULL PAGE STYLES
 }
 .super-full #super-header #large-post-header #full-post-info #super-title h1 a,
 .super-full #super-header #large-post-header #full-post-info #super-title h1 a:visited {
-  color: rgba(255, 255, 255, 0.84);
+  color: rgba(255, 255, 255, 0.95);
 }
 .super-full #super-header #large-post-header #full-post-info #super-title h1 a:hover,
 .super-full #super-header #large-post-header #full-post-info #super-title h1 a:visited:hover {
@@ -4063,6 +4063,8 @@ STILI PER ARTICLE generali validi sia per single sia per archivi.
 #side-post-sharebox {
   position: fixed !important;
   display: block;
+  background-color: #1a1a1a;
+  opacity: .9;
   width: 60px;
   top: 50%;
   margin-top: -110px;
@@ -4657,7 +4659,7 @@ SUPER FULL PAGE STYLES
   left: 10%;
 }
 .super-full #super-header #large-post-header #full-post-info #super-title h1 {
-  font-size: 3em;
+  font-size: 3.2em;
 }
 .super-full #super-header #large-post-header #full-post-info #super-author h2 {
   font-size: 1.2em;
