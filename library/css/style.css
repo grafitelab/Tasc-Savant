@@ -752,7 +752,7 @@ HEADER
 *********************/
 header.header {
   text-align: center;
-  background-color: #202020;
+  background-color: #1a1a1a;
   color: #ffffff;
   height: 50px;
   padding: 0;
@@ -1562,33 +1562,7 @@ div.gradient {
 STILI PER ARTICLE generali validi sia per single sia per archivi.
 *********************/
 #side-post-sharebox {
-  position: fixed !important;
-  height: 220px;
-  width: 60px;
-  background-color: rgba(84, 84, 84, 0.33);
-  top: 50%;
-  margin-top: -110px;
-  z-index: 10;
-  left: 0px;
-}
-#side-post-sharebox ul {
-  padding: 0;
-}
-#side-post-sharebox ul li {
-  list-style: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-#side-post-sharebox ul li a {
-  border: 0;
-  color: white;
-  text-align: center;
-  display: block;
-  font-size: 30px;
-  opacity: 0.7;
-}
-#side-post-sharebox ul li a:hover {
-  opacity: 0.85;
+  display: none;
 }
 .gallery a {
   border: 0;
@@ -2210,7 +2184,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .snack-story .category-highlight,
 #snacks-sidebar .category-highlight,
 #article-sidebar .category-highlight {
-  display: inline-block;
+  display: none;
   color: #fff;
   padding: 1px 8px 0;
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
@@ -2249,7 +2223,6 @@ LOOP BIGSTORY ARCHIVES AND HOME
   z-index: 2;
   color: #fff;
   text-shadow: 0px 1px 1px #000;
-  text-transform: uppercase;
 }
 .big-story .title:hover,
 .second-story .title:hover,
@@ -3320,7 +3293,6 @@ SIDEBAR
   z-index: 2;
   color: #fff;
   text-shadow: 0px 1px 1px #000;
-  text-transform: uppercase;
 }
 #column-sidebar ul.s-column-container li.s-column-single h1.title:hover {
   color: #fff;
@@ -4100,6 +4072,34 @@ MIDDLE BAR
   /*********************
 STILI PER ARTICLE generali validi sia per single sia per archivi.
 *********************/
+  #side-post-sharebox {
+    position: fixed !important;
+    display: block;
+    width: 60px;
+    top: 50%;
+    margin-top: -110px;
+    z-index: 10;
+    left: 0px;
+  }
+  #side-post-sharebox ul {
+    padding: 0;
+  }
+  #side-post-sharebox ul li {
+    list-style: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  #side-post-sharebox ul li a {
+    border: 0;
+    color: white;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    opacity: 0.7;
+  }
+  #side-post-sharebox ul li a:hover {
+    opacity: 0.85;
+  }
   article footer.article-footer {
     display: block;
   }
@@ -4294,7 +4294,7 @@ MAIN STORIES - ONLY HOME
   .opinion-story .title,
   .snack-story .title {
     font-size: 35px;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     padding: 30px;
   }
   #second-stories {
@@ -4669,21 +4669,21 @@ SUPER FULL PAGE STYLES
     left: 10%;
   }
   .super-full #super-header #large-post-header #full-post-info #super-title h1 {
-    font-size: 4em;
+    font-size: 3em;
   }
   .super-full #super-header #large-post-header #full-post-info #super-author h2 {
-    font-size: 1.5em;
-    height: 40px;
-    line-height: 40px;
+    font-size: 1.2em;
+    height: 30px;
+    line-height: 30px;
   }
   .super-full #super-header #large-post-header #full-post-info #super-author h2 .gravatar {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     margin-right: 10px;
   }
   .super-full #super-header #large-post-header #full-post-info #super-author h2 .author-details {
-    height: 50px;
-    line-height: 50px;
+    height: 30px;
+    line-height: 30px;
   }
   @-webkit-keyframes pop-in {
     0% {

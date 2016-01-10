@@ -267,6 +267,40 @@ MIDDLE BAR
 /*********************
 STILI PER ARTICLE generali validi sia per single sia per archivi.
 *********************/
+	#side-post-sharebox{
+		position: fixed !important;
+		display:block;
+	    width: 60px;
+	    top: 50%;
+	    margin-top: -110px;
+	    z-index: 10;
+	    left: 0px;
+	    
+	    ul{
+		    padding: 0;
+		    
+		    li{
+			    list-style: none;
+			    padding-top: 5px;
+			    padding-bottom: 5px;
+			    
+			    a{
+				    border: 0;
+				    color: white;
+				    text-align: center;
+				    display: block;
+				    font-size: 20px;
+				    opacity: 0.7;
+					&:hover{
+						opacity: 0.85;
+					}
+			    }
+		    }
+		    
+	    }
+	}
+
+
 article {
 	
 	footer.article-footer {
@@ -285,7 +319,7 @@ article {
 		}		
 	
 	}
-	
+		
 	#share-box {
 		display:table;
 		width: 100%;
@@ -555,7 +589,7 @@ MAIN STORIES - ONLY HOME
 				
 	.title {
 		font-size:35px;
-		text-shadow:0px 2px 4px rgba(0, 0, 0, 0.5);
+		text-shadow:0px 2px 4px rgba(0, 0, 0, 0.2);
 		padding: 30px;
 		
 		&:hover {
@@ -957,23 +991,23 @@ SUPER FULL PAGE STYLES
 				left:10%;
 				#super-title {
 					h1 {
-						font-size:4em; 
+						font-size:3em; 
 					}
 				}
 				
 				#super-author {
 					h2 {
-						font-size:1.5em;
-						height:40px;
-						line-height:40px;
+						font-size:1.2em;
+						height:30px;
+						line-height:30px;
 						.gravatar {
-							width: 50px;
-							height:50px;
+							width: 30px;
+							height:30px;
 							margin-right:10px;
 						}
 						.author-details{
-							height:50px;
-							line-height:50px;
+							height:30px;
+							line-height:30px;
 						}
 					}
 				}

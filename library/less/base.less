@@ -129,7 +129,7 @@ HEADER
 
 header.header {
 	text-align:center;
-	background-color:@savantsmoke;
+	background-color:@darkgrafite;
 	color: @white;
 	height:50px;
 	padding:0;
@@ -870,37 +870,7 @@ div.gradient {
 STILI PER ARTICLE generali validi sia per single sia per archivi.
 *********************/
 #side-post-sharebox{
-	position: fixed !important;
-    height: 220px;
-    width: 60px;
-    background-color: rgba(84,84,84,0.33);
-    top: 50%;
-    margin-top: -110px;
-    z-index: 10;
-    left: 0px;
-    
-    ul{
-	    padding: 0;
-	    
-	    li{
-		    list-style: none;
-		    padding-top: 5px;
-		    padding-bottom: 5px;
-		    
-		    a{
-			    border: 0;
-			    color: white;
-			    text-align: center;
-			    display: block;
-			    font-size: 30px;
-			    opacity: 0.7;
-				&:hover{
-					opacity: 0.85;
-				}
-		    }
-	    }
-	    
-    }
+display:none;
 }
 
 .gallery{
@@ -1443,7 +1413,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 	}
 	
 	.category-highlight{
-		display: inline-block;
+		display: none;
 		color: #fff;
 		padding: 1px 8px 0;
 		font-family: @large;
@@ -1475,7 +1445,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 		z-index:2;
 		color: #fff;
 		text-shadow:0px 1px 1px #000;
-		text-transform: uppercase;
+		//text-transform: uppercase;
 		&:hover {
 			color: #fff;
 		}
@@ -2504,7 +2474,7 @@ SIDEBAR
 				z-index:2;
 				color: #fff;
 				text-shadow:0px 1px 1px #000;
-				text-transform: uppercase;
+				//text-transform: uppercase;
 				&:hover {
 					color: #fff;
 				}
