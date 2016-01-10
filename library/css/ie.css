@@ -2800,8 +2800,7 @@ FOOTER STYLES
   clear: both;
   background-color: #1a1a1a;
   display: block;
-  color: #7b7b7b;
-  text-align: center;
+  color: #f1f1f1;
   bottom: 0;
   -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
   -moz-transition: -moz-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
@@ -2810,13 +2809,46 @@ FOOTER STYLES
   -webkit-transform-style: preserve-3d;
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
-  border-top: 1px solid #404040;
-  height: 350px;
-  background-image: url(../images/footer-bg.jpg);
   background-size: cover;
   background-position: center center;
   border-top: 0px;
   color: white;
+  /* footer più colonnare e pulito by albi 
+		
+		.footer-menu {
+		text-align:left;
+		.column {
+			width:100%;
+			height:auto;
+			.boxSizing();
+			margin:1em 0;
+			padding:1em 0;
+			border-bottom:1px solid rgba(255,255,255,.3);
+			text-align:justify;
+			&:last-child {
+				border-right:0px;
+			}
+			
+			ul {
+				li{
+					margin:5px 0;
+				}
+			}
+			
+		}
+	}
+	
+	.quote {
+		font-style:italic;
+		text-transform:initial;
+		font-size:.9em;
+		a,a:visited {
+			border-bottom:0px;
+			&:hover {
+				border-bottom:0px;
+			}
+		}
+	}*/
 }
 .footer #inner-footer {
   padding: 20px;
@@ -2831,29 +2863,96 @@ FOOTER STYLES
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
+.footer ul {
+  padding-left: 0;
+}
+.footer ul li {
+  padding-left: 0;
+  list-style-type: none;
+}
+.footer .footer-title {
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 10px;
+}
 .footer a,
 .footer a:visited {
-  border-bottom: 1px solid white;
-  color: white;
   font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom: 0px;
 }
 .footer a:hover,
 .footer a:visited:hover {
-  border-bottom: 1px solid #f1f1f1;
-  color: #f1f1f1;
-}
-.footer .quote {
-  font-style: italic;
-  text-transform: initial;
-  font-size: .9em;
-}
-.footer .quote a,
-.footer .quote a:visited {
+  color: rgba(255, 255, 255, 0.9);
   border-bottom: 0px;
 }
-.footer .quote a:hover,
-.footer .quote a:visited:hover {
-  border-bottom: 0px;
+.footer .footer-first-row {
+  height: auto;
+  overflow: hidden;
+}
+.footer .footer-first-row .social-links {
+  border-bottom: 1px solid #b8b8b8;
+  padding: 1em 0;
+}
+.footer .footer-first-row .social-links span {
+  float: left;
+  padding-right: 5px;
+  display: inline-block;
+  font-size: 20px;
+}
+.footer .footer-first-row .social-links ul li {
+  margin: 10px 0;
+}
+.footer .footer-first-row .newsletter {
+  border-bottom: 1px solid #b8b8b8;
+  padding: 1em 0;
+}
+.footer .footer-first-row .newsletter .mc4wp-response {
+  font-size: 10px;
+  margin-top: 5px;
+}
+.footer .footer-first-row .newsletter input[type="email"] {
+  border: 0px;
+  border-bottom: 1px solid #e7e7e7;
+  float: left;
+  background-color: transparent;
+  padding: 10px 0;
+}
+.footer .footer-first-row .newsletter input[placeholder] {
+  font-size: 10px;
+}
+.footer .footer-first-row .newsletter input[type="submit"] {
+  background-color: transparent;
+  border: 0px;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 10px;
+  font-size: 12px;
+}
+.footer ul.footer-menu {
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #b8b8b8;
+  padding: 1em 0;
+}
+.footer ul.footer-menu li {
+  text-align: left;
+}
+.footer ul.footer-menu li a,
+.footer ul.footer-menu li a:visited {
+  padding: 10px 0;
+  display: block;
+}
+.footer ul.footer-menu li.tasc {
+  display: none;
+}
+.footer .footer-third-row {
+  padding: 1em 0;
+  font-size: 9px;
+  text-align: left;
 }
 /*
 	if you checked out the link above:
@@ -4470,6 +4569,82 @@ mobile. Make sure to double check these!
 			*/
 }
 /* end .footer-links */
+.footer {
+  padding: 40px 0;
+  /* footer più pulito
+		.footer-menu {
+		.column {
+			width:25%;
+			border-bottom:0;
+			margin:0;
+			float:left;
+			height:200px;
+			padding:20px 40px;
+			border-right:1px solid rgba(255,255,255,.3);
+			&:last-child {
+				border-right:0px;
+			}
+			
+		}
+	}*/
+}
+.footer .footer-first-row {
+  padding-bottom: 40px;
+}
+.footer .footer-first-row .social-links {
+  border-bottom: 0px;
+  padding: 0;
+  width: 70%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.footer .footer-first-row .social-links ul li {
+  float: left;
+  margin: 0 20px;
+}
+.footer .footer-first-row .newsletter {
+  width: 30%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: right;
+  border-bottom: 0px;
+  padding: 0;
+}
+.footer ul.footer-menu {
+  text-align: center;
+  width: 100%;
+  border-bottom: 0px;
+  padding: 0;
+}
+.footer ul.footer-menu li {
+  display: inline-block;
+  text-align: center;
+  width: auto;
+  padding: 0 30px;
+  vertical-align: middle;
+  height: 29px;
+}
+.footer ul.footer-menu li.tasc {
+  background-image: url('../images/logo.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50px auto;
+  width: 73px;
+  display: inline-block;
+}
+.footer .footer-third-row {
+  padding: 0;
+  padding-top: 50px;
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+}
 /******************************************************************
 SUPER FULL PAGE STYLES
 ******************************************************************/
@@ -4651,3 +4826,16 @@ http://www.modernizr.com/docs/
 sidebar {
   padding-left: 0px;
 }
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/

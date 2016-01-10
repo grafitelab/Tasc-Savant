@@ -284,7 +284,7 @@ function update_tasc_rank() {
          DEFINE ('wordsnumber', 0.000132);
          DEFINE ('commentsnumber', 0.0065);
          DEFINE ('viewsnumber', 0.000351); //Definitivo, basso inizialmente ma destinate ad aumentare nel tempo.
-         DEFINE ('sharesnumber', 0.00151);
+         DEFINE ('sharesnumber', 0.003);
          
          
          //CALCOLO PUNTEGGIO GIORNALIERO

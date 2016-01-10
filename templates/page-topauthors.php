@@ -47,8 +47,9 @@
 												);
 												$blogusers = get_users($args);
 												usort($blogusers ,'cmp');
+												$do_not_duplicate = [0];
 												$i = 0;
-												foreach ($blogusers as $user) { if(user_can($user->ID,'publish_posts')) {} else {continue;} $i++; ?>
+												foreach ($blogusers as $user) { if(user_can($user->ID,'publish_posts')) {} else {continue;} if(in_array($user->ID, $do_not_duplicate)){continue;} $i++; $do_not_duplicate[] = $user->ID; ?>
 											      <tr>
 											        <td class="points_pos"><?php echo $i; ?></td>
 											        <td class="author_name"><?php echo get_avatar($user->ID, 60); ?><a href="<?php echo get_author_posts_url( $user->ID); ?>"><?php echo $user->display_name; ?></a></td>

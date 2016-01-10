@@ -104,7 +104,7 @@
 				<div id="content-footer"  class="full-width">
 						<div class="story-center">
 							<h1 class="black">Tasc Rank Stats</h1>
-							<?php list ($words_number, $comments_number,$views_number) = get_user_meta($curauth->ID, "points_thirtydays", true); ?>
+							<?php list ($words_number, $comments_number,$views_number,$shares_number) = get_user_meta($curauth->ID, "points_thirtydays", true); ?>
 					    	<table class="clean">
 						    	<tr>
 						    		<td><span><?php echo get_user_meta($curauth->ID, "points_user_day", true); ?> punti oggi</span>sul <a href="http://www.tasc.it/tasc-rank">Tasc Rank</a></td>
@@ -119,7 +119,7 @@
 						    	<tr>
 						    		<td><span><?php echo $words_number; ?> parole scritte</span>negli ultimi 30 giorni</td>
 						    		<td><span><?php echo $comments_number; ?> commenti ricevuti</span>negli ultimi 30 giorni.</td>
-						    		<td><span><?php echo $views_number; ?> visite ricevute</span>negli ultimi 30 giorni.</td>
+						    		<td><span><?php echo $shares_number; ?> condivisioni ricevute</span>negli ultimi 30 giorni.</td>
 						    	</tr>
 					    	</table>
 				    	</div>

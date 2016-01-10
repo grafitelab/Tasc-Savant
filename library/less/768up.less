@@ -857,6 +857,85 @@ mobile. Make sure to double check these!
 } /* end .footer-links */
 
 
+.footer {
+	padding:40px 0;
+	.footer-first-row {
+		padding-bottom:40px;
+		.social-links {
+			border-bottom:0px;
+			padding:0;
+			width:70%;
+			float:left;
+			.boxSizing();
+			margin-top:10px;
+			ul {
+				li {
+					float:left;
+					margin:0 20px;
+				}
+			}
+		}
+		.newsletter {
+			width:30%;
+			.boxSizing();
+			float:right;
+			border-bottom:0px;
+			padding:0;
+		}
+	}
+	
+	
+	ul.footer-menu {
+		text-align:center;
+		width:100%;
+		border-bottom:0px;
+		padding:0;
+		li {
+			display:inline-block;
+			text-align:center;
+			width:auto;
+			padding:0 30px;
+			vertical-align:middle;
+			height:29px;
+		
+			&.tasc {
+				background-image: url('../images/logo.png');
+				background-repeat:no-repeat;
+				background-position:center center;
+				background-size:50px auto;
+				width:73px;
+				display:inline-block;
+			}
+		}
+	}
+	
+	.footer-third-row {
+		padding:0;
+		padding-top:50px;
+		text-align:center;
+		width:40%;
+		margin: 0 auto;
+	}
+	
+	/* footer più pulito
+		.footer-menu {
+		.column {
+			width:25%;
+			border-bottom:0;
+			margin:0;
+			float:left;
+			height:200px;
+			padding:20px 40px;
+			border-right:1px solid rgba(255,255,255,.3);
+			&:last-child {
+				border-right:0px;
+			}
+			
+		}
+	}*/
+}
+
+
 
 /******************************************************************
 SUPER FULL PAGE STYLES

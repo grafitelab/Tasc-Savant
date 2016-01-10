@@ -360,7 +360,7 @@ function bones_footer_links() {
     	'container' => '',                              // remove nav container
     	'container_class' => 'footer-links clearfix',   // class of container (should you choose to use it)
     	'menu' => 'Footer Links',                       // nav name
-    	'menu_class' => 'nav footer-nav clearfix',      // adding custom nav class
+    	'menu_class' => 'nav footer-nav footer-menu clearfix',      // adding custom nav class
     	'theme_location' => 'footer-links',             // where it's located in the theme
     	'before' => '',                                 // before the menu
         'after' => '',                                  // after the menu

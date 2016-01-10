@@ -2017,8 +2017,7 @@ FOOTER STYLES
 	clear: both;
 	background-color: @darkgrafite;
 	display:block;
-	color: @tascgray;
-	text-align:center;
+	color: @tascpure;
 	bottom:0;
 	-webkit-transition: -webkit-transform .2s cubic-bezier(0.2,0.3,0.25,0.9);
 	-moz-transition: -moz-transform .2s cubic-bezier(0.2,0.3,0.25,0.9);
@@ -2027,10 +2026,6 @@ FOOTER STYLES
 	-webkit-transform-style: preserve-3d;
 	-webkit-transform: translateZ(0);
 	-webkit-backface-visibility: hidden;	
-	border-top:1px solid @text;
-	
-	height: 350px;
-	background-image: url(../images/footer-bg.jpg);
 	background-size: cover;
 	background-position: center center;
 	border-top: 0px;
@@ -2048,14 +2043,126 @@ FOOTER STYLES
 		&:last-child {border-bottom:0px;padding-bottom:0px; margin-bottom:0px;}
 	}
 	
+	
+	ul {
+		padding-left:0;
+		li {
+			padding-left:0;
+			list-style-type:none;
+		}
+	}
+	
+	.footer-title {
+		width:100%;
+		display:block;
+		text-transform: uppercase;
+		font-weight:500;
+		margin-bottom:8px;
+		font-size:10px;
+	}
+	
 	a,a:visited {
-		border-bottom:1px solid white;
-		color: white;
 		font-weight:400;
-		
+		color: rgba(255,255,255,.7);
+		border-bottom:0px;
+				
 		&:hover {
-		border-bottom:1px solid @tascpure;
-		color: @tascpure;
+		color: rgba(255,255,255,.9);
+		border-bottom:0px;
+		}
+	}
+	
+	
+	.footer-first-row {
+		height:auto;
+		overflow:hidden;
+		.social-links {
+			border-bottom:1px solid @tascsmoke;
+			padding: 1em 0;
+			span {
+				float:left;
+				padding-right:5px;
+				display:inline-block;
+				font-size:20px;
+			}
+			ul {
+				li {
+					margin:10px 0;
+				}
+			}
+		}
+		.newsletter {
+			border-bottom:1px solid @tascsmoke;
+			padding: 1em 0;
+			.mc4wp-response {
+				font-size:10px;
+				margin-top:5px;
+			}
+			input[type="email"] {
+				border:0px;
+				border-bottom:1px solid @lightgray;
+				float:left;
+				background-color:transparent;
+				padding:10px 0;
+			}
+			
+			input[placeholder] {
+				font-size:10px;
+			}
+			input[type="submit"] {
+				background-color:transparent;
+				border:0px;
+				color: @white;
+				font-weight:400;
+				padding:10px;
+				font-size:12px;
+			}
+		}
+	}
+	
+	
+	ul.footer-menu {
+		text-align:center;
+		width:100%;
+		border-bottom:1px solid @tascsmoke;
+		padding: 1em 0;
+		li {
+			a,a:visited {padding:10px 0; display:block;}
+			text-align:left;
+			&.tasc {
+				display:none;
+			}
+		}
+	}
+	
+	.footer-third-row {
+		padding: 1em 0;
+		font-size:9px;
+		text-align:left;
+	}
+	
+	/* footer più colonnare e pulito by albi 
+		
+		.footer-menu {
+		text-align:left;
+		.column {
+			width:100%;
+			height:auto;
+			.boxSizing();
+			margin:1em 0;
+			padding:1em 0;
+			border-bottom:1px solid rgba(255,255,255,.3);
+			text-align:justify;
+			&:last-child {
+				border-right:0px;
+			}
+			
+			ul {
+				li{
+					margin:5px 0;
+				}
+			}
+			
 		}
 	}
 	
@@ -2069,7 +2176,7 @@ FOOTER STYLES
 				border-bottom:0px;
 			}
 		}
-	}
+	}*/
 }
 	
 	/*
