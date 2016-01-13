@@ -33,7 +33,7 @@
 						<div class="snack-story">
 								<?php 
 									$last_snacks = new WP_Query( array('showposts' => 1,'tax_query' => array(array('taxonomy' => 'post_format','field' => 'slug','terms' => 'post-format-aside'))));
-									while ( $sidebar_snacks->have_posts() ) : $sidebar_snacks->the_post(); 
+									while ( $last_snacks->have_posts() ) : $last_snacks->the_post(); 
 									get_template_part( 'loop','bigstory' ); 
 									endwhile; 
 								?>
