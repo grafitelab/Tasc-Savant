@@ -31,31 +31,12 @@
 						</div>
 						
 						<div class="snack-story">
-							
-<?php 
-								
-								//Inizializzo query
-								if (is_paged()) {wp_reset_query();   } else { query_posts('showposts=10'); } ?>
-								
 								<?php 
-								
-								while (have_posts()) : the_post(); 
-								
-								//Se è uno snack NON salta
-								$format = get_post_format();
-								if ($format == 'aside') {} else {continue;}
-								
-								//Se è già stato messo prima lo salta
-								if(empty($do_not_duplicate)) {} else { if( in_array($post->ID, $do_not_duplicate) ) continue;}
-								
-								$do_not_duplicate[] = $post->ID;
-								
-								get_template_part( 'loop','bigstory' );
-
-								break;
-								endwhile;
-								
-							?>
+									$last_snacks = new WP_Query( array('showposts' => 1,'tax_query' => array(array('taxonomy' => 'post_format','field' => 'slug','terms' => 'post-format-aside'))));
+									while ( $sidebar_snacks->have_posts() ) : $sidebar_snacks->the_post(); 
+									get_template_part( 'loop','bigstory' ); 
+									endwhile; 
+								?>
 						</div>
 
 					</div> 

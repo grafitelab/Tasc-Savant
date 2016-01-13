@@ -4166,12 +4166,19 @@ article.opinion p {
 #articles .tasc-post .title {
   font-size: 2.1em;
   padding: 30px;
+  line-height: 35px;
 }
 #articles {
   padding-right: 41.07142857142857%;
 }
 #articles article.article-big-story:first-child {
   margin-top: 0;
+}
+.author #articles {
+  padding-right: 0;
+}
+.author #articles .article-big-story {
+  width: 100%;
 }
 /*********************
 POSTS IN SINGLE VIEW
@@ -4286,6 +4293,7 @@ MAIN STORIES - ONLY HOME
   font-size: 35px;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   padding: 30px;
+  line-height: 35px;
 }
 #second-stories {
   margin-bottom: 1em;
@@ -4828,16 +4836,3 @@ http://www.modernizr.com/docs/
 sidebar {
   padding-left: 0px;
 }
-/*
-For example, you can use something like:
-
-.no-textshadow .class { ... }
-
-You can also target specific versions by using the classes applied to
-the html element. These can sometimes change, so take a look inside the
-header.php file to see what they are:
-
-
-.lt-ie8 .class { ... }
-
-*/
