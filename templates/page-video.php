@@ -106,6 +106,7 @@
 
 							</article>
 							<?php } }?>
+							<?php echo do_shortcode('[ajax_load_more post_type="video" repeater="default" posts_per_page="9" transition="fade" button_label="Load More" offset="9"]'); ?>
 							</div>
 						</div>
 	    				

@@ -98,6 +98,7 @@
 						<div id="main" role="main">
 							<div id="videos" class="clearfix">
 							<?php 
+								$taxonomy_name = get_queried_object() -> taxonomy;
 								if (is_tax() || is_category() || is_tag() ){
 								    $qobj = get_queried_object();
 								    // var_dump($qobj); // debugging only
@@ -151,6 +152,7 @@
 
 							</article>
 									<?php } } }?>
+									<?php echo do_shortcode('[ajax_load_more taxonomy="video_category" taxonomy_terms="'.$taxonomy_name.'" repeater="default" posts_per_page="9" transition="fade" button_label="Load More" offset="9"]'); ?>
 							</div>
 						</div>
 	    				

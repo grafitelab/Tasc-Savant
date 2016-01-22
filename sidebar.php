@@ -3,7 +3,7 @@
 					<div class="s-section-title clearfix">
 						<div class="s-title-border"></div>
 						<div class="s-title-background">
-							<span class="s-title">Le vostre opinioni</span>
+							<span class="s-title">Opinioni</span>
 							<div class="s-title-white-triangle"></div>
 						</div>
 						<a href="https://www.tasc.it/opinioni">Tutte le opinioni ></a>
@@ -65,7 +65,7 @@
 									if ( $terms && !is_wp_error( $terms ) ) : ?>
 										<ul class="s-column-container">
 												<?php foreach ( $terms as $term ) { ?>
-											<li class="s-column-single">
+											<li class="s-column-single" style="background-image: url(<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>); background-size: cover;">
 												<div class="outer-mask">
 													<div class="inner-mask">
 														<div class="content"></div>
