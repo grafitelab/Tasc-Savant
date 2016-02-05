@@ -716,7 +716,7 @@ LAYOUT & GRID STYLES
   background-color: #ffffff;
   overflow: hidden;
   height: auto;
-  padding-top: 51px;
+  padding-top: 50px;
   -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
   -moz-transition: -moz-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
   -o-transition: -o-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
@@ -3247,6 +3247,7 @@ SIDEBAR
   transform: skew(-40deg, 0deg);
 }
 #column-sidebar ul.s-column-container li.s-column-single .outer-mask .inner-mask .content {
+  opacity: 0.9;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -3390,6 +3391,7 @@ CUSTOM PAGES
   font-weight: 200;
   border: none;
   padding: 0;
+  font-size: 25px;
 }
 .page-template-page-video #content-top .m-border,
 .page-template-page-rubriche #content-top .m-border,
@@ -4147,7 +4149,8 @@ ARTICLES ARCHIVES STYLE + footer per l'opinion
 *********************/
 #articles article.large .title,
 article.opinion .title {
-  font-size: 2.5em;
+  font-size: 20px;
+  line-height: 24px;
   padding: 30px;
 }
 #articles article.large footer.article-footer .meta,
@@ -4298,10 +4301,10 @@ MAIN STORIES - ONLY HOME
 .sticky .title,
 .opinion-story .title,
 .snack-story .title {
-  font-size: 35px;
+  font-size: 20px;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 30px;
-  line-height: 35px;
+  padding: 20px;
+  line-height: 24px;
 }
 #second-stories {
   margin-bottom: 1em;
@@ -4804,6 +4807,14 @@ CUSTOM PAGES
 .tax-column_category #content-top .featured-background {
   margin-top: -65px;
 }
+.page-template-page-video #content-top h1.last-title,
+.page-template-page-rubriche #content-top h1.last-title,
+.page-template-page-shop #content-top h1.last-title,
+.tax-video_category #content-top h1.last-title,
+.tax-product_category #content-top h1.last-title,
+.tax-column_category #content-top h1.last-title {
+  font-size: 30px;
+}
 /******************************************************************
 VIDEO
 ******************************************************************/
@@ -4831,6 +4842,27 @@ SHOP
 .product.single .rightColumn.details {
   float: right;
   width: 37%;
+}
+#articles article.large .title,
+article.opinion .title,
+.big-story .title,
+.second-story .title,
+#related_stories .title,
+.sticky .title,
+.opinion-story .title,
+.snack-story .title {
+  font-size: 35px;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  line-height: 35px;
+}
+.page-template-page-video #content-top h1.last-title,
+.page-template-page-rubriche #content-top h1.last-title,
+.page-template-page-shop #content-top h1.last-title,
+.tax-video_category #content-top h1.last-title,
+.tax-product_category #content-top h1.last-title,
+.tax-column_category #content-top h1.last-title {
+  font-size: 36px;
 }
 /* 
 you can call the larger styles if you want, but there's really no need 
