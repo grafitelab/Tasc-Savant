@@ -100,6 +100,7 @@ echo $lastTerm->name;
 						    
 						    	<div id="articles-content">
 							    	<?php 
+								    	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 								if (is_tax() || is_category() || is_tag() ){
 								    $qobj = get_queried_object();
 								    // var_dump($qobj); // debugging only
@@ -107,7 +108,7 @@ echo $lastTerm->name;
 								    // concatenate the query
 								    $args = array(
 								      'posts_per_page' => 9,
-								      'orderby' => 'rand',
+								      'paged' => $paged,
 								      'tax_query' => array(
 								        array(
 								          'taxonomy' => $qobj->taxonomy,

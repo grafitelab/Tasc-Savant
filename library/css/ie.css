@@ -4179,6 +4179,9 @@ article.opinion p {
 #articles article.article-big-story:first-child {
   margin-top: 0;
 }
+#articles.category-articles {
+  padding-right: 0;
+}
 .author #articles {
   padding-right: 0;
 }

@@ -34,7 +34,7 @@
 				    	    <span>Archivio annuale:</span> <?php the_time('Y'); ?>
 				        </h1>
 				    <?php } ?>
-				    <div id="articles">
+				    <div id="articles" <?php if (is_category()) { ?>class="category-articles"<?php } ?>>
 						<?php if (have_posts()) :  while (have_posts()) : the_post(); 
 							get_template_part( 'loop' );
 							endwhile;

@@ -76,7 +76,9 @@ echo $lastTerm->name;
 								
 						    
 						    	<div id="articles-content">
-									<?php $mainCustom = new WP_Query( 'post_type=column' );
+									<?php 
+										$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+										$mainCustom = new WP_Query(  array( 'post_type' => 'column', 'paged' => $paged ) );
 						if ($mainCustom->have_posts()) {
 							while ($mainCustom->have_posts()) {
 								$mainCustom->the_post();
