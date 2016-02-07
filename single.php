@@ -19,7 +19,7 @@ get_header(); ?>
 					}
 					?>
 		
-			<div id="content-container" class="wrap center-wrap">
+			<div id="content-container" class="wrap <?php if ( !is_singular( 'product' ) ) {?> center-wrap <?php }?>">
 			
 				<div id="content">
 	

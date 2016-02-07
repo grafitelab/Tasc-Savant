@@ -3358,6 +3358,7 @@ CUSTOM PAGES
 .tax-product_category #content-top .featured-background,
 .tax-column_category #content-top .featured-background {
   height: 100vh;
+  min-height: 480px;
   background-size: cover;
   margin-top: -50px;
   background-position: center center;
@@ -3391,7 +3392,6 @@ CUSTOM PAGES
   font-weight: 200;
   border: none;
   padding: 0;
-  font-size: 25px;
 }
 .page-template-page-video #content-top .m-border,
 .page-template-page-rubriche #content-top .m-border,
@@ -3460,7 +3460,7 @@ CUSTOM PAGES
 .tax-column_category #content-top h1.last-title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 36px;
+  font-size: 25px;
   position: absolute;
   left: 0;
   right: 0;
