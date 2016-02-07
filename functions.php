@@ -379,7 +379,7 @@ function my_custom_post_video() {
     'public'        => true,
     'menu_icon' => 'dashicons-video-alt3',
     'menu_position' => 6,
-    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments', 'author' ),
     'has_archive'   => false,
   );
   register_post_type( 'video', $args ); 
@@ -408,7 +408,7 @@ function my_custom_post_product() {
     'public'        => true,
     'menu_icon' => 'dashicons-cart',
     'menu_position' => 6,
-    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments', 'author' ),
     'has_archive'   => false,
   );
   register_post_type( 'product', $args ); 
@@ -437,7 +437,7 @@ function my_custom_post_column() {
     'public'        => true,
     'menu_icon' => 'dashicons-feedback',
     'menu_position' => 6,
-    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments', 'author' ),
     'has_archive'   => false,
   );
   register_post_type( 'column', $args ); 
