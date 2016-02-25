@@ -600,12 +600,13 @@ ul.tasc-social {
 		list-style-type:none;
 		a,a:visited {
 			display:block;
-			padding:5px;
 			color: @white;
 			font-weight:400;
 			font-size:13px;
 			border-bottom:0px;
 			opacity:.9;
+			height:40px;
+			width:40px;
 			
 			&:hover {
 				border-bottom:0px;
@@ -616,6 +617,10 @@ ul.tasc-social {
 				float:left;
 				margin-right:5px;
 				font-size:21px;
+				height:40px;
+				width:40px;
+				text-align:center;
+				line-height:40px;
 			}
 			
 			&.facebook {
@@ -1000,7 +1005,9 @@ article {
 			}
 			
 			.share-count {
-				width:100%;
+				width:50px;
+				text-align:center;
+				float:left;
 				.count {
 					font-size:25px;
 					margin-bottom:5px;
@@ -1009,20 +1016,23 @@ article {
 			}
 			
 			.shares-name {
-				font-size:20px;
+				font-size:12px;
 				font-weight:300;
 				color: @tascgray;
 				text-transform:lowercase;
 			}
 			
 			.share-it {
-				width:100%;
+				margin-left:10px;
 				.tasc-social {
 					margin-top:10px;
 					li {
 						display:inline-block;
 						margin-right:6px;
 						float:left;
+						span {
+							
+						}
 					}
 				}
 			}
@@ -1083,7 +1093,7 @@ ARTICLES ARCHIVES STYLE
 		bottom:0;
 		padding:15px;
 		font-size:1.7em;
-		font-weight:700;
+		font-weight:400;
 		position:absolute;
 		text-align:left;
 		z-index:2;
@@ -1397,7 +1407,7 @@ MAIN STORIES - HOME
 /*********************
 LOOP BIGSTORY ARCHIVES AND HOME
 *********************/
-.big-story,.second-story,#related_stories,.sticky,#articles,.opinion-story,.snack-story, #snacks-sidebar, #article-sidebar {
+.big-story,.second-story,#related_stories,.sticky,#articles,.side-story, #snacks-sidebar, #article-sidebar {
 	 overflow:hidden;
 	 
 	.tasc-post {
@@ -1438,7 +1448,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 		bottom:0;
 		padding:15px;
 		font-size:17px;
-		font-weight:600;
+		font-weight:400;
 		position:absolute;
 		text-align:left;
 		font-family: @large;
@@ -1461,10 +1471,10 @@ LOOP BIGSTORY ARCHIVES AND HOME
 	}
 	
 	.createdby {
-		font-size:12px;
+		font-size:10px;
 		text-transform: uppercase;
 		color: rgba(255, 255, 255, 1);
-		font-weight:600;
+		font-weight:400;
 		display:block;
 		margin-top:5px;
 		text-shadow:0px 2px 4px rgba(0, 0, 0, 0.5);
@@ -2298,45 +2308,36 @@ SIDEBAR
 .s-section-title{
 	position: relative;
 	margin-bottom: 30px;
-	.s-title-border{
-		width: 100%;
-		height: 2px;
-		position: absolute;
-		bottom: 1px;
-		background-color: blue;
-	}
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+49,e7e7e7+50,ffffff+51 */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 49%, #8b8b8b 50%, #ffffff 51%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #ffffff 49%,#8b8b8b 50%,#ffffff 51%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #ffffff 49%,#8b8b8b 50%,#ffffff 51%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	
 	.s-title-background{
-		height: 35px;
 		position: relative;
-		background-color: blue;
-		float: left;
+		text-align:center;
+		width: 100px;
+		height: 30px;
+		background-color:@white;
+		margin:0 auto;
+		
 		.s-title{
-			font-family: @large;
 			font-size: 16px;
-			color: white;
-			font-weight: 600;
 			text-transform: uppercase;
-			line-height: 35px;
-			padding-left: 15px;
-			padding-right: 30px;
-		}
-		.s-title-white-triangle{
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 0 18px 33px 0;
-			border-color: transparent #ffffff transparent transparent;
-			position: absolute;
-			right: 0;
-			top: 0px;
 		}
 	}
+	line-height: 35px;
+	font-family: @large;
+	font-weight: 600;
+	font-size: 16px;
 	a{
-		float: right;
 		line-height: 35px;
 		font-family: @large;
 		font-weight: 600;
-		font-size: 14px;
+		font-size: 16px;
+		color: @text;
 	}
 	a:hover{
 		text-decoration: none;
@@ -2345,15 +2346,7 @@ SIDEBAR
 }
 
 #opinions-sidebar{
-	.s-title-border{
-		background-color: @opinionslight;
-	}
-	.s-title-background{
-		.opinionsshade
-	}
-	a{
-		color: @opinionsmedium;
-	}
+
 	article.type-opinion{
 		margin: 0 !important;
 		margin-bottom: 20px !important;
@@ -2391,27 +2384,9 @@ SIDEBAR
 	}
 }
 #snacks-sidebar{
-	.s-title-border{
-		background-color: @snackslight;
-	}
-	.s-title-background{
-		.snacksshade
-	}
-	a{
-		color: @snacksmedium !important;
-		border-bottom: solid 1px !important;
-		border-bottom-color: transparent !important;
-		&:hover{
-			color: @snacksmedium !important;
-		}
-	}
 }
 #column-sidebar{
-	.s-title-border{
-		background-color: @columnslight;
-	}
 	.s-title-background{
-		.columnsshade
 	}
 	a{
 		color: @columnsmedium;
@@ -2484,11 +2459,7 @@ SIDEBAR
 	}
 }
 #other-sidebar{
-	.s-title-border{
-		background-color: @otherlight;
-	}
 	.s-title-background{
-		.othershade
 	}
 	a{
 		color: @otherdark;

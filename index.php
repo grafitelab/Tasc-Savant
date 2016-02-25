@@ -19,22 +19,42 @@
 					</div> <!-- End first-stories -->
 											
 					<div id="side-story"  class="right-column">
-						<div class="last-opinions opinion-story">
+						<div class="last-opinions side-story">
 								<?php 
 									$last_opinions = new WP_Query( array( 'post_type' => 'opinion', 'showposts' => 1 )  );
-									while ( $last_opinions->have_posts() ) : $last_opinions->the_post(); 
+									while ( $last_opinions->have_posts() ) : $last_opinions->the_post();
+									
+									if(is_old_post(7)) {
+										while (have_posts()) : the_post(); 
+											//NON INSERISCO IN TOP STORIES POST non importanti.
+											$important= get_post_meta($post->ID, 'opt_notbig', true); if( $important == "on" ) continue;
+											if(empty($do_not_duplicate)) {} else { if( in_array($post->ID, $do_not_duplicate) ) continue;}
+											$do_not_duplicate[] = $post->ID; 
+											get_template_part( 'loop','bigstory' ); 
+										break; endwhile;  //il break serve a non mostrare più di 1 post
+									} else {
 								?>
 								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix main-post permalink'); ?> role="article">
 								<?php get_template_part( 'loop','bigstory' ); ?>	
 								</article>
-								<?php endwhile; ?>
+								<?php } endwhile; ?>
 						</div>
 						
-						<div class="snack-story">
+						<div class="side-story">
 								<?php 
 									$last_snacks = new WP_Query( array('showposts' => 1,'tax_query' => array(array('taxonomy' => 'post_format','field' => 'slug','terms' => 'post-format-aside'))));
 									while ( $last_snacks->have_posts() ) : $last_snacks->the_post(); 
+									if(is_old_post(7)) {
+										while (have_posts()) : the_post(); 
+											//NON INSERISCO IN TOP STORIES POST non importanti.
+											$important= get_post_meta($post->ID, 'opt_notbig', true); if( $important == "on" ) continue;
+											if(empty($do_not_duplicate)) {} else { if( in_array($post->ID, $do_not_duplicate) ) continue;}
+											$do_not_duplicate[] = $post->ID; 
+											get_template_part( 'loop','bigstory' ); 
+										break; endwhile;
+									} else {
 									get_template_part( 'loop','bigstory' ); 
+									}
 									endwhile; 
 								?>
 						</div>

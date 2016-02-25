@@ -402,44 +402,6 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
-.opinionsshade {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7951c+0,fad961+100 */
-  background: #f7951c;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #f7951c), color-stop(100%, #fad961));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #f7951c 0%, #fad961 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7951c', endColorstr='#fad961', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-}
-.snacksshade {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#429321+0,b4ec51+100 */
-  background: #429321;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #429321), color-stop(100%, #b4ec51));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #429321 0%, #b4ec51 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#429321', endColorstr='#b4ec51', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-}
 .columnsshade {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3023ae+0,c86dd7+100 */
   background: #3023ae;
@@ -713,7 +675,7 @@ LAYOUT & GRID STYLES
   margin: 0 auto;
 }
 #container {
-  background-color: #ffffff;
+  background-color: #fff;
   overflow: hidden;
   height: auto;
   padding-top: 50px;
@@ -746,7 +708,7 @@ HEADER
 header.header {
   text-align: center;
   background-color: #1a1a1a;
-  color: #ffffff;
+  color: #fff;
   height: 50px;
   padding: 0;
   position: fixed;
@@ -814,7 +776,7 @@ header.header #hamburger p {
   margin: 0;
   padding: 0;
   width: 18px;
-  background-color: #ffffff;
+  background-color: #fff;
   height: 2px;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -837,7 +799,7 @@ header.header #hamburger p {
 header.header #hamburger p:before {
   content: "";
   display: block;
-  background-color: #ffffff;
+  background-color: #fff;
   width: 18px;
   height: 2px;
   position: relative;
@@ -856,7 +818,7 @@ header.header #hamburger p:before {
   -webkit-transform-style: preserve-3d;
 }
 header.header #hamburger:hover {
-  color: #ffffff;
+  color: #fff;
   border-bottom: 0px;
 }
 header.header #logo {
@@ -1136,7 +1098,7 @@ STILI GENERALI
 *********************/
 .grafitestyle {
   background-color: #1a1a1a !important;
-  color: #ffffff;
+  color: #fff;
 }
 .grafitestyle h3 {
   font-weight: 500;
@@ -1168,13 +1130,13 @@ STILI GENERALI
 .grafitestyle a,
 .grafitestyle a:visited {
   opacity: .8;
-  color: #ffffff;
+  color: #fff;
   border-bottom: 0px;
 }
 .grafitestyle a:hover,
 .grafitestyle a:visited:hover {
   opacity: 1;
-  color: #ffffff !important;
+  color: #fff !important;
   border-bottom: 0px;
 }
 hr {
@@ -1198,12 +1160,13 @@ ul.tasc-social li {
 ul.tasc-social li a,
 ul.tasc-social li a:visited {
   display: block;
-  padding: 5px;
-  color: #ffffff;
+  color: #fff;
   font-weight: 400;
   font-size: 13px;
   border-bottom: 0px;
   opacity: .9;
+  height: 40px;
+  width: 40px;
 }
 ul.tasc-social li a:hover,
 ul.tasc-social li a:visited:hover {
@@ -1215,6 +1178,10 @@ ul.tasc-social li a:visited span.icon {
   float: left;
   margin-right: 5px;
   font-size: 21px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
 }
 ul.tasc-social li a.facebook,
 ul.tasc-social li a:visited.facebook {
@@ -1467,7 +1434,7 @@ h5,
   font-weight: 400;
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
   text-transform: uppercase;
-  color: #000000;
+  color: #000;
 }
 .mediumone.single-section-title {
   font-size: 36px;
@@ -1724,7 +1691,9 @@ article #share-box .share .share-it {
   float: left;
 }
 article #share-box .share .share-count {
-  width: 100%;
+  width: 50px;
+  text-align: center;
+  float: left;
 }
 article #share-box .share .share-count .count {
   font-size: 25px;
@@ -1732,13 +1701,13 @@ article #share-box .share .share-count .count {
   font-weight: 400;
 }
 article #share-box .share .shares-name {
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 300;
   color: #7b7b7b;
   text-transform: lowercase;
 }
 article #share-box .share .share-it {
-  width: 100%;
+  margin-left: 10px;
 }
 article #share-box .share .share-it .tasc-social {
   margin-top: 10px;
@@ -1802,7 +1771,7 @@ article.video .title {
   bottom: 0;
   padding: 15px;
   font-size: 1.7em;
-  font-weight: 700;
+  font-weight: 400;
   position: absolute;
   text-align: left;
   z-index: 2;
@@ -2136,8 +2105,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #related_stories,
 .sticky,
 #articles,
-.opinion-story,
-.snack-story,
+.side-story,
 #snacks-sidebar,
 #article-sidebar {
   overflow: hidden;
@@ -2147,8 +2115,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #related_stories .tasc-post,
 .sticky .tasc-post,
 #articles .tasc-post,
-.opinion-story .tasc-post,
-.snack-story .tasc-post,
+.side-story .tasc-post,
 #snacks-sidebar .tasc-post,
 #article-sidebar .tasc-post {
   width: 100%;
@@ -2160,8 +2127,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #related_stories .tasc-post img,
 .sticky .tasc-post img,
 #articles .tasc-post img,
-.opinion-story .tasc-post img,
-.snack-story .tasc-post img,
+.side-story .tasc-post img,
 #snacks-sidebar .tasc-post img,
 #article-sidebar .tasc-post img {
   width: 100%;
@@ -2173,8 +2139,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #related_stories .category-highlight,
 .sticky .category-highlight,
 #articles .category-highlight,
-.opinion-story .category-highlight,
-.snack-story .category-highlight,
+.side-story .category-highlight,
 #snacks-sidebar .category-highlight,
 #article-sidebar .category-highlight {
   display: none;
@@ -2202,14 +2167,13 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #related_stories .title,
 .sticky .title,
 #articles .title,
-.opinion-story .title,
-.snack-story .title,
+.side-story .title,
 #snacks-sidebar .title,
 #article-sidebar .title {
   bottom: 0;
   padding: 15px;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 400;
   position: absolute;
   text-align: left;
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
@@ -2222,8 +2186,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #related_stories .title:hover,
 .sticky .title:hover,
 #articles .title:hover,
-.opinion-story .title:hover,
-.snack-story .title:hover,
+.side-story .title:hover,
 #snacks-sidebar .title:hover,
 #article-sidebar .title:hover {
   color: #fff;
@@ -2233,8 +2196,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #related_stories .title .title-date,
 .sticky .title .title-date,
 #articles .title .title-date,
-.opinion-story .title .title-date,
-.snack-story .title .title-date,
+.side-story .title .title-date,
 #snacks-sidebar .title .title-date,
 #article-sidebar .title .title-date {
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
@@ -2250,14 +2212,13 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #related_stories .createdby,
 .sticky .createdby,
 #articles .createdby,
-.opinion-story .createdby,
-.snack-story .createdby,
+.side-story .createdby,
 #snacks-sidebar .createdby,
 #article-sidebar .createdby {
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 400;
   display: block;
   margin-top: 5px;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
@@ -2267,8 +2228,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #related_stories a,
 .sticky a,
 #articles a,
-.opinion-story a,
-.snack-story a,
+.side-story a,
 #snacks-sidebar a,
 #article-sidebar a,
 .big-story a:visited,
@@ -2276,8 +2236,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #related_stories a:visited,
 .sticky a:visited,
 #articles a:visited,
-.opinion-story a:visited,
-.snack-story a:visited,
+.side-story a:visited,
 #snacks-sidebar a:visited,
 #article-sidebar a:visited {
   color: #fff;
@@ -2288,8 +2247,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #related_stories a:hover,
 .sticky a:hover,
 #articles a:hover,
-.opinion-story a:hover,
-.snack-story a:hover,
+.side-story a:hover,
 #snacks-sidebar a:hover,
 #article-sidebar a:hover,
 .big-story a:visited:hover,
@@ -2297,8 +2255,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #related_stories a:visited:hover,
 .sticky a:visited:hover,
 #articles a:visited:hover,
-.opinion-story a:visited:hover,
-.snack-story a:visited:hover,
+.side-story a:visited:hover,
 #snacks-sidebar a:visited:hover,
 #article-sidebar a:visited:hover {
   color: #fff;
@@ -2387,7 +2344,7 @@ FORMATTING CONTENT
 .post-content .h1 {
   margin: 2em 0 1em 0;
   padding-top: 0;
-  color: #000000;
+  color: #000;
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
   font-weight: 600;
   letter-spacing: -2px;
@@ -2397,7 +2354,7 @@ FORMATTING CONTENT
   padding-top: .7em;
   font-size: 1.7em;
   font-weight: 400;
-  color: #000000;
+  color: #000;
   text-transform: uppercase;
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
 }
@@ -2486,7 +2443,7 @@ SHORTCODE REVIEW BOX
 *********************/
 .post-content .review {
   padding: 10px;
-  color: #ffffff !important;
+  color: #fff !important;
   margin: 1em 0;
   display: block;
   background-color: #232323;
@@ -2513,7 +2470,7 @@ SHORTCODE REVIEW BOX
 }
 .post-content .review .header .h2 {
   font-size: 12px;
-  color: #ffffff;
+  color: #fff;
   font-weight: 400;
   margin: 0px;
   border: 0;
@@ -2522,7 +2479,7 @@ SHORTCODE REVIEW BOX
   font-size: 25px;
   letter-spacing: 2px;
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
-  color: #ffffff;
+  color: #fff;
   font-weight: 300 !important;
   margin: 6px 0px 0px 0px;
   padding: 0;
@@ -2631,7 +2588,7 @@ SHORTCODE RIASSUNTO PRODOTTO BOX
 *********************/
 .post-content .riassunto {
   padding: 20px;
-  color: #ffffff;
+  color: #fff;
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -2900,7 +2857,7 @@ FOOTER STYLES
 .footer .footer-first-row .newsletter input[type="submit"] {
   background-color: transparent;
   border: 0px;
-  color: #ffffff;
+  color: #fff;
   font-weight: 400;
   padding: 10px;
   font-size: 12px;
@@ -2973,7 +2930,7 @@ SUPER FULL PAGE STYLES
   width: 70%;
   left: 3%;
   z-index: 4;
-  color: #ffffff;
+  color: #fff;
 }
 .super-full #super-header #large-post-header #full-post-info #super-title h1 {
   font-size: 2em;
@@ -3052,75 +3009,44 @@ SIDEBAR
 .s-section-title {
   position: relative;
   margin-bottom: 30px;
-}
-.s-section-title .s-title-border {
-  width: 100%;
-  height: 2px;
-  position: absolute;
-  bottom: 1px;
-  background-color: blue;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+49,e7e7e7+50,ffffff+51 */
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 49%, #8b8b8b 50%, #ffffff 51%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 49%, #8b8b8b 50%, #ffffff 51%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 49%, #8b8b8b 50%, #ffffff 51%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
+  /* IE6-9 */
+  line-height: 35px;
+  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
+  font-weight: 600;
+  font-size: 16px;
 }
 .s-section-title .s-title-background {
-  height: 35px;
   position: relative;
-  background-color: blue;
-  float: left;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  background-color: #fff;
+  margin: 0 auto;
 }
 .s-section-title .s-title-background .s-title {
-  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
   font-size: 16px;
-  color: white;
-  font-weight: 600;
   text-transform: uppercase;
-  line-height: 35px;
-  padding-left: 15px;
-  padding-right: 30px;
-}
-.s-section-title .s-title-background .s-title-white-triangle {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 18px 33px 0;
-  border-color: transparent #ffffff transparent transparent;
-  position: absolute;
-  right: 0;
-  top: 0px;
 }
 .s-section-title a {
-  float: right;
   line-height: 35px;
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
+  color: #404040;
 }
 .s-section-title a:hover {
   text-decoration: none;
   border-bottom-color: transparent;
-}
-#opinions-sidebar .s-title-border {
-  background-color: #fad961;
-}
-#opinions-sidebar .s-title-background {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7951c+0,fad961+100 */
-  background: #f7951c;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #f7951c), color-stop(100%, #fad961));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #f7951c 0%, #fad961 100%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #f7951c 0%, #fad961 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7951c', endColorstr='#fad961', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-}
-#opinions-sidebar a {
-  color: #ffc600;
 }
 #opinions-sidebar article.type-opinion {
   margin: 0 !important;
@@ -3162,60 +3088,8 @@ SIDEBAR
 #opinions-sidebar article.type-opinion:last-child {
   margin-bottom: 0;
 }
-#snacks-sidebar .s-title-border {
-  background-color: #b4ed51;
-}
-#snacks-sidebar .s-title-background {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#429321+0,b4ec51+100 */
-  background: #429321;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #429321), color-stop(100%, #b4ec51));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #429321 0%, #b4ec51 100%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #429321 0%, #b4ec51 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#429321', endColorstr='#b4ec51', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-}
-#snacks-sidebar a {
-  color: #7ed321 !important;
-  border-bottom: solid 1px !important;
-  border-bottom-color: transparent !important;
-}
-#snacks-sidebar a:hover {
-  color: #7ed321 !important;
-}
-#column-sidebar .s-title-border {
-  background-color: #c86dd7;
-}
-#column-sidebar .s-title-background {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3023ae+0,c86dd7+100 */
-  background: #3023ae;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #3023ae), color-stop(100%, #c86dd7));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #3023ae 0%, #c86dd7 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3023ae', endColorstr='#c86dd7', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-}
 #column-sidebar a {
-  color: #7000d1;
+  color: #7000D1;
 }
 #column-sidebar ul.s-column-container {
   list-style: none;
@@ -3295,28 +3169,6 @@ SIDEBAR
 }
 #column-sidebar ul.s-column-container li.s-column-single h1.title:hover {
   color: #fff;
-}
-#other-sidebar .s-title-border {
-  background-color: #606060;
-}
-#other-sidebar .s-title-background {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,606060+100 */
-  background: #000000;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #000000 0%, #606060 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #000000), color-stop(100%, #606060));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #000000 0%, #606060 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #000000 0%, #606060 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #000000 0%, #606060 100%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #000000 0%, #606060 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#606060', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
 }
 #other-sidebar a {
   color: #000000;
@@ -3519,7 +3371,7 @@ CUSTOM PAGES
 .tax-video_category #content-top #m-nav ul li a:hover,
 .tax-product_category #content-top #m-nav ul li a:hover,
 .tax-column_category #content-top #m-nav ul li a:hover {
-  color: #ffffff;
+  color: #fff;
   background-color: #404040;
   text-decoration: none;
 }
@@ -3997,25 +3849,25 @@ header.header #categories-nav ul li a:visited {
 }
 header.header #categories-nav ul li a:hover,
 header.header #categories-nav ul li a:visited:hover {
-  color: #ffffff;
+  color: #fff;
   background-color: #404040;
 }
 header.header #categories-nav ul li.video-link a,
 header.header #categories-nav ul li.video-link a:visited {
-  color: #50e3c2;
+  color: #50E3C2;
 }
 header.header #categories-nav ul li.video-link a:hover,
 header.header #categories-nav ul li.video-link a:visited:hover {
-  color: #ffffff;
+  color: #fff;
   background-color: #404040;
 }
 header.header #categories-nav ul li.shop-link a,
 header.header #categories-nav ul li.shop-link a:visited {
-  color: #f5a623;
+  color: #F5A623;
 }
 header.header #categories-nav ul li.shop-link a:hover,
 header.header #categories-nav ul li.shop-link a:visited:hover {
-  color: #ffffff;
+  color: #fff;
   background-color: #404040;
 }
 header.header.smaller #logo {
@@ -4130,10 +3982,6 @@ article #share-box .share {
 article #share-box .share .share-count,
 article #share-box .share .share-it {
   float: left;
-}
-article #share-box .share .share-count {
-  width: 100%;
-  float: none;
 }
 article #share-box .share .share-count .count {
   margin-top: 10px;
@@ -4273,20 +4121,20 @@ MAIN STORIES - ONLY HOME
 #side-story .last-opinions .opinion .article-big-story .tasc-post a {
   height: 100%;
 }
-#side-story .snack-story {
+#side-story .side-story {
   width: 100%;
   height: 50%;
   display: block;
   position: relative;
 }
-#side-story .snack-story .article-big-story {
+#side-story .side-story .article-big-story {
   height: 100%;
   border: 0;
 }
-#side-story .snack-story .article-big-story .tasc-post {
+#side-story .side-story .article-big-story .tasc-post {
   height: 100%;
 }
-#side-story .snack-story .article-big-story .tasc-post a {
+#side-story .side-story .article-big-story .tasc-post a {
   height: 100%;
 }
 #side-story .promotion {
@@ -4299,8 +4147,7 @@ MAIN STORIES - ONLY HOME
 .second-story .title,
 #related_stories .title,
 .sticky .title,
-.opinion-story .title,
-.snack-story .title {
+.side-story .title {
   font-size: 20px;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -4348,30 +4195,8 @@ SIDEBAR
 #opinions-sidebar article.type-opinion:last-child {
   margin-bottom: 0;
 }
-#column-sidebar .s-title-border {
-  background-color: #c86dd7;
-}
-#column-sidebar .s-title-background {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3023ae+0,c86dd7+100 */
-  background: #3023ae;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #3023ae), color-stop(100%, #c86dd7));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #3023ae 0%, #c86dd7 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3023ae', endColorstr='#c86dd7', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-}
 #column-sidebar a {
-  color: #7000d1;
+  color: #7000D1;
 }
 #column-sidebar ul.s-column-container {
   list-style: none;
@@ -4411,23 +4236,6 @@ SIDEBAR
   width: 330px;
   height: 190px;
   background-blend-mode: multiply;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3023ae+0,c86dd7+100 */
-  background: #3023ae;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #3023ae), color-stop(100%, #c86dd7));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #3023ae 0%, #c86dd7 100%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #3023ae 0%, #c86dd7 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3023ae', endColorstr='#c86dd7', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
 }
 #column-sidebar ul.s-column-container li.s-column-single a {
   position: absolute;
@@ -4739,7 +4547,7 @@ SUPER FULL PAGE STYLES
   width: 600px;
   padding: 0;
   display: none;
-  background: #ffffff;
+  background: #fff;
   -webkit-animation: pop-in 0.5s;
   -moz-animation: pop-in 0.5s;
   -ms-animation: pop-in 0.5s;
@@ -4794,7 +4602,7 @@ SUPER FULL PAGE STYLES
 #fblikebox .modal_close:hover {
   border-bottom: 0px;
   background-color: #232323;
-  color: #ffffff;
+  color: #fff;
 }
 /******************************************************************
 CUSTOM PAGES
@@ -4877,3 +4685,16 @@ http://www.modernizr.com/docs/
 sidebar {
   padding-left: 0px;
 }
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/

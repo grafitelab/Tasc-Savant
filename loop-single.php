@@ -89,7 +89,6 @@ elseif ( has_post_format( 'aside' )) {
 	</div>
 	
 </div>
-<h1 class="mediumone single-section-title">Leggi Anche</h1>
 <h1 class="mediumone single-section-title">Esprimi la tua</h1>
 <?php comments_template(); // comments should go inside the article element ?>
 </article> <!-- end article -->

@@ -1,12 +1,9 @@
 			<div id="sidebar">
 				<section id="opinions-sidebar" class="sidebar-section">
 					<div class="s-section-title clearfix">
-						<div class="s-title-border"></div>
 						<div class="s-title-background">
-							<span class="s-title">Opinioni</span>
-							<div class="s-title-white-triangle"></div>
+							<span class="s-title"><a href="https://www.tasc.it/opinioni">Opinioni</a></span>
 						</div>
-						<a href="https://www.tasc.it/opinioni">Tutte le opinioni ></a>
 					</div>
 					<div>
 								<?php 
@@ -23,12 +20,9 @@
 				</section>
 				<section id="snacks-sidebar" class="sidebar-section">
 					<div class="s-section-title clearfix">
-						<div class="s-title-border"></div>
 						<div class="s-title-background">
 							<span class="s-title">Snacks</span>
-							<div class="s-title-white-triangle"></div>
 						</div>
-						<a href="#"></a>	
 					</div>
 					<div>
 								<?php 
@@ -41,12 +35,9 @@
 				</section>
 				<section id="column-sidebar" class="sidebar-section">
 					<div class="s-section-title clearfix">
-						<div class="s-title-border"></div>
 						<div class="s-title-background">
-							<span class="s-title">Rubriche</span>
-							<div class="s-title-white-triangle"></div>
+							<span class="s-title"><a href="https://www.tasc.it/rubriche">Rubriche</a></span>
 						</div>
-						<a href="https://www.tasc.it/rubriche">Tutte le rubriche ></a>
 					</div>
 					<div>
 								<?php
@@ -85,12 +76,9 @@
 				</div>
 				<section id="other-sidebar" class="sidebar-section">
 					<div class="s-section-title clearfix">
-						<div class="s-title-border"></div>
 						<div class="s-title-background">
 							<span class="s-title">Quotes</span>
-							<div class="s-title-white-triangle"></div>
 						</div>
-						<a href="#">Scarica Quotes ></a>
 					</div>
 				
 					<div>
