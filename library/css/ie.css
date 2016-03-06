@@ -1834,15 +1834,18 @@ article.video footer.article-footer .meta {
   -o-transition: all .2s ease;
   transition: all .2s ease;
 }
-#articles.category-articles article header .meta a,
-#articles.category-articles article header .meta a:visited {
+#articles.category-articles article footer .meta a,
+#articles.category-articles article footer .meta a:visited {
   color: #7b7b7b;
   border-bottom: 1px solid transparent;
   text-decoration: none;
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
   -o-transition: all .2s ease;
-  transition: all 0.2s ease;
+  transition: all .2s ease;
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 25px;
 }
 /*********************
 POSTS IN SINGLE VIEW - STILI VALIDI SOLO PER L'ARTICOLO SINGOLO
