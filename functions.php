@@ -463,6 +463,11 @@ function my_taxonomies_video() {
   $args = array(
     'labels' => $labels,
     'hierarchical' => true,
+    'rewrite' => array(
+            //'slug' => 'event',
+            'slug' => 'video',
+            'with_front' => false
+        )
   );
   register_taxonomy( 'video_category', 'video', $args );
 }
@@ -485,6 +490,11 @@ function my_taxonomies_product() {
   $args = array(
     'labels' => $labels,
     'hierarchical' => true,
+    'rewrite' => array(
+            //'slug' => 'event',
+            'slug' => 'shop',
+            'with_front' => false
+        )
   );
   register_taxonomy( 'product_category', 'product', $args );
 }
@@ -507,6 +517,11 @@ function my_taxonomies_column() {
   $args = array(
     'labels' => $labels,
     'hierarchical' => true,
+    'rewrite' => array(
+            //'slug' => 'event',
+            'slug' => 'rubriche',
+            'with_front' => false
+        )
   );
   register_taxonomy( 'column_category', 'column', $args );
 }
