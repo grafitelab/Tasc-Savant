@@ -675,7 +675,7 @@ LAYOUT & GRID STYLES
   margin: 0 auto;
 }
 #container {
-  background-color: #fff;
+  background-color: #ffffff;
   overflow: hidden;
   height: auto;
   padding-top: 50px;
@@ -708,7 +708,7 @@ HEADER
 header.header {
   text-align: center;
   background-color: #1a1a1a;
-  color: #fff;
+  color: #ffffff;
   height: 50px;
   padding: 0;
   position: fixed;
@@ -776,7 +776,7 @@ header.header #hamburger p {
   margin: 0;
   padding: 0;
   width: 18px;
-  background-color: #fff;
+  background-color: #ffffff;
   height: 2px;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -799,7 +799,7 @@ header.header #hamburger p {
 header.header #hamburger p:before {
   content: "";
   display: block;
-  background-color: #fff;
+  background-color: #ffffff;
   width: 18px;
   height: 2px;
   position: relative;
@@ -818,7 +818,7 @@ header.header #hamburger p:before {
   -webkit-transform-style: preserve-3d;
 }
 header.header #hamburger:hover {
-  color: #fff;
+  color: #ffffff;
   border-bottom: 0px;
 }
 header.header #logo {
@@ -1098,7 +1098,7 @@ STILI GENERALI
 *********************/
 .grafitestyle {
   background-color: #1a1a1a !important;
-  color: #fff;
+  color: #ffffff;
 }
 .grafitestyle h3 {
   font-weight: 500;
@@ -1130,13 +1130,13 @@ STILI GENERALI
 .grafitestyle a,
 .grafitestyle a:visited {
   opacity: .8;
-  color: #fff;
+  color: #ffffff;
   border-bottom: 0px;
 }
 .grafitestyle a:hover,
 .grafitestyle a:visited:hover {
   opacity: 1;
-  color: #fff !important;
+  color: #ffffff !important;
   border-bottom: 0px;
 }
 hr {
@@ -1160,7 +1160,7 @@ ul.tasc-social li {
 ul.tasc-social li a,
 ul.tasc-social li a:visited {
   display: block;
-  color: #fff;
+  color: #ffffff;
   font-weight: 400;
   font-size: 13px;
   border-bottom: 0px;
@@ -1206,8 +1206,8 @@ ul.tasc-social-small li a:visited {
 }
 ul.tasc-social-small li a span.icon,
 ul.tasc-social-small li a:visited span.icon {
-  font-size: 17px;
-  line-height: 13px;
+  font-size: 21px;
+  line-height: 40px;
 }
 ul.tasc-social-small li:last-child {
   margin-right: 0;
@@ -1434,7 +1434,7 @@ h5,
   font-weight: 400;
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
   text-transform: uppercase;
-  color: #000;
+  color: #000000;
 }
 .mediumone.single-section-title {
   font-size: 36px;
@@ -2344,7 +2344,7 @@ FORMATTING CONTENT
 .post-content .h1 {
   margin: 2em 0 1em 0;
   padding-top: 0;
-  color: #000;
+  color: #000000;
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
   font-weight: 600;
   letter-spacing: -2px;
@@ -2354,7 +2354,7 @@ FORMATTING CONTENT
   padding-top: .7em;
   font-size: 1.7em;
   font-weight: 400;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
 }
@@ -2443,7 +2443,7 @@ SHORTCODE REVIEW BOX
 *********************/
 .post-content .review {
   padding: 10px;
-  color: #fff !important;
+  color: #ffffff !important;
   margin: 1em 0;
   display: block;
   background-color: #232323;
@@ -2470,7 +2470,7 @@ SHORTCODE REVIEW BOX
 }
 .post-content .review .header .h2 {
   font-size: 12px;
-  color: #fff;
+  color: #ffffff;
   font-weight: 400;
   margin: 0px;
   border: 0;
@@ -2479,7 +2479,7 @@ SHORTCODE REVIEW BOX
   font-size: 25px;
   letter-spacing: 2px;
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
-  color: #fff;
+  color: #ffffff;
   font-weight: 300 !important;
   margin: 6px 0px 0px 0px;
   padding: 0;
@@ -2588,7 +2588,7 @@ SHORTCODE RIASSUNTO PRODOTTO BOX
 *********************/
 .post-content .riassunto {
   padding: 20px;
-  color: #fff;
+  color: #ffffff;
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -2857,7 +2857,7 @@ FOOTER STYLES
 .footer .footer-first-row .newsletter input[type="submit"] {
   background-color: transparent;
   border: 0px;
-  color: #fff;
+  color: #ffffff;
   font-weight: 400;
   padding: 10px;
   font-size: 12px;
@@ -2930,7 +2930,7 @@ SUPER FULL PAGE STYLES
   width: 70%;
   left: 3%;
   z-index: 4;
-  color: #fff;
+  color: #ffffff;
 }
 .super-full #super-header #large-post-header #full-post-info #super-title h1 {
   font-size: 2em;
@@ -3030,7 +3030,7 @@ SIDEBAR
   text-align: center;
   width: 100px;
   height: 30px;
-  background-color: #fff;
+  background-color: #ffffff;
   margin: 0 auto;
 }
 .s-section-title .s-title-background .s-title {
@@ -3089,7 +3089,7 @@ SIDEBAR
   margin-bottom: 0;
 }
 #column-sidebar a {
-  color: #7000D1;
+  color: #7000d1;
 }
 #column-sidebar ul.s-column-container {
   list-style: none;
@@ -3371,7 +3371,7 @@ CUSTOM PAGES
 .tax-video_category #content-top #m-nav ul li a:hover,
 .tax-product_category #content-top #m-nav ul li a:hover,
 .tax-column_category #content-top #m-nav ul li a:hover {
-  color: #fff;
+  color: #ffffff;
   background-color: #404040;
   text-decoration: none;
 }
@@ -3849,25 +3849,25 @@ header.header #categories-nav ul li a:visited {
 }
 header.header #categories-nav ul li a:hover,
 header.header #categories-nav ul li a:visited:hover {
-  color: #fff;
+  color: #ffffff;
   background-color: #404040;
 }
 header.header #categories-nav ul li.video-link a,
 header.header #categories-nav ul li.video-link a:visited {
-  color: #50E3C2;
+  color: #50e3c2;
 }
 header.header #categories-nav ul li.video-link a:hover,
 header.header #categories-nav ul li.video-link a:visited:hover {
-  color: #fff;
+  color: #ffffff;
   background-color: #404040;
 }
 header.header #categories-nav ul li.shop-link a,
 header.header #categories-nav ul li.shop-link a:visited {
-  color: #F5A623;
+  color: #f5a623;
 }
 header.header #categories-nav ul li.shop-link a:hover,
 header.header #categories-nav ul li.shop-link a:visited:hover {
-  color: #fff;
+  color: #ffffff;
   background-color: #404040;
 }
 header.header.smaller #logo {
@@ -4196,7 +4196,7 @@ SIDEBAR
   margin-bottom: 0;
 }
 #column-sidebar a {
-  color: #7000D1;
+  color: #7000d1;
 }
 #column-sidebar ul.s-column-container {
   list-style: none;
@@ -4547,7 +4547,7 @@ SUPER FULL PAGE STYLES
   width: 600px;
   padding: 0;
   display: none;
-  background: #fff;
+  background: #ffffff;
   -webkit-animation: pop-in 0.5s;
   -moz-animation: pop-in 0.5s;
   -ms-animation: pop-in 0.5s;
@@ -4602,7 +4602,7 @@ SUPER FULL PAGE STYLES
 #fblikebox .modal_close:hover {
   border-bottom: 0px;
   background-color: #232323;
-  color: #fff;
+  color: #ffffff;
 }
 /******************************************************************
 CUSTOM PAGES
@@ -4685,16 +4685,3 @@ http://www.modernizr.com/docs/
 sidebar {
   padding-left: 0px;
 }
-/*
-For example, you can use something like:
-
-.no-textshadow .class { ... }
-
-You can also target specific versions by using the classes applied to
-the html element. These can sometimes change, so take a look inside the
-header.php file to see what they are:
-
-
-.lt-ie8 .class { ... }
-
-*/
