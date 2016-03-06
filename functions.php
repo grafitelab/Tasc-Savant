@@ -381,6 +381,7 @@ function my_custom_post_video() {
     'menu_position' => 6,
     'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments', 'author' ),
     'has_archive'   => false,
+    'rewrite' => array('slug' => 'video/single','with_front' => false)
   );
   register_post_type( 'video', $args ); 
 }
@@ -410,6 +411,7 @@ function my_custom_post_product() {
     'menu_position' => 6,
     'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments', 'author' ),
     'has_archive'   => false,
+    'rewrite' => array('slug' => 'shop/single','with_front' => false)
   );
   register_post_type( 'product', $args ); 
 }
@@ -439,6 +441,7 @@ function my_custom_post_column() {
     'menu_position' => 6,
     'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments', 'author' ),
     'has_archive'   => false,
+    'rewrite' => array('slug' => 'rubriche/single','with_front' => false)
   );
   register_post_type( 'column', $args ); 
 }

@@ -227,7 +227,29 @@
     </script>
             <?php } ?> 
         <!-- SET HEIGHT TO MAIN STORY -->
+        
+        
+        <!-- SCROLLING NAV IN MEDIA PAGES -->
+        <?php if ( !is_single() && !is_home() ) {?> 
+        	<script src="<?php echo get_stylesheet_directory_uri(); ?>/library/js/jquery.kinetic.min.js" type="text/javascript"></script>
+        	<script src="<?php echo get_stylesheet_directory_uri(); ?>/library/js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        	<script src="<?php echo get_stylesheet_directory_uri(); ?>/library/js/jquery.smoothdivscroll-1.3-min.js" type="text/javascript"></script>
+        	
+        	<script type="text/javascript">
+				jQuery(document).ready(function () {
+					jQuery("#m-nav ul").smoothDivScroll({
+						mousewheelScrolling: "allDirections",
+						manualContinuousScrolling: true,
+						autoScrollingMode: "onStart",
+						touchScrolling: true
+					});
+				});
+			</script>
+
+        <?php }?>
             
+        <!-- END SCROLLING NAV IN MEDIA PAGES -->
+        
 		<?php wp_footer(); // js scripts are inserted using this function ?>
 
 <script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '11lK8x']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
