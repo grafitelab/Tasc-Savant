@@ -69,6 +69,8 @@
 						<a class="absoluteLink" href="<?php the_permalink() ?>"></a>
 						<h1 class="product-title"><?php the_title(); ?></h1>
 						<span class="featured-price"><?php $productCustomMeta['price'] ?></span>
+						<div class="overlay"></div>
+						<div class="gradient"></div>
 					</div>
 					<?php
 							}

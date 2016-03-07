@@ -51,7 +51,7 @@
 
 					if ( $terms && !is_wp_error( $terms ) ) : ?>
 						<ul>
-							<li><a href="/video">Tutti</a></li>
+							<li><a href="/shop">Tutti</a></li>
 								<?php foreach ( $terms as $term ) { ?>
 							<li><a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"><?php echo $term->name; ?></a></li>
 								<?php } ?>
