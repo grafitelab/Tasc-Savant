@@ -19,7 +19,7 @@
 				$thumb= $thumb_url[0];
 			
     				?>
-					<div class="featured-background"<?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>'); height: 700px; margin: 0;"  <?php } ?>><div class="featured-background-shade"></div></div>
+					<div class="featured-background" style="background-color:#202020;"><div class="featured-background-shade"></div></div>
 					<h1 class="page-title">Ultimo Video<div class="m-border"></div></h1>
 					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="divLink"></a>
