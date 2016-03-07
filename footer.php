@@ -46,7 +46,12 @@
     				?>
 				</div>
 			<div id="home-shop" style="position: relative;">
-					<div class="featured-background" style="height: 800px; margin: 0;"><div class="featured-background-shade"></div></div>
+					<div class="featured-background" style="height: 800px; margin: 0; /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e98202+0,ffd746+100&0.9+0,0.9+100 */
+background: -moz-linear-gradient(-45deg,  rgba(233,130,2,0.9) 0%, rgba(255,215,70,0.9) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(233,130,2,0.9) 0%,rgba(255,215,70,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(233,130,2,0.9) 0%,rgba(255,215,70,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e98202', endColorstr='#e6ffd746',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+"></div>
 					<h1 class="page-title">Tasc Shop<div class="m-border"></div></h1>
 					<h2 class="page-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</h2>
 					<div id="featured-product-container">
