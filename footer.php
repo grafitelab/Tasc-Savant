@@ -19,8 +19,8 @@
 				$thumb= $thumb_url[0];
 			
     				?>
-					<div class="featured-background" style="height: 800px; background-color: #202020; margin: 0;"><div class="featured-background-shade"></div></div>
-					<h1 class="page-title">Ultimo Video<div class="m-border"></div></h1>
+					<div class="featured-background" style="height: 800px; background-color: #202020; background-image: none; margin: 0;"><div class="featured-background-shade"></div></div>
+					<h1 class="page-title">Ultimo Video<div class="m-border" style="background-color: #50E3C2;"></div></h1>
 					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="divLink"></a>
 						<h2 class="last-category">
@@ -34,7 +34,7 @@
 										$terms_slug_str = join( " ", $term_slugs_arr);
 									endif;
 									echo $terms_slug_str;
-							?><div class="m-border"></div>
+							?><div class="m-border" style="background-color: #50E3C2;"></div>
 						</h2>
 						<h1 class="last-title"><?php the_title(); ?></h1>
 						<div class="overlay"></div> 
