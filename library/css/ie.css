@@ -3520,6 +3520,101 @@ div.scrollableArea {
 /******************************************************************
 VIDEO
 ******************************************************************/
+.m-slider-container {
+  height: 70px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -10%;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  margin-top: -35px;
+  width: 120%;
+  z-index: 10;
+}
+.m-slider-container .arrow {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-sizing: border-box;
+}
+.m-slider-container .arrow .inner-arrow {
+  width: 1em;
+  height: 1em;
+  border-right: 0.2em solid #ffffff;
+  border-top: 0.2em solid white;
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+  top: 50%;
+  margin-top: -8px;
+}
+.m-slider-container .arrow .arrow-text {
+  color: black;
+  text-transform: uppercase;
+  line-height: 70px;
+  display: none;
+  line-height: 62px;
+  font-weight: 400;
+}
+.m-slider-container .arrow.arrow-left {
+  left: 0;
+}
+.m-slider-container .arrow.arrow-left .inner-arrow {
+  left: 0;
+  right: -5px;
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+}
+.m-slider-container .arrow.arrow-right {
+  right: 0;
+}
+.m-slider-container .arrow.arrow-right .inner-arrow {
+  right: 0;
+  left: -5px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+.m-slider-container .arrow:hover {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px !important;
+  background-color: white;
+  min-width: 250px;
+  width: auto;
+}
+.m-slider-container .arrow:hover .inner-arrow {
+  border-color: black;
+  margin-left: 0;
+  margin-right: 0;
+}
+.m-slider-container .arrow.arrow-right:hover .inner-arrow {
+  left: auto;
+  right: 27px;
+}
+.m-slider-container .arrow.arrow-right:hover .arrow-text {
+  float: left;
+  display: block;
+  margin-right: 60px;
+  padding-left: 20px;
+}
+.m-slider-container .arrow.arrow-left:hover .inner-arrow {
+  right: auto;
+  left: 27px;
+}
+.m-slider-container .arrow.arrow-left:hover .arrow-text {
+  float: left;
+  display: block;
+  margin-left: 60px;
+  padding-right: 20px;
+}
 .page-template-page-video #content-top,
 .tax-video_category #content-top {
   position: relative;
