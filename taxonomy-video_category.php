@@ -144,7 +144,7 @@
 												<span class="title-date"><?php echo the_time('j F Y'); ?></span>
 										    	<?php the_title(); ?>
 										    	</div>
-												<div class="video-icon"></div>
+												<div class="video-icon"><div class="play"></div></div>
 								    			<div class="overlay"></div> 
 								    			<div class="gradient"></div>
 								    		</a>
