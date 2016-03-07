@@ -3469,7 +3469,7 @@ div.scrollableArea {
 .tax-product_category #content-top #m-nav ul,
 .tax-column_category #content-top #m-nav ul {
   height: 100%;
-  padding: 0;
+  padding: 0px !important;
 }
 .page-template-page-video #content-top #m-nav ul li:first-child,
 .page-template-page-rubriche #content-top #m-nav ul li:first-child,
@@ -3486,7 +3486,8 @@ div.scrollableArea {
 .tax-product_category #content-top #m-nav ul li,
 .tax-column_category #content-top #m-nav ul li {
   list-style: none;
-  display: inline;
+  display: block;
+  float: left;
   height: 100%;
   line-height: 65px;
 }
