@@ -21,8 +21,8 @@
 					<h1 class="page-title">Ultimo Video<div class="m-border"></div></h1>
 					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
 						<div class="m-slider-container">
-							<div class="arrow arrow-left"><div class="inner-arrow"></div><div class="arrow-text">prova titolo freccia</div></div>
-							<div class="arrow arrow-right"><div class="inner-arrow"></div><div class="arrow-text">prova titolo freccia</div></div>
+							<div class="arrow arrow-left"><div class="inner-arrow"></div><div class="arrow-text">prova titolo freccia</div><a class="divLink" href="#"></a></div>
+							<div class="arrow arrow-right"><div class="inner-arrow"></div><div class="arrow-text">prova titolo freccia</div><a class="divLink" href="#"></a></div>
 						</div>
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="divLink"></a>
 						<h2 class="last-category">
