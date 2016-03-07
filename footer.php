@@ -19,7 +19,7 @@
 				$thumb= $thumb_url[0];
 			
     				?>
-					<div class="featured-background" style="background-color:#202020;"><div class="featured-background-shade"></div></div>
+					<div class="featured-background" style="height: 800px; background-color: #202020;"><div class="featured-background-shade"></div></div>
 					<h1 class="page-title">Ultimo Video<div class="m-border"></div></h1>
 					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="divLink"></a>
@@ -46,7 +46,7 @@
     				?>
 				</div>
 			<div id="home-shop" style="position: relative;">
-					<div class="featured-background" style="height: 700px; margin: 0;"><div class="featured-background-shade"></div></div>
+					<div class="featured-background" style="height: 800px; margin: 0;"><div class="featured-background-shade"></div></div>
 					<h1 class="page-title">Tasc Shop<div class="m-border"></div></h1>
 					<h2 class="page-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</h2>
 					<div id="featured-product-container">
