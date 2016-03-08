@@ -3842,7 +3842,6 @@ a.absoluteLink {
   top: 44%;
   left: 0;
   right: 0;
-  height: 360px;
   display: flex;
   -webkit-flex-flow: row wrap;
   -webkit-justify-content: space-between;
@@ -3855,7 +3854,8 @@ a.absoluteLink {
 .page-template-page-shop #content-top #m-header #featured-product-container .featured-product,
 .tax-product_category #content-top #m-header #featured-product-container .featured-product {
   display: inline-block;
-  height: 100%;
+  height: auto;
+  padding-bottom: 22% !important;
   width: 30%;
   background-color: #D8D8D8;
   top: 0;
@@ -3871,7 +3871,7 @@ a.absoluteLink {
   font-size: 25px;
   color: white;
   font-weight: 500;
-  z-index: 2;
+  z-index: 3;
 }
 .page-template-page-shop #content-top #m-header #featured-product-container .featured-product span.featured-price,
 .tax-product_category #content-top #m-header #featured-product-container .featured-product span.featured-price {
