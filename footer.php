@@ -5,8 +5,11 @@
 		<div id="content-top">
 		<div id="m-header">
 				<div class="home-video" style="position: relative;">
+					<div class="featured-background" style="height: 800px; background-color: #202020; background-image: none; margin: 0;"><div class="featured-background-shade"></div></div>
+					<h1 class="page-title">Ultimo Video<div class="m-border" style="background-color: #50E3C2;"></div></h1>
+					<ul class="featured-last-slider">
 					<?php
-						$lastCustomVideo = new WP_Query( 'post_type=video&posts_per_page=1' );
+						$lastCustomVideo = new WP_Query( 'post_type=video&posts_per_page=4' );
 						if ($lastCustomVideo->have_posts()) {
 							while ($lastCustomVideo->have_posts()) {
 								$lastCustomVideo->the_post();
@@ -19,9 +22,7 @@
 				$thumb= $thumb_url[0];
 			
     				?>
-					<div class="featured-background" style="height: 800px; background-color: #202020; background-image: none; margin: 0;"><div class="featured-background-shade"></div></div>
-					<h1 class="page-title">Ultimo Video<div class="m-border" style="background-color: #50E3C2;"></div></h1>
-					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
+					<li class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="divLink"></a>
 						<h2 class="last-category">
 							<?php
@@ -39,11 +40,12 @@
 						<h1 class="last-title"><?php the_title(); ?></h1>
 						<div class="overlay"></div> 
 						<div class="gradient"></div>
-					</div>
+					</li>
 					<?php
 							}
 						}
     				?>
+					</ul>
 				</div>
 			<div id="home-shop" style="position: relative;">
 					<div class="featured-background" style="height: 800px; margin: 0; /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e98202+0,ffd746+100&0.9+0,0.9+100 */
@@ -232,6 +234,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e98202', e
 			});
 });
     </script>
+    <!--SLIDER-->
+  		<link type="text/css" rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/lightslider.css" />                  
+  		<script src="<?php echo get_stylesheet_directory_uri(); ?>/library/js/lightslider.js"></script>
+    <script  type="text/javascript">
+		jQuery(document).ready(function() {
+		    jQuery('.home-video .featured-last-slider').lightSlider({
+		        item:1,
+		        slideMargin:0,
+		        loop:true
+		    });
+		});
+	</script>
             <?php } ?> 
         <!-- SET HEIGHT TO MAIN STORY -->
         
