@@ -4031,7 +4031,7 @@ a.absoluteLink {
 }
 #featured-product-container-flex article.product {
   display: inline-block;
-  width: 23%;
+  width: 48%;
   border: 0px;
   margin-bottom: 50px;
 }
@@ -5053,7 +5053,8 @@ VIDEO
 /******************************************************************
 SHOP
 ******************************************************************/
-#content-container #content #inner-content #main article.product {
+.page-template-page-shop #content-container #content #inner-content #main article.product,
+.tax-product_category #content-container #content #inner-content #main article.product {
   width: 23%;
 }
 .product.single .leftColumn.content {
@@ -5063,6 +5064,9 @@ SHOP
 .product.single .rightColumn.details {
   float: right;
   width: 37%;
+}
+.home .page-template-page-shop #content-top #m-header #home-shop #featured-product-container-flex article.product {
+  width: 23px !important;
 }
 #articles article.large .title,
 article.opinion .title,
