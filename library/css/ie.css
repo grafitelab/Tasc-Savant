@@ -3920,7 +3920,7 @@ a.absoluteLink {
 .page-template-page-shop #content-container #content #inner-content #main article.product,
 .tax-product_category #content-container #content #inner-content #main article.product {
   display: inline-block;
-  width: 23%;
+  width: 48%;
   border: 0px;
   margin-bottom: 50px;
 }
@@ -5053,6 +5053,9 @@ VIDEO
 /******************************************************************
 SHOP
 ******************************************************************/
+#content-container #content #inner-content #main article.product {
+  width: 23%;
+}
 .product.single .leftColumn.content {
   float: left;
   width: 60%;
