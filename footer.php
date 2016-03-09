@@ -3,12 +3,10 @@
 		<div class="page-template-page-video page-template-page-shop">
 		<div id="content-top">
 		<div id="m-header">
-				<div class="home-video" style="position: relative;">
-					<div class="featured-background" style="height: 800px; background-color: #202020; background-image: none; margin: 0;"><div class="featured-background-shade"></div></div>
+				<div id="home-video" style="position: relative;">
 					<h1 class="page-title">Ultimo Video<div class="m-border" style="background-color: #50E3C2;"></div></h1>
-					<ul class="featured-last-slider">
 					<?php
-						$lastCustomVideo = new WP_Query( 'post_type=video&posts_per_page=4' );
+						$lastCustomVideo = new WP_Query( 'post_type=video&posts_per_page=1' );
 						if ($lastCustomVideo->have_posts()) {
 							while ($lastCustomVideo->have_posts()) {
 								$lastCustomVideo->the_post();
@@ -21,7 +19,7 @@
 				$thumb= $thumb_url[0];
 			
     				?>
-					<li class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
+					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="divLink"></a>
 						<h2 class="last-category">
 							<?php
@@ -39,12 +37,12 @@
 						<h1 class="last-title"><?php the_title(); ?></h1>
 						<div class="overlay"></div> 
 						<div class="gradient"></div>
-					</li>
+					</div>
 					<?php
 							}
 						}
     				?>
-					</ul>
+					<div class="home-m-link" style="color: #50E3C2">Visita Tasc Video<a class="divLink" href="/video"></a></div>
 				</div>
 			<div id="home-shop">
 					<div class="featured-background"></div>
