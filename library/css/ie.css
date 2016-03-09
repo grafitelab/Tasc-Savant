@@ -3941,6 +3941,112 @@ a.absoluteLink {
   display: inline-block;
   width: 23%;
 }
+.home .page-template-page-shop #content-top #m-header #home-shop {
+  position: relative;
+  height: auto;
+  z-index: 0;
+}
+.home .page-template-page-shop #content-top #m-header #home-shop .featured-background {
+  position: absolute !important;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  margin: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e98202+0,ffd746+100&0.9+0,0.9+100 */
+  background: -moz-linear-gradient(-45deg, rgba(233, 130, 2, 0.9) 0%, rgba(255, 215, 70, 0.9) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(233, 130, 2, 0.9) 0%, rgba(255, 215, 70, 0.9) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(233, 130, 2, 0.9) 0%, rgba(255, 215, 70, 0.9) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6e98202', endColorstr='#e6ffd746', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  z-index: -1;
+}
+.home .page-template-page-shop #content-top #m-header #home-shop .page-title {
+  position: relative;
+  top: 30px;
+}
+.home .page-template-page-shop #content-top #m-header #home-shop .page-subtitle {
+  position: relative;
+  margin-bottom: 30px;
+}
+.home .page-template-page-shop #content-top #m-header #home-shop .featured-product-container-flex {
+  position: relative;
+  margin-bottom: 30px;
+}
+.home-m-link {
+  display: block;
+  padding: 10px;
+  background-color: white;
+  position: relative;
+  width: 130px;
+  margin: 0 auto;
+  bottom: 30px;
+  color: #F5A623;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#featured-product-container-flex {
+  text-align: justify;
+  font-size: 0;
+  display: -webkit-flex;
+  display: flex;
+  display: -ms-flex;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: space-between;
+  -webkit-align-content: flex-start;
+  margin-bottom: 20px;
+  width: 85%;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 0;
+}
+#featured-product-container-flex:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+#featured-product-container-flex article.product {
+  display: inline-block;
+  width: 23%;
+  border: 0px;
+  margin-bottom: 50px;
+}
+#featured-product-container-flex article.product .thumb {
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: #D8D8D8;
+  margin-bottom: 20px;
+  position: relative;
+}
+#featured-product-container-flex article.product span.brand {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+}
+#featured-product-container-flex article.product span.price {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  margin-top: -18px;
+  text-align: right;
+}
+#featured-product-container-flex article.product h1.product-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  border: 0;
+}
+#featured-product-container-flex .gap {
+  display: inline-block;
+  width: 23%;
+}
 .product.single {
   border-bottom: 0px;
 }

@@ -1,5 +1,4 @@
-		
-		</div> <!-- end #container -->
+
 		<?php if ( is_home() ) {?>
 		<div class="page-template-page-video page-template-page-shop">
 		<div id="content-top">
@@ -47,18 +46,13 @@
     				?>
 					</ul>
 				</div>
-			<div id="home-shop" style="position: relative;">
-					<div class="featured-background" style="height: 800px; margin: 0; /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e98202+0,ffd746+100&0.9+0,0.9+100 */
-background: -moz-linear-gradient(-45deg,  rgba(233,130,2,0.9) 0%, rgba(255,215,70,0.9) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg,  rgba(233,130,2,0.9) 0%,rgba(255,215,70,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg,  rgba(233,130,2,0.9) 0%,rgba(255,215,70,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e98202', endColorstr='#e6ffd746',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-"></div>
+			<div id="home-shop">
+					<div class="featured-background"></div>
 					<h1 class="page-title">Tasc Shop<div class="m-border"></div></h1>
 					<h2 class="page-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</h2>
-					<div id="featured-product-container">
+					<div id="featured-product-container-flex">
 					<?php
-						$lastCustomProduct = new WP_Query( 'post_type=product&posts_per_page=3' );
+						$lastCustomProduct = new WP_Query( 'post_type=product&posts_per_page=4' );
 						if ($lastCustomProduct->have_posts()) {
 							while ($lastCustomProduct->have_posts()) {
 								$lastCustomProduct->the_post();
@@ -72,24 +66,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e98202', e
 				$productCustomMeta = get_post_meta($post->ID,'_my_meta',TRUE);
 			
     				?>
-					<div class="featured-product" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>'); background-size: cover;"  <?php } ?>>
-						<a class="absoluteLink" href="<?php the_permalink() ?>"></a>
-						<h1 class="product-title"><?php the_title(); ?></h1>
-						<span class="featured-price"><?php $productCustomMeta['price'] ?></span>
-						<div class="overlay"></div>
-						<div class="gradient"></div>
-					</div>
+					<article class="product">
+			    				<div class="thumb" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>'); background-size: cover;"  <?php } ?>><a class="absoluteLink" href="<?php the_permalink() ?>"></a></div>
+			    				<span class="brand"><?php echo $productCustomMeta['brand'] ?></span>
+			    				<span class="price"><?php if ($productCustomMeta['discounted-price'] != ""){ echo "<span class='discounted-price'>".$productCustomMeta['price'].'</span> | '.$productCustomMeta['discounted-price'];} else if ($productCustomMeta['price'] != "") { echo $productCustomMeta['price']; }?></span>
+			    				<h1 class="product-name"><?php the_title(); ?></h1>
+		    		</article>
 					<?php
 							}
 						}
     				?>
 					</div>
+					<div class="home-m-link">Visita lo shop<a class="divLink" href="/shop"></a></div>
 			</div>
 			
 		</div>
 		</div>
 		</div>
 		<?php } ?>
+		
+		</div> <!-- end #container -->
+		
 		<footer class="footer" role="contentinfo"
 			<?php
 			//seleziono immagine casuale per sfondo footer
@@ -234,18 +231,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e98202', e
 			});
 });
     </script>
-    <!--SLIDER-->
-  		<link type="text/css" rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/lightslider.css" />                  
-  		<script src="<?php echo get_stylesheet_directory_uri(); ?>/library/js/lightslider.js"></script>
-    <script  type="text/javascript">
-		jQuery(document).ready(function() {
-		    jQuery('.home-video .featured-last-slider').lightSlider({
-		        item:1,
-		        slideMargin:0,
-		        loop:true
-		    });
-		});
-	</script>
+    
             <?php } ?> 
         <!-- SET HEIGHT TO MAIN STORY -->
         

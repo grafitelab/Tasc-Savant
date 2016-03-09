@@ -5,6 +5,7 @@
 						$thumb_url = wp_get_attachment_image_src($thumb_id,'thumb-big', true);
 						$thumb= $thumb_url[0];
 					?>
+					
 					<div id="super-header">
 						<div id="large-post-header" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>  >
 							<h1 class="page-title"><?php
@@ -19,6 +20,11 @@
 											echo $terms_slug_str;
 									?><div class="m-border"></div></h1>
 							<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
+								<div class="m-slider-container">
+									
+									<div class="arrow arrow-left"><div class="inner-arrow"></div><div class="arrow-text">Previous</div><a class="divLink" rel="previous" href="#"></a></div>
+									<div class="arrow arrow-right"><div class="inner-arrow"></div><div class="arrow-text">Next</div><a class="divLink" rel="next" href="#"></a></div>
+								</div>
 								<?php if( has_post_video() ) {the_post_video();} ?>
 							</div>
 							
