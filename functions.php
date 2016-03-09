@@ -650,4 +650,12 @@ function my_meta_clean(&$arr)
     }
 }
 
+//RELATED POSTS ON CUSTOM POST TYPES
+
+function allow_my_post_types($allowed_post_types) {
+    $allowed_post_types[] = 'video', 'product';
+    return $allowed_post_types;
+}
+add_filter( 'rest_api_allowed_post_types', 'allow_my_post_types' );
+
 ?>

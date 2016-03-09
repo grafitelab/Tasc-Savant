@@ -2778,6 +2778,7 @@ VIDEO
     margin-top: -35px;
     width: 120%;
     z-index: 10;
+    display: none;
     .arrow{
 	    position: absolute;
 	    width: 70px;
@@ -2869,37 +2870,7 @@ VIDEO
     }
 }
 
-.page-template-page-video, .tax-video_category{
-	#content-top{
-		position: relative;
-		
-		#m-header{
-			position: relative;
-		
-			.featured-background{
-				background-image: url(../images/page-column-bg.jpg);
-			}
-			.m-border{
-				background-color: #50E3C2;
-			}
-		
-		}
-	}
-	#videos{
-		margin-bottom: 2em;
-		article.video{
-			border: 0;
-			margin: 0;
-			height: 250px;
-			.tasc-post{
-				height: 100%;
-				a{
-					border: 0;
-					.title{
-						    line-height: 24px;
-							font-size: 20px;
-						}
-					.video-icon{
+.video-icon{
 						    width: 80px;
 						    height: 80px;
 						    background-color: black;
@@ -2935,6 +2906,37 @@ VIDEO
 							    margin-top: -6px;
 						    }
 					}
+
+.page-template-page-video, .tax-video_category{
+	#content-top{
+		position: relative;
+		
+		#m-header{
+			position: relative;
+		
+			.featured-background{
+				background-image: url(../images/page-column-bg.jpg);
+			}
+			.m-border{
+				background-color: #50E3C2;
+			}
+		
+		}
+	}
+	#videos{
+		margin-bottom: 2em;
+		article.video{
+			border: 0;
+			margin: 0;
+			height: 250px;
+			.tasc-post{
+				height: 100%;
+				a{
+					border: 0;
+					.title{
+						    line-height: 24px;
+							font-size: 20px;
+						}
 				}
 			}
 		}
@@ -3007,27 +3009,33 @@ VIDEO
 		    top: 0;
 		    left: 0;
 		    opacity: 0.25;
-		}
-	#full-post-info{
+		}	
+
+}
+
+.single.single-video .super-full #super-header{
+	min-height: 850px;
+}
+
+.single.single-video .super-full #super-header #large-post-header #full-post-info{
 		left: 0;
 		width: 100%;
 		z-index: 2;
+		bottom: 20px; 
 		#super-title{
 			width: 100%;
-			.single-title{
+			h1.single-title{
 				text-align: center;
 			    left: 0px;
 			    margin: 0 auto;
 			    a{
 				    text-transform: uppercase;
 				    font-weight: 600 !important;
+				    font-size: 20px;
 			    }
 			}
 		}
-	}	
-
-}
-
+	}
 
 .home .page-template-page-video #content-top #m-header #home-video{
 	background-color: #202020;
