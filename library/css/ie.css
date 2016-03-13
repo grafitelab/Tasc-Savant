@@ -3359,7 +3359,7 @@ div.scrollableArea {
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.6;
+  opacity: 0.8;
   top: 0;
   left: 0;
 }
@@ -3697,7 +3697,7 @@ VIDEO
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.6;
+  opacity: 0.8;
   top: 0;
   left: 0;
   z-index: 1;
@@ -3869,13 +3869,15 @@ a.absoluteLink {
   font-size: 0;
   width: 92%;
   margin: 0 auto;
+  margin-top: 20px;
 }
 .page-template-page-shop #content-top #m-header #featured-product-container .featured-product,
 .tax-product_category #content-top #m-header #featured-product-container .featured-product {
   display: inline-block;
   height: auto;
   padding-bottom: 22% !important;
-  width: 30%;
+  width: 48%;
+  margin-bottom: 10px;
   background-color: #D8D8D8;
   top: 0;
   vertical-align: top;
@@ -3887,7 +3889,7 @@ a.absoluteLink {
 .tax-product_category #content-top #m-header #featured-product-container .featured-product h1.product-title {
   position: absolute;
   bottom: 25px;
-  font-size: 25px;
+  font-size: 20px;
   color: white;
   font-weight: 500;
   z-index: 3;
@@ -5066,7 +5068,15 @@ SHOP
   width: 37%;
 }
 .home .page-template-page-shop #content-top #m-header #home-shop #featured-product-container-flex article.product {
-  width: 23px !important;
+  width: 23% !important;
+}
+.page-template-page-shop #content-top #m-header #featured-product-container .featured-product,
+.tax-product_category #content-top #m-header #featured-product-container .featured-product {
+  width: 30%;
+}
+.page-template-page-shop #content-top #m-header #featured-product-container .featured-product h1.product-title,
+.tax-product_category #content-top #m-header #featured-product-container .featured-product h1.product-title {
+  font-size: 25px;
 }
 #articles article.large .title,
 article.opinion .title,
