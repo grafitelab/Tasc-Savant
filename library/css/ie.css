@@ -4547,6 +4547,9 @@ article.opinion p {
   padding: 30px;
   line-height: 35px;
 }
+.search #articles {
+  padding-right: 0;
+}
 #articles {
   padding-right: 41.07142857142857%;
 }
