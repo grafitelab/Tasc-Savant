@@ -1377,7 +1377,6 @@ MAIN STORIES - HOME
 
 #top-stories {
 	margin-bottom: 1em;
-	height:auto;
 	overflow:hidden;
 }
 
@@ -1397,13 +1396,15 @@ MAIN STORIES - HOME
 }
 
 #main-story {
-	display:block;
-	margin-bottom:1em;
-	
+	display:block;	
 	article.main-post {
 		width:100%; 
 		border-bottom:0;
 		margin-bottom:0;
+		article{
+			margin: 0;
+			border: 0;
+		}
 	}
 
 }
@@ -1412,11 +1413,12 @@ MAIN STORIES - HOME
 #side-story {
 	display:block; 
 
-	/*article.side-post {
-		width:100%;
-		border-bottom:0;
-		margin-bottom:0;
-	}*/
+	article.side-post {
+		article{
+			margin: 0;
+			border: 0;
+		}
+	}
 	
 
 	.last-opinions {

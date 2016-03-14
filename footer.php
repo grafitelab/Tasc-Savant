@@ -219,8 +219,6 @@
         <?php if ( is_home() ) {?>	
 	<script  type="text/javascript">	
 		jQuery(document).ready(function($) {
-			$(window).resize(function() {
-			if ($(window).width() > 768) {
 			$(function(){
 				var msh = $("#main-story").height();
 				$("#top-stories").css('height',msh);
@@ -228,8 +226,6 @@
 				var msh = $("#main-story").height();
 				$("#top-stories").css('height',msh);
     		});
-			});
-			}		
 			});
 		});
     </script>
