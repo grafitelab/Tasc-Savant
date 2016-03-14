@@ -3115,6 +3115,7 @@ SIDEBAR
   /* 150 / 390 */
   height: auto;
   float: left;
+  display: none;
 }
 #opinions-sidebar article.type-opinion .s-opinion-title {
   float: left;
@@ -3132,6 +3133,7 @@ SIDEBAR
 }
 #opinions-sidebar article.type-opinion .createdby {
   float: left;
+  clear: both;
   max-width: 57.69230769230769%;
   /* 225 / 390 */
   margin-left: 3.8461538461538464%;
@@ -3154,15 +3156,16 @@ SIDEBAR
 }
 #column-sidebar ul.s-column-container li.s-column-single {
   width: 100%;
-  height: 190px;
+  height: auto;
   position: relative;
   display: block;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 #column-sidebar ul.s-column-container li.s-column-single .outer-mask {
   position: absolute;
   width: 390px;
-  height: 190px;
+  height: 100%;
   overflow: hidden;
 }
 #column-sidebar ul.s-column-container li.s-column-single .outer-mask .inner-mask {
@@ -3218,7 +3221,7 @@ SIDEBAR
   padding: 15px;
   font-size: 17px;
   font-weight: 600;
-  position: absolute;
+  position: relative;
   text-align: left;
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
   z-index: 2;
@@ -3232,13 +3235,13 @@ SIDEBAR
   color: #000000;
 }
 #other-sidebar .quote {
-  font-size: 24px;
+  font-size: 15px;
   font-weight: 100;
   display: block;
 }
 #other-sidebar .quote-author {
   display: block;
-  font-size: 13px;
+  font-size: 10px;
   text-transform: uppercase;
   text-align: right;
 }
@@ -4631,6 +4634,10 @@ SIDEBAR
 #opinions-sidebar article.type-opinion img {
   width: 38.461538461538464%;
   /* 150 / 390 */
+  display: block;
+}
+#opinions-sidebar article.type-opinion .createdby {
+  clear: none;
 }
 #opinions-sidebar article.type-opinion:last-child {
   margin-bottom: 0;
@@ -4701,6 +4708,12 @@ SIDEBAR
 }
 #column-sidebar ul.s-column-container li.s-column-single h1.title:hover {
   color: #fff;
+}
+#other-sidebar .quote {
+  font-size: 24px;
+}
+#other-sidebar .quote-author {
+  font-size: 13px;
 }
 /*********************
 REVIEW BOX

@@ -182,7 +182,8 @@ You are reading our code. Thank you for that: it's often said that imitation is 
 					<a href="<?php echo home_url(); ?>" rel="nofollow" class="iconfont"><span id="logospan"></span></a>
 				</div>
 				
-				<?php display_cats(); ?>
+				<?php // display_cats(); ?>
+				<?php wp_nav_menu( array( 'container_id' => 'categories-nav', 'theme_location' => 'categories' ) ); ?>
 				
 			</div> <!-- end #inner-header -->
 		

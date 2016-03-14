@@ -2420,6 +2420,7 @@ SIDEBAR
 			width: 38.461538461538464%; /* 150 / 390 */
 			height: auto;
 			float: left;
+			display: none;
 		}
 		.s-opinion-title{
 			float: left;
@@ -2435,6 +2436,7 @@ SIDEBAR
 		}
 		.createdby{
 			float: left;
+			clear: both;
 			max-width: 57.69230769230769%; /* 225 / 390 */
 			margin-left: 3.8461538461538464%; /* 15 / 390 */
 			font-family: @large;
@@ -2462,14 +2464,15 @@ SIDEBAR
 		
 		li.s-column-single{
 			width: 100%;
-			height: 190px;
+			height: auto;
 			position: relative;
 			display: block;
 			margin-bottom: 20px;
+			overflow: hidden;
 			.outer-mask {
 			    position: absolute;
 			    width: 390px;
-			    height: 190px;
+			    height: 100%;
 			    overflow: hidden;
 			    .inner-mask {
 				    position: absolute;
@@ -2510,7 +2513,7 @@ SIDEBAR
 				padding:15px;
 				font-size:17px;
 				font-weight:600;
-				position:absolute;
+				position:relative;
 				text-align:left;
 				font-family: @large;
 				z-index:2;
@@ -2531,13 +2534,13 @@ SIDEBAR
 		color: @otherdark;
 	}
 	.quote{
-		font-size: 24px;
+		font-size: 15px;
 	    font-weight: 100;
 	    display: block;
 	}
 	.quote-author{
 		display: block;
-	    font-size: 13px;
+	    font-size: 10px;
 	    text-transform: uppercase;
 	    text-align: right;
 	}

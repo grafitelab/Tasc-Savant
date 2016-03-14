@@ -658,4 +658,10 @@ function allow_my_post_types($allowed_post_types) {
 }
 add_filter( 'rest_api_allowed_post_types', 'allow_my_post_types' );
 
+//add menu
+function savant_menu() {
+    register_nav_menu( 'categories', 'Savant Menu' );
+}
+add_action( 'init', 'savant_menu' );
+
 ?>
