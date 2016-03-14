@@ -2,9 +2,7 @@
 								    	<div class="tasc-post">
 								    		<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 									    		<div class="title">
-										    	<span class="category-highlight category-<?php foreach(get_the_category() as $category) {
-														echo $css_slug;} ?> category-<?php $category = get_the_category(); 
-														echo $category[0]->slug; ?>"><?php
+										    	<span class="category-highlight tag-<?php echo get_post_type( $post ) ?> tagformat-<?php echo get_post_format(); ?>"><span class="color"></span><?php
 														$category = get_the_category(); 
 														echo $category[0]->cat_name;?>
 												</span><br/>

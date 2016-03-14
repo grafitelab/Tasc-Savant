@@ -2174,25 +2174,50 @@ LOOP BIGSTORY ARCHIVES AND HOME
 .side-story .category-highlight,
 #snacks-sidebar .category-highlight,
 #article-sidebar .category-highlight {
-  display: none;
   color: #fff;
   padding: 1px 8px 0;
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 12px;
   text-transform: uppercase;
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 6px;
-  height: 33px;
-  line-height: 31px;
-  background-color: #FFC600;
-  opacity: 80%;
-  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
-  /*CAMBIO*/
-  height: 23px;
-  line-height: 23px;
+}
+.big-story .category-highlight .color,
+.second-story .category-highlight .color,
+#related_stories .category-highlight .color,
+.sticky .category-highlight .color,
+#articles .category-highlight .color,
+.side-story .category-highlight .color,
+#snacks-sidebar .category-highlight .color,
+#article-sidebar .category-highlight .color {
+  height: 16px;
+  width: 4px;
+  background-color: white;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+}
+.big-story .tag-post.category-highlight .color,
+.second-story .tag-post.category-highlight .color,
+#related_stories .tag-post.category-highlight .color,
+.sticky .tag-post.category-highlight .color,
+#articles .tag-post.category-highlight .color,
+.side-story .tag-post.category-highlight .color,
+#snacks-sidebar .tag-post.category-highlight .color,
+#article-sidebar .tag-post.category-highlight .color {
+  background-color: #202020;
+}
+.big-story .tag-post.tagformat-aside.category-highlight .color,
+.second-story .tag-post.tagformat-aside.category-highlight .color,
+#related_stories .tag-post.tagformat-aside.category-highlight .color,
+.sticky .tag-post.tagformat-aside.category-highlight .color,
+#articles .tag-post.tagformat-aside.category-highlight .color,
+.side-story .tag-post.tagformat-aside.category-highlight .color,
+#snacks-sidebar .tag-post.tagformat-aside.category-highlight .color,
+#article-sidebar .tag-post.tagformat-aside.category-highlight .color {
+  background-color: #7ED321;
 }
 .big-story .title,
 .second-story .title,
