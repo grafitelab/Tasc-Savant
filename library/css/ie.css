@@ -2067,7 +2067,7 @@ MAIN STORIES - HOME
 #side-story {
   display: block;
 }
-#side-story article.side-post article {
+#side-story .side-story article {
   margin: 0;
   border: 0;
 }
