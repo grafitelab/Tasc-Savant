@@ -2184,7 +2184,15 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #articles .category-highlight,
 .side-story .category-highlight,
 #snacks-sidebar .category-highlight,
-#article-sidebar .category-highlight {
+#article-sidebar .category-highlight,
+.big-story .category-highlight::before,
+.second-story .category-highlight::before,
+#related_stories .category-highlight::before,
+.sticky .category-highlight::before,
+#articles .category-highlight::before,
+.side-story .category-highlight::before,
+#snacks-sidebar .category-highlight::before,
+#article-sidebar .category-highlight::before {
   color: #fff;
   font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", "Arial";
   font-weight: 600;
@@ -2200,7 +2208,15 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #articles .category-highlight .color,
 .side-story .category-highlight .color,
 #snacks-sidebar .category-highlight .color,
-#article-sidebar .category-highlight .color {
+#article-sidebar .category-highlight .color,
+.big-story .category-highlight::before .color,
+.second-story .category-highlight::before .color,
+#related_stories .category-highlight::before .color,
+.sticky .category-highlight::before .color,
+#articles .category-highlight::before .color,
+.side-story .category-highlight::before .color,
+#snacks-sidebar .category-highlight::before .color,
+#article-sidebar .category-highlight::before .color {
   height: 16px;
   width: 4px;
   background-color: white;
@@ -2228,16 +2244,6 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #snacks-sidebar .tag-post.tagformat-aside.category-highlight .color,
 #article-sidebar .tag-post.tagformat-aside.category-highlight .color {
   background-color: #7ED321;
-}
-.big-story .tag-video.category-highlight,
-.second-story .tag-video.category-highlight,
-#related_stories .tag-video.category-highlight,
-.sticky .tag-video.category-highlight,
-#articles .tag-video.category-highlight,
-.side-story .tag-video.category-highlight,
-#snacks-sidebar .tag-video.category-highlight,
-#article-sidebar .tag-video.category-highlight {
-  content: "Video";
 }
 .big-story .tag-video.category-highlight .color,
 .second-story .tag-video.category-highlight .color,
