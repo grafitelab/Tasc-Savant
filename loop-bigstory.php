@@ -11,17 +11,20 @@
 									    		<div class="title">
 										    	<span class="category-highlight tag-<?php echo get_post_type( $post ) ?> tagformat-<?php echo get_post_format(); ?>"><span class="color"></span><?php
 														$category = get_the_category(); 
-														echo $category[0]->cat_name;?><?php
-								$postCat = get_the_terms($post->ID, 'video_category' );
-									if ($postCat && ! is_wp_error($postCat)) :
-										$term_slugs_arr = array();
-										foreach ($postCat as $term) {
-											$term_slugs_arr[] = $term->slug;
-										}
-										$terms_slug_str = join( " ", $term_slugs_arr);
-									endif;
-									echo $terms_slug_str;
-							?>
+														echo $category[0]->cat_name;?>
+														<?php $videocat = get_the_terms( $post->ID , 'video_category' );
+
+														foreach ( $videocat as $lastTerm ) {
+														
+														echo $lastTerm->name;
+														
+														} ?><?php $columncat = get_the_terms( $post->ID , 'column_category' );
+							
+														foreach ( $columncat as $lastTerm ) {
+														
+														echo $lastTerm->name;
+														
+														} ?>
 												</span><br/>
 												<span class="title-date"><?php echo the_time('j F Y'); ?></span>
 										    	<?php the_title(); ?>
