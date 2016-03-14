@@ -2229,6 +2229,26 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #article-sidebar .tag-post.tagformat-aside.category-highlight .color {
   background-color: #7ED321;
 }
+.big-story .tag-video.category-highlight,
+.second-story .tag-video.category-highlight,
+#related_stories .tag-video.category-highlight,
+.sticky .tag-video.category-highlight,
+#articles .tag-video.category-highlight,
+.side-story .tag-video.category-highlight,
+#snacks-sidebar .tag-video.category-highlight,
+#article-sidebar .tag-video.category-highlight {
+  content: "Video";
+}
+.big-story .tag-video.category-highlight .color,
+.second-story .tag-video.category-highlight .color,
+#related_stories .tag-video.category-highlight .color,
+.sticky .tag-video.category-highlight .color,
+#articles .tag-video.category-highlight .color,
+.side-story .tag-video.category-highlight .color,
+#snacks-sidebar .tag-video.category-highlight .color,
+#article-sidebar .tag-video.category-highlight .color {
+  background-color: #50E3C2;
+}
 .big-story .title,
 .second-story .title,
 #related_stories .title,

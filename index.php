@@ -76,7 +76,11 @@
 								
 						    
 						    	<div id="articles-content">
-									<?php wp_reset_query(); if (have_posts()) : while (have_posts()) : the_post(); 
+									<?php wp_reset_query(); 
+										global $wp_query;
+										$args = array_merge( $wp_query->query, array( 'post_type' => array('post','column','video') ) );
+										query_posts( $args );
+										if (have_posts()) : while (have_posts()) : the_post(); 
 									
 										//Se è uno snack salta
 										$format = get_post_format();
