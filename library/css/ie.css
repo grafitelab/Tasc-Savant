@@ -2339,6 +2339,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
 }
 #task-rank-sidebar .s-section-title {
   background-color: transparent !important;
+  background: transparent !important;
 }
 #task-rank-sidebar .s-section-title .s-title-background {
   background-color: transparent !important;
@@ -2349,13 +2350,14 @@ LOOP BIGSTORY ARCHIVES AND HOME
 #task-rank-sidebar .s-section-title .s-title-background .s-title a {
   font-weight: 400 !important;
   color: black;
+  font-size: 15px;
 }
 #task-rank-sidebar .s-section-title .s-title-background .s-title a:hover {
   color: #5b5b5b !important;
 }
 #task-rank-sidebar .comewithus {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 13px;
   text-align: center;
 }
 #task-rank-sidebar .comewithus .entranelcast {
@@ -2366,6 +2368,7 @@ LOOP BIGSTORY ARCHIVES AND HOME
   margin: 0 auto;
   margin-top: 10px;
   text-transform: uppercase;
+  position: relative;
 }
 /*********************
 OPINIONE
@@ -4755,6 +4758,15 @@ SIDEBAR
 }
 #other-sidebar .quote-author {
   font-size: 13px;
+}
+#task-rank-sidebar {
+  margin-bottom: 10px;
+}
+#task-rank-sidebar .s-section-title .s-title-background .s-title a {
+  font-size: 20px;
+}
+#task-rank-sidebar .comewithus {
+  font-size: 18px;
 }
 /*********************
 REVIEW BOX
