@@ -98,6 +98,41 @@
 					</div>
 				</section>
 				<section id="task-rank-sidebar" class="sidebar-section">
+					<div id="tasc-world" class="promotion grafitestyle">
+						<div class="s-section-title clearfix">
+						<div class="s-title-background">
+							<span class="s-title"><a href="http://www.tasc.it/tasc-rank">Tasc Rank</a></span>
+						</div>
+						</div>
+											<div class="tascrank">
+												<ul>
+											    	<?php
+											    	
+													function cmp( $a, $b )
+													{ 
+													  if(  $a->points_user_day ==  $b->points_user_day ){ return 0 ; } 
+													  return ($a->points_user_day < $b->points_user_day ) ? 1 : -1;
+													} 
+													
+													$args = array(
+													'meta_key' => 'points_user_day',
+													'who' => 'authors',
+													);
+													$blogusers = get_users($args);
+													usort($blogusers ,'cmp');
+													$count = 0;
+													foreach ($blogusers as $user) { $count++; ?>
+													<li><a href="<?php echo get_author_posts_url( $user->ID ); ?>"><span class="avatar"><?php echo get_avatar($user->ID, 60); ?></span><span class="name"><?php echo $user->display_name; ?></span></a></li>						      
+												    <?php 
+												    if ($count==3) {break;}  }
+												    ?>
+												</ul>
+											</div>
+					</div>
+					<div class="comewithus">
+						SEI APPASSIONATO DI TENDENZE E INNOVAZIONE? TI PIACE SCRIVERE E VUOI DIRE LA TUA?
+						<div class="entranelcast">Entra nel cast!<a class="divLink" alt="Entra nel cast!" title="Entra nel cast!" href="https://www.tasc.it/entra-nel-cast"></a></div>
+					</div>	
 					
 				</section>
 			</div>

@@ -44,7 +44,7 @@
     				?>
 					<div class="home-m-link" style="color: #50E3C2">Visita Tasc Video<a class="divLink" href="/video"></a></div>
 				</div>
-			<div id="home-shop">
+			<div id="home-shop" style="display: none; visibility: hidden;">
 					<div class="featured-background"></div>
 					<h1 class="page-title">Tasc Shop<div class="m-border"></div></h1>
 					<h2 class="page-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</h2>

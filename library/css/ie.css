@@ -996,6 +996,8 @@ MIDDLE BAR
   font-size: 15px;
   margin: 0;
   padding-bottom: 1em;
+  background-color: transparent !important;
+  border-bottom: 1px solid white;
 }
 #tasc-world .border-line {
   display: none;
@@ -1021,6 +1023,10 @@ MIDDLE BAR
   font-size: 1em;
   font-weight: 400;
 }
+#tasc-world .tascrank {
+  width: 90%;
+  margin: 0 auto;
+}
 #tasc-world .tascrank ul li {
   height: 30px;
   width: 100%;
@@ -1031,6 +1037,10 @@ MIDDLE BAR
 }
 #tasc-world .tascrank ul li a {
   display: block;
+  color: black;
+}
+#tasc-world .tascrank ul li a:hover {
+  color: #5b5b5b !important;
 }
 #tasc-world .tascrank ul li .avatar {
   display: inline-block;
@@ -2322,6 +2332,40 @@ LOOP BIGSTORY ARCHIVES AND HOME
 }
 #snacks-sidebar article:last-child {
   margin-bottom: 0px !important;
+}
+#task-rank-sidebar {
+  background-color: #F0F0F0;
+  padding: 20px;
+}
+#task-rank-sidebar .s-section-title {
+  background-color: transparent !important;
+}
+#task-rank-sidebar .s-section-title .s-title-background {
+  background-color: transparent !important;
+  margin: 0;
+  width: auto;
+  text-align: left;
+}
+#task-rank-sidebar .s-section-title .s-title-background .s-title a {
+  font-weight: 400 !important;
+  color: black;
+}
+#task-rank-sidebar .s-section-title .s-title-background .s-title a:hover {
+  color: #5b5b5b !important;
+}
+#task-rank-sidebar .comewithus {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+#task-rank-sidebar .comewithus .entranelcast {
+  background-color: black;
+  color: white;
+  padding: 8px;
+  width: 180px;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-transform: uppercase;
 }
 /*********************
 OPINIONE
@@ -4352,9 +4396,6 @@ MIDDLE BAR
 }
 #tasc-world .tasclinks {
   width: 19%;
-}
-#tasc-world .tascrank {
-  width: 24%;
 }
 #tasc-world .sponsor {
   width: 27%;
