@@ -3546,6 +3546,10 @@ div.scrollableArea {
 /******************************************************************
 VIDEO
 ******************************************************************/
+.single-video .featured-last {
+  height: 0 !important;
+  padding-bottom: 50%;
+}
 .m-slider-container {
   height: 70px;
   position: absolute;
@@ -3753,7 +3757,7 @@ VIDEO
   right: 0;
   max-width: 948px;
   width: 80%;
-  height: 55%;
+  padding-bottom: 55%;
   background-position: center center;
   background-size: cover;
   color: white;
@@ -3782,9 +3786,11 @@ VIDEO
   left: 0;
   opacity: 0.25;
 }
-.single.single-video .super-full #super-header {
-  min-height: 850px;
+/*
+.single.single-video .super-full #super-header{
+	min-height: 850px;
 }
+*/
 .single.single-video .super-full #super-header #large-post-header #full-post-info {
   left: 0;
   width: 100%;
@@ -5123,6 +5129,13 @@ article.opinion .title,
 .tax-product_category #content-top h1.last-title,
 .tax-column_category #content-top h1.last-title {
   font-size: 36px;
+}
+.single-video .featured-last {
+  height: 55% !important;
+  padding-bottom: 0 !important;
+}
+.single.single-video .super-full #super-header {
+  min-height: 850px;
 }
 /* 
 you can call the larger styles if you want, but there's really no need 
