@@ -27,7 +27,7 @@
 										    	<?php the_title(); ?>
 										    	<div class="createdby">Creato da <?php $author = get_the_author(); echo $author; ?> </div></div>
 								    			<div class="overlay"></div> 
-								    			<?php if ( has_post_thumbnail() && get_post_type( $post ) != 'video' ) { the_post_thumbnail('large'); } else { ?><img src="<?php echo get_template_directory_uri(); ?>/library/images/default.jpg" /><?php } ?>
+								    			<?php if ( has_post_thumbnail() && get_post_type( $post ) != 'video' ) { the_post_thumbnail('large'); } elseif(!has_post_thumbnail() && get_post_type( $post ) == 'video' ) { ?><img style="visibility: hidden" src="<?php echo get_template_directory_uri(); ?>/library/images/default.jpg"/><?php } else{?><img style="visibility: hidden" src="<?php echo get_template_directory_uri(); ?>/library/images/default.jpg"/><?php } ?>
 							    			<div class="gradient"></div>
 								    		</a>
 								    	</div>
