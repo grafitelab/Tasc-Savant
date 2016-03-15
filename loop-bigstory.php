@@ -8,7 +8,7 @@
 								    	<article class="article-big-story"  <?php if ( has_post_thumbnail() && get_post_type( $post ) == 'video') { ?>style="background-image:url('<?php echo $thumb; ?>'); background-size: cover;"  <?php } ?>>
 								    	<div class="tasc-post">
 								    		<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-									    		<?php if ( get_post_type( $post ) == 'video') ){ ?>
+									    		<?php if ( get_post_type( $post ) == 'video'){ ?>
 									    		<div class="video-icon"><div class="play"></div></div>
 									    		<?php }?>
 									    		<div class="title">
