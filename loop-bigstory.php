@@ -12,22 +12,23 @@
 									    		<div class="video-icon"><div class="play"></div></div>
 									    		<?php }?>
 									    		<div class="title">
-										    	<span class="category-highlight tag-<?php echo get_post_type( $post ) ?> tagformat-<?php echo get_post_format(); ?>"><span class="color"></span><?php
-														$category = get_the_category(); 
-														echo $category[0]->cat_name;?>
+										    	<span class="category-highlight tag-<?php echo get_post_type( $post ) ?> tagformat-<?php echo get_post_format(); ?>"><span class="color"></span>
 														<?php if(get_post_type( $post ) == 'video'){ $videocat = get_the_terms( $post->ID , 'video_category' );
 
 														foreach ( $videocat as $lastTerm ) {
 														
 														echo $lastTerm->name;
 														
-														} }?><?php if(get_post_type( $post ) == 'column'){$columncat = get_the_terms( $post->ID , 'column_category' );
+														} }?><?php elseif(get_post_type( $post ) == 'column'){$columncat = get_the_terms( $post->ID , 'column_category' );
 							
 														foreach ( $columncat as $lastTerm ) {
 														
 														echo $lastTerm->name;
 														
-														} }?>
+														} } else{
+															$category = get_the_category(); 
+														echo $category[0]->cat_name;
+														}?>
 												</span><br/>
 												<span class="title-date"><?php echo the_time('j F Y'); ?></span>
 										    	<?php the_title(); ?>
