@@ -8,7 +8,7 @@ get_header(); ?>
 			<?php 
 			//SE L'ARTICOLO è FULL SUPER
 					$large = get_post_meta(get_the_ID(), 'opt_large', true);
-					if ( $large == "on" or $large == 1 ) {					
+					if ( $large == "on" or $large == 1   or is_singular( 'column' )) {					
 						get_template_part( 'loop', 'singleheaderfull' );
 					} 
 					if ( is_singular( 'video' ) ) {

@@ -1,7 +1,7 @@
 <?php
 //Se è un articolo SUPER
 $large = get_post_meta(get_the_ID(), 'opt_large', true);
-if ( $large == "on" or $large == 1 or is_singular( 'video' ) ) {
+if ( $large == "on" or $large == 1 or is_singular( 'video' )  or is_singular( 'column' ) ) {
 	
 	//VECCHIO
 

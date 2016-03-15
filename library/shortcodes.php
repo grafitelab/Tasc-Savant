@@ -6,7 +6,7 @@ function tasctags() {
     global $typenow;
 
     // only on Post Type: post and page
-    if( ! in_array( $typenow, array( 'post', 'page' ) ) )
+    if( ! in_array( $typenow, array( 'post', 'page', 'column' ) ) )
         return ;
 
     add_filter( 'mce_external_plugins', 'tasctags_add_tinymce_plugin' );

@@ -192,7 +192,7 @@ You are reading our code. Thank you for that: it's often said that imitation is 
 		<!-- Apro il container in base al tipo di pagina -->
 		<?php if(is_single()) {
 			$large = get_post_meta($post->ID, 'opt_large', true);
-			if($large == "on" or $large == 1 or is_singular( 'video' ) or is_singular( 'product' )) { ?>
+			if($large == "on" or $large == 1 or is_singular( 'video' ) or is_singular( 'product' ) or is_singular( 'column' )) { ?>
 				<?php 
 					global $post;
 					get_template_part( 'parts/side-sharebox' ); 
