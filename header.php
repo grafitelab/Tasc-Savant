@@ -122,7 +122,8 @@ You are reading our code. Thank you for that: it's often said that imitation is 
 				if($detect->isMobile() && !$detect->isTablet()) { ?> 
 				<div class="site-nav-box">
 					<h3>Esplora</h3>
-					<?php display_cats(); ?>
+					<?php // display_cats(); ?>
+					<?php wp_nav_menu( array( 'container_id' => 'categories-nav', 'theme_location' => 'categories' ) ); ?>
 				</div>
 				<?php } ?>
 				
