@@ -19,7 +19,7 @@
 														
 														echo $lastTerm->name;
 														
-														} }?><?php elseif(get_post_type( $post ) == 'column'){$columncat = get_the_terms( $post->ID , 'column_category' );
+														} } elseif(get_post_type( $post ) == 'column'){$columncat = get_the_terms( $post->ID , 'column_category' );
 							
 														foreach ( $columncat as $lastTerm ) {
 														
