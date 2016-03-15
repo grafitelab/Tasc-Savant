@@ -996,8 +996,6 @@ MIDDLE BAR
   font-size: 15px;
   margin: 0;
   padding-bottom: 1em;
-  background-color: transparent !important;
-  border-bottom: 1px solid white;
 }
 #tasc-world .border-line {
   display: none;
@@ -2373,6 +2371,10 @@ LOOP BIGSTORY ARCHIVES AND HOME
   background-color: #F0F0F0;
   padding: 20px;
 }
+#task-rank-sidebar #tasc-world {
+  background-color: transparent!important;
+  border-bottom: 1px solid white;
+}
 #task-rank-sidebar .s-section-title {
   background-color: transparent !important;
   background: transparent !important;
@@ -3299,6 +3301,23 @@ SIDEBAR
   border: none;
   z-index: 10;
 }
+#column-sidebar ul.s-column-container li.s-column-single h2.subtitle {
+  top: 0;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  text-align: left;
+  font-family: "Gotham A", "Gotham B", "Myriad Pro", "Helvetica Neue", "Trebuchet MS", Arial;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 1px 1px #000;
+  text-transform: uppercase;
+  margin: 0;
+}
+#column-sidebar ul.s-column-container li.s-column-single h2.subtitle p {
+  margin: 0;
+}
 #column-sidebar ul.s-column-container li.s-column-single h1.title {
   top: 0;
   padding: 15px;
@@ -3310,6 +3329,7 @@ SIDEBAR
   z-index: 2;
   color: #fff;
   text-shadow: 0px 1px 1px #000;
+  margin-top: 20px;
 }
 #column-sidebar ul.s-column-container li.s-column-single h1.title:hover {
   color: #fff;
@@ -3541,12 +3561,12 @@ div.scrollableArea {
   text-align: center;
   font-weight: 200;
   text-transform: uppercase;
-  font-size: 18px;
   position: absolute;
   left: 0;
   right: 0;
   top: 15%;
   z-index: 2;
+  font-size: 12px;
 }
 .page-template-page-video #content-top h1.last-title,
 .page-template-page-rubriche #content-top h1.last-title,
@@ -3556,12 +3576,12 @@ div.scrollableArea {
 .tax-column_category #content-top h1.last-title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 25px;
   position: absolute;
   left: 0;
   right: 0;
   top: 40%;
   z-index: 2;
+  font-size: 15px;
 }
 .page-template-page-video #content-top #m-nav,
 .page-template-page-rubriche #content-top #m-nav,
@@ -4788,6 +4808,7 @@ SIDEBAR
   color: #fff;
   text-shadow: 0px 1px 1px #000;
   text-transform: uppercase;
+  margin-top: 20px;
 }
 #column-sidebar ul.s-column-container li.s-column-single h1.title:hover {
   color: #fff;
@@ -5160,13 +5181,21 @@ CUSTOM PAGES
 .tax-column_category #content-top .featured-background {
   margin-top: -65px;
 }
-.page-template-page-video #content-top h1.last-title,
-.page-template-page-rubriche #content-top h1.last-title,
-.page-template-page-shop #content-top h1.last-title,
-.tax-video_category #content-top h1.last-title,
-.tax-product_category #content-top h1.last-title,
-.tax-column_category #content-top h1.last-title {
-  font-size: 30px;
+.page-template-page-video #content-top .featured-last h2.last-category,
+.page-template-page-rubriche #content-top .featured-last h2.last-category,
+.page-template-page-shop #content-top .featured-last h2.last-category,
+.tax-video_category #content-top .featured-last h2.last-category,
+.tax-product_category #content-top .featured-last h2.last-category,
+.tax-column_category #content-top .featured-last h2.last-category {
+  font-size: 18px;
+}
+.page-template-page-video #content-top .featured-last h1.last-title,
+.page-template-page-rubriche #content-top .featured-last h1.last-title,
+.page-template-page-shop #content-top .featured-last h1.last-title,
+.tax-video_category #content-top .featured-last h1.last-title,
+.tax-product_category #content-top .featured-last h1.last-title,
+.tax-column_category #content-top .featured-last h1.last-title {
+  font-size: 25px;
 }
 .single.single-video .super-full #super-header #large-post-header #full-post-info #super-title h1.single-title a {
   font-size: 25px;
@@ -5180,6 +5209,10 @@ VIDEO
 #videos article.video {
   width: 33.33333333333%;
   float: left;
+}
+.single-video .featured-last {
+  height: 55% !important;
+  padding-bottom: 0 !important;
 }
 .single-video #full-post-info {
   left: 0 !important;
@@ -5234,10 +5267,6 @@ article.opinion .title,
 .tax-product_category #content-top h1.last-title,
 .tax-column_category #content-top h1.last-title {
   font-size: 36px;
-}
-.single-video .featured-last {
-  height: 55% !important;
-  padding-bottom: 0 !important;
 }
 .single.single-video .super-full #super-header {
   min-height: 850px;

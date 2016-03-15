@@ -726,6 +726,9 @@ SIDEBAR
 				display: block;
 				border: none;
 			}
+			h2.subtitle{
+				
+			}
 			h1.title{
 				top:0;
 				padding:15px;
@@ -738,6 +741,7 @@ SIDEBAR
 				color: #fff;
 				text-shadow:0px 1px 1px #000;
 				text-transform: uppercase;
+				margin-top: 20px;
 				&:hover {
 					color: #fff;
 				}
@@ -1141,8 +1145,13 @@ CUSTOM PAGES
 		.featured-background{
 			margin-top: -65px;
 		}
-		h1.last-title{
-		    font-size: 30px;
+		.featured-last{
+			h2.last-category{
+				font-size: 18px;
+			}
+			h1.last-title{
+			    font-size: 25px;
+			}
 		}
 	}
 }
@@ -1163,7 +1172,13 @@ VIDEO
 	}
 }
 
+.single-video .featured-last{
+	height: 55% !important;
+	padding-bottom: 0 !important;
+}
+
 .single-video{
+	
 	#full-post-info{
 		left: 0 !important;
 		width: 100% !important;

@@ -49,6 +49,7 @@
         											</div>
     											</div>
     											<a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"></a>
+    											<h2 class="subtitle"><?php echo term_description( $term->term_id, $taxonomy ) ?></h2>
     											<h1 class="title"><?php echo $term->name; ?></h1>
     										</li>
 												<?php } ?>
