@@ -21,6 +21,7 @@
     				?>
 					<div class="featured-last" <?php if ( has_post_thumbnail() ) { ?>style="background-image:url('<?php echo $thumb; ?>');"  <?php } ?>>
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="divLink"></a>
+						<div class="video-icon" style="z-index: 2;"><div class="play"></div></div>
 						<h2 class="last-category">
 							<?php
 								$lastTerms = get_the_terms($post->ID, 'video_category' );
