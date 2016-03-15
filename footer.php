@@ -42,7 +42,7 @@
 							}
 						}
     				?>
-					<div class="home-m-link" style="color: #50E3C2">Visita Tasc Video<a class="divLink" href="/video"></a></div>
+					<div class="home-m-link">Visita Tasc Video<a class="divLink" href="/video"></a></div>
 				</div>
 			<div id="home-shop" style="display: none; visibility: hidden;">
 					<div class="featured-background"></div>
