@@ -122,7 +122,7 @@
 					</ul>
 				</div>
 				<div class="footer-third-row">
-					Powered by <a href="http://grafite.io">Grafite</a>, designed and developed by <a href="http://albertoziveri.com">Alberto Ziveri</a> & Matteo Pelosi | <a href="https://tasc.it/disclaimer">Legal Policy</a>
+					Powered by <a href="http://grafite.io">Grafite</a>, designed and developed by <a href="http://albertoziveri.com">Alberto Ziveri</a>, Matteo Pelosi & Alessandro Ionni | <a href="https://tasc.it/disclaimer">Legal Policy</a>
 				</div>
 				
 				
