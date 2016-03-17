@@ -219,7 +219,7 @@
 		<!-- SET HEIGHT TO MAIN STOR in homepage -->
         <?php if ( is_home() ) {?>	
 	<script  type="text/javascript">	
-		jQuery(document).ready(function($) {
+		jQuery(document).load(function($) {
 			$(function(){
 				var msh = $("#main-story").height();
 				$("#top-stories").css('height',msh);
