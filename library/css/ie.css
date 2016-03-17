@@ -3604,14 +3604,6 @@ div.scrollableArea {
   height: 100%;
   padding: 0px !important;
 }
-.page-template-page-video #content-top #m-nav ul .scrollableArea,
-.page-template-page-rubriche #content-top #m-nav ul .scrollableArea,
-.page-template-page-shop #content-top #m-nav ul .scrollableArea,
-.tax-video_category #content-top #m-nav ul .scrollableArea,
-.tax-product_category #content-top #m-nav ul .scrollableArea,
-.tax-column_category #content-top #m-nav ul .scrollableArea {
-  margin-left: 40px;
-}
 .page-template-page-video #content-top #m-nav ul li,
 .page-template-page-rubriche #content-top #m-nav ul li,
 .page-template-page-shop #content-top #m-nav ul li,
@@ -3623,6 +3615,17 @@ div.scrollableArea {
   float: left;
   height: 100%;
   line-height: 65px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.page-template-page-video #content-top #m-nav ul li:hover,
+.page-template-page-rubriche #content-top #m-nav ul li:hover,
+.page-template-page-shop #content-top #m-nav ul li:hover,
+.tax-video_category #content-top #m-nav ul li:hover,
+.tax-product_category #content-top #m-nav ul li:hover,
+.tax-column_category #content-top #m-nav ul li:hover {
+  color: #ffffff;
+  background-color: #404040;
 }
 .page-template-page-video #content-top #m-nav ul li a,
 .page-template-page-rubriche #content-top #m-nav ul li a,
@@ -3635,8 +3638,6 @@ div.scrollableArea {
   font-weight: 200;
   text-transform: uppercase;
   display: inline-block;
-  padding-left: 15px;
-  padding-right: 15px;
   border: none;
 }
 .page-template-page-video #content-top #m-nav ul li a:hover,

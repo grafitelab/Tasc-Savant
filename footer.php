@@ -247,11 +247,11 @@
 					jQuery("#m-nav ul").smoothDivScroll({
 						mousewheelScrolling: "",
 						manualContinuousScrolling: false,
-						autoScrollingMode: "onStart",
 						touchScrolling: true,
 						visibleHotSpotBackgrounds: "always"
 					});
 				});
+				jQuery("#m-nav ul").smoothDivScroll("recalculateScrollableArea");
 			</script>
 
         <?php }?>
