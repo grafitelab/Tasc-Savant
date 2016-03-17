@@ -118,7 +118,7 @@
 						<li><a href="https://tasc.it/ciao">Ciao</a></li>
 						<li><a href="https://tasc.it/cast">Cast</a></li>
 						<li class="tasc"></li>
-						<li><a href="https://tasc.it/partnership">Partnership</a></li>
+						<li><a href="https://tasc.it/contatti">Partnership</a></li>
 					</ul>
 				</div>
 				<div class="footer-third-row">
