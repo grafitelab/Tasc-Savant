@@ -88,6 +88,44 @@
 							<!-- fine "BOX RUOLI" -->
 							
 							
+							<!--INIZIO BOX RUOLO TASC MANAGER-->
+							<div class="profile-category">
+								<hr class="hr-pagecast">
+								<h2 class="h2-pagecast">Tasc Manager</h2>
+								<hr class="hr-pagecast">
+								<ul class="users-unordered-list">
+							
+									<?php
+									global $wpdb;
+									$authors = $wpdb->get_results("SELECT ID, user_nicename from $wpdb->users ORDER BY display_name");
+									
+									foreach($authors as $author) {
+									$author = get_userdata( $author->ID );
+										if (check_user_role('tasc_manager',$author->ID)) {
+										?>	
+										<li class="users-list-item">
+											<div class="profile">
+												<div class="image-user">
+													<a href="<?php echo get_author_posts_url($author->ID); ?>" class="boxtext">
+														<?php echo get_avatar($author->ID, 300); ?>
+												
+														<div class="text">
+															<h3 class="name"><?php echo $author->display_name; ?></h3>
+														</div>
+													</a>
+												</div>
+											</div>
+										</li>
+										<?php
+										}
+									}
+									?>
+									
+								</ul>
+							</div> 
+							<!-- fine "BOX RUOLI" -->
+							
+							
 							<!--INIZIO BOX RUOLO ADMIN-->
 							<div class="profile-category">
 								<hr class="hr-pagecast">
