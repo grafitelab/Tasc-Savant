@@ -85,6 +85,7 @@
 					<div>
 						<span class="quote">
 							<?php
+								/*
 								$key = 'vyfl4dws0xnebf9ka95p9e'; 
 								$language = 'it';
 								$request = file_get_contents('https://www.getquotesapp.com/api/randomquote?key='.$key.'&ln='.$language);
@@ -92,7 +93,8 @@
 								
 								$body_quote = $response['quote']['body'];
 								$author_quote = $response['quote']['author'];	
-								echo '"' . $body_quote . '"';					
+								echo '"' . $body_quote . '"';	
+								*/				
 							?>
 						</span>
 						<span class="quote-author"><?php echo $author_quote ?></span>

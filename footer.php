@@ -149,6 +149,23 @@
 			</div> <!-- end #inner-footer -->
 			
 		</footer> <!-- end footer -->
+		
+				<!-- SET HEIGHT TO MAIN STOR in homepage -->
+        <?php if ( is_home() ) {?>	
+	<script  type="text/javascript">	
+			jQuery(function(){
+				var msh = jQuery("#main-story").outerHeight();
+				jQuery("#top-stories").css('height',msh);
+			jQuery(window).resize(function(){
+				var msh = jQuery("#main-story").height();
+				jQuery("#top-stories").css('height',msh);
+    		});
+			});
+    </script>
+    
+            <?php } ?> 
+        <!-- SET HEIGHT TO MAIN STORY -->
+        
 		<?php 
 		//Se non è mobile mostro il Facebook Like BOX dentro un modal, con jquery cookie che controlla ecc.
 		global $detect;
@@ -214,25 +231,6 @@
 		</script>
             <?php } ?> 
         <!-- SHRINKING HEADER -->
-        
-        
-		<!-- SET HEIGHT TO MAIN STOR in homepage -->
-        <?php if ( is_home() ) {?>	
-	<script  type="text/javascript">	
-		jQuery(document).load(function($) {
-			$(function(){
-				var msh = $("#main-story").height();
-				$("#top-stories").css('height',msh);
-			$(window).resize(function(){
-				var msh = $("#main-story").height();
-				$("#top-stories").css('height',msh);
-    		});
-			});
-		});
-    </script>
-    
-            <?php } ?> 
-        <!-- SET HEIGHT TO MAIN STORY -->
         
         
         <!-- SCROLLING NAV IN MEDIA PAGES -->
