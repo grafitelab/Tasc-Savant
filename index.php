@@ -3,13 +3,15 @@
 			<div id="content-top">
 				<div id="top-stories">
 					<div id="main-story" class="big-story left-column">		
-							<?php query_posts('showposts=3'); ?>
+							<?php query_posts('showposts=3'); 
+								global $do_not_duplicate;
+							?>
 							<?php if (have_posts()) : while (have_posts()) : the_post(); 
 							//NON INSERISCO IN TOP STORIES POST non importanti.
 							$important= get_post_meta($post->ID, 'opt_notbig', true); if( $important == "on" ) continue;
 							if(empty($do_not_duplicate)) {} else { if( in_array($post->ID, $do_not_duplicate) ) continue;}
 							
-							$do_not_duplicate[] = $post->ID; ?>
+							$do_not_duplicate[] = $post->ID;  ?>
 								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix main-post permalink'); ?> role="article">
 								<?php get_template_part( 'loop','bigstory' ); ?>	
 								</article>
@@ -21,9 +23,10 @@
 					<div id="side-story"  class="right-column">
 						<div class="last-opinions side-story">
 								<?php 
-									$last_opinions = new WP_Query( array( 'post_type' => 'opinion', 'showposts' => 1 )  );
+									$last_opinions = new WP_Query( array( 'post_type' => 'opinion', 'showposts' => 5 )  );
 									while ( $last_opinions->have_posts() ) : $last_opinions->the_post();
-									
+									if(empty($do_not_duplicate)) {} else { if( in_array($post->ID, $do_not_duplicate) ) continue;}
+									$do_not_duplicate[] = $post->ID; 
 									if(is_old_post(7)) {
 										while (have_posts()) : the_post(); 
 											//NON INSERISCO IN TOP STORIES POST non importanti.
@@ -37,13 +40,15 @@
 								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix main-post permalink'); ?> role="article">
 								<?php get_template_part( 'loop','bigstory' ); ?>	
 								</article>
-								<?php } endwhile; ?>
+								<?php } break; endwhile; ?>
 						</div>
 						
 						<div class="side-story">
 								<?php 
-									$last_snacks = new WP_Query( array('showposts' => 1,'tax_query' => array(array('taxonomy' => 'post_format','field' => 'slug','terms' => 'post-format-aside'))));
+									$last_snacks = new WP_Query( array('showposts' => 5,'tax_query' => array(array('taxonomy' => 'post_format','field' => 'slug','terms' => 'post-format-aside'))));
 									while ( $last_snacks->have_posts() ) : $last_snacks->the_post(); 
+									if(empty($do_not_duplicate)) {} else { if( in_array($post->ID, $do_not_duplicate) ) continue;}
+									$do_not_duplicate[] = $post->ID; 
 									if(is_old_post(7)) {
 										while (have_posts()) : the_post(); 
 											//NON INSERISCO IN TOP STORIES POST non importanti.
@@ -55,7 +60,7 @@
 									} else {
 									get_template_part( 'loop','bigstory' ); 
 									}
-									endwhile; 
+									break; endwhile; 
 								?>
 						</div>
 

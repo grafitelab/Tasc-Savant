@@ -154,12 +154,30 @@
         <?php if ( is_home() ) {?>	
 	<script  type="text/javascript">	
 			jQuery(function(){
+				/*
+				if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1){
+					
+				}
+				
+				*/
+				
 				var msh = jQuery("#main-story").outerHeight();
-				jQuery("#top-stories").css('height',msh);
-			jQuery(window).resize(function(){
-				var msh = jQuery("#main-story").height();
-				jQuery("#top-stories").css('height',msh);
-    		});
+				    jQuery("#top-stories").css('height',msh);
+				    
+				setTimeout(function(){
+					
+				    var msh = jQuery("#main-story").outerHeight();
+				    jQuery("#top-stories").css('height',msh);
+				    
+				
+				}, 1000);
+				
+				jQuery(window).resize(function(){
+						var msh = jQuery("#main-story").height();
+						jQuery("#top-stories").css('height',msh);
+		    		});
+    		
+    		
 			});
     </script>
     
